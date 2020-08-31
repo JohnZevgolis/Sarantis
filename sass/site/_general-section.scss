@@ -1,0 +1,422 @@
+.general-section {
+	background-color: $generalSection;
+	padding-top: 4.64285rem;
+	padding-bottom: 4.64285rem;
+
+	p {
+		color: $generalText;
+		line-height: 1.7;
+
+		strong {
+			font-weight: 600;
+		}
+
+		a {
+			color: $generalText;
+			text-decoration: none;
+		}
+	}
+
+	.general-section-img {
+		padding-top: 138.14935%;
+		
+		&.negative-margin {
+			margin-bottom: 3rem;
+
+			@include media-breakpoint-down(xl) {
+				margin-top: 0 !important;
+			}
+		}
+
+		&:not(.negative-margin) {
+			margin-top: 6.5rem;
+			margin-bottom: 6.5rem;
+		}
+	}
+
+	.table-responsive {
+		table {
+			width: 100%;
+
+			th,td {
+				color: $generalText;
+				text-align: center;
+				padding-left: 0.4rem;
+				padding-right: 0.4rem;
+				line-height: 1.3;
+			}
+
+			thead {
+				tr {
+					border-bottom: 2px solid $light-blue;
+
+					th {
+						font-weight: 600;
+						font-size: 1rem;
+						padding-top: 1.125rem;
+						padding-bottom: 1.125rem;
+
+						@include media-breakpoint-down(lg) {
+							font-size: 0.9375rem;
+						}
+
+						@include media-breakpoint-down(xs) {
+							font-size: 0.875rem;
+						}
+					}
+				}
+			}
+
+			tbody {
+				tr {
+					border-bottom: 1px dotted $tableBodyRowBorder;
+
+					td {
+						font-size: 0.875rem;
+						padding-top: 0.875rem;
+						padding-bottom: 0.875rem;
+
+						@include media-breakpoint-down(lg) {
+							font-size: 0.8125rem;
+						}
+
+						@include media-breakpoint-down(xs) {
+							font-size: 0.75rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.plain-text {
+		color: $generalText;
+
+		h2 {
+			font-size: 1.875rem;
+			font-weight: 600;
+
+			&.blue {
+				color: $generalMeetingsAnchor;
+			}
+
+			@include media-breakpoint-down(lg) {
+				max-width: none;
+				font-size: 1.775rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.675rem;
+			}
+		}
+
+		h4 {
+			font-size: 1.5rem;
+			color: $generalMeetingsAnchor;
+			font-weight: 600;
+			line-height: 1.4;
+			max-width: 95%;
+
+			@include media-breakpoint-down(lg) {
+				max-width: none;
+				font-size: 1.375rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.25rem;
+			}
+		}
+
+		h6 {
+			font-size: 1.125rem;
+			color: $generalMeetingsAnchor;
+			font-weight: 600;
+			line-height: 1.7;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+		}
+
+		p {
+			font-size: 1.125rem;
+			margin-bottom: 1.5rem;
+			max-width: 95%;
+
+			@include media-breakpoint-down(lg) {
+				max-width: none;
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+		}
+
+		ul {
+			list-style: none;
+			padding-left: 0.75rem;
+
+			@include media-breakpoint-down(xs) {
+				padding-left: 0;
+			}
+
+			li {
+				font-size: 1.125rem;
+				color: $generalText;
+				position: relative;
+				margin-bottom: .5rem;
+				padding-left: 1.7625rem;
+
+				&:before {
+					content: "\2022";
+					color: $bullets;
+					font-weight: bold; 
+					display: inline-block;
+					position: absolute;
+					left: 0;
+				}
+
+				strong {
+					font-weight: 600;
+				}
+
+				@include media-breakpoint-down(lg) {
+					font-size: 1.0625rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+
+	&.general-meetings {
+		.date {
+			color: $light-blue;
+			font-size: 0.875rem;
+			font-weight: 600;
+		}
+
+		h2 {
+			font-size: 1.875rem;
+			font-weight: 600;
+			color: $generalText;
+			max-width: 90%;
+
+			@include media-breakpoint-down(lg) {
+				max-width: none;
+				font-size: 1.75rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.625rem;
+			}
+		}
+
+		hr {
+			border: none;
+			width: 100%;
+			background-color: $light-blue;
+			height: 2px;
+		}
+
+		.general-meeting {
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+
+				li {
+					a {
+						@include display-flex(flex);
+						@include justify-content(space-between);
+						@include align-items(center);
+						text-decoration: none;
+						line-height: 1;
+						padding: 1.5rem 1rem;
+						border-bottom: 1px dotted $generalMeetingsBorder;
+
+						@include media-breakpoint-down(md) {
+							padding: 1.5rem 0;
+						}
+
+						img {
+							margin-right: 1.5rem;
+							display: block;
+
+							@include media-breakpoint-down(xs) {
+								margin-right: 1rem;
+							}
+						}
+
+						&:after {
+							content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAATCAYAAACk9eypAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1ZTA3ZmM2Yi00OGUxLTE4NDItYTdkMS1lODEyYTM3ZjA5YmUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzZDQTRCRjZBNTgyMTFFQUE4MTZGRjI1NkUwNUEwMTciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzZDQTRCRjVBNTgyMTFFQUE4MTZGRjI1NkUwNUEwMTciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MWZiNTEyMDktZDgyZS0wZjQ1LTk5MTUtOWJmNzM1MjQ1ZjE4IiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6MzBiZTc0N2EtOTllYS0xMWVhLWFmZjMtOTkzZWNlZjQ0Y2Y0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+BqK0GQAAAJ5JREFUeNpi/P//PwMyYNz9GSzw35WXkQELYGIgEQwHDYwMuz6hi/2Hy1HLSfVEqKuHqQM5CeSEBiBuxOGkeqj8XyA2YIIyGnDYhKw4GoivMDPEVt4EMgKB2AmqyAFJA7LilcihFA7ES4GYGc0GkOIoIF6FHkoroab8xacYBFiQ2Cuh9FIojaEYXQOyJgZsinHFNF7AghTutEl8AAEGAHEWK09RrDGFAAAAAElFTkSuQmCC');
+						}
+
+						.text {
+							font-size: 1.125rem;
+							font-weight: 600;
+							color: $generalMeetingsAnchor;
+
+							@include media-breakpoint-down(sm) {
+								font-size: 1.0625rem;
+							}
+
+							@include media-breakpoint-down(xs) {
+								font-size: 1rem;
+							}
+						}
+
+						.size {
+							font-weight: 400;
+							color: $generalMeetingsSize;
+							font-size: 0.75rem;
+						}
+					}
+				}
+			}
+		}	
+	}
+
+	.management-team {
+		margin: 4.42857rem 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		h2 {
+			font-size: 1.875rem;
+			color: $light-blue;
+			font-weight: 600;
+
+			@include media-breakpoint-down(lg) {
+				max-width: none;
+				font-size: 1.775rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.675rem;
+			}
+		}
+
+		h6 {
+			font-size: 1.125rem;
+			color: $generalMeetingsAnchor;
+			font-weight: 600;
+			line-height: 1.7;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+
+	&.worldwide-general-section {
+		p {
+			margin-bottom: .5rem;
+		}
+
+		strong {
+			color: $generalMeetingsAnchor;
+		}
+
+		.worldwide-general-section-bullets {
+			.flex-shrink-0 {
+				min-width: 66px;
+			}
+		}
+	}
+
+	&.join-us {
+		p {
+			font-size: 1.5rem;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.375rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.25rem;
+			}
+
+			a {
+				font-weight: 600;
+				color: $generalSectionLink;
+				position: relative;
+				text-decoration: none;
+				
+				&:after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					left: 0;
+					display: block;
+					background-color: $generalSectionLink;
+					height: 2px;
+				}
+			}
+		}
+
+		button[type="submit"] {
+			background-color: $generalSectionLink;
+			color: $white;
+			font-weight: 600;
+			font-size: 1.5rem;
+			border: none;
+			outline: none;
+			height: 74px;
+			line-height: 74px;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.375rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.25rem;
+			}
+
+			img {
+				max-width: 43px;
+			}
+		}
+	}
+
+	&.career-tips {
+		h4 {
+			color: $light-blue;
+		}
+
+		h6 {
+			color: $generalText;
+		}
+
+		.flex-shrink-0 {
+			margin-right: 1.5rem;
+			min-width: 72px;
+			text-align: center;
+
+			@include media-breakpoint-down(xs) {
+				margin-right: 0;
+				margin-bottom: 1rem;
+				min-width: auto;
+				text-align: left;
+			}
+		}
+	}
+}

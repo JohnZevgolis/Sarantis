@@ -1,0 +1,39 @@
+.campaign {
+	background-color: $generalSection;
+	padding-bottom: 12.1428rem;
+
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 4.64285rem;
+	}
+
+	.campaign-img {
+		padding-top: 68.2628%;
+	}
+
+	h2 {
+		font-weight: 600;
+		font-size: 2.25rem;
+		color: $balenciagaCarouselText;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 2rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.75rem;
+		}
+	}
+
+	p {
+		color: $campaignHeading;
+		font-size: 1.125rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.0625rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1rem;
+		}
+	}
+}

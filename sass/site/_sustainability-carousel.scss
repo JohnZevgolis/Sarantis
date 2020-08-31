@@ -1,0 +1,110 @@
+.sustainability-carousel {
+	background-color: $generalSection;
+
+	.sustainability-carousel-img {
+		padding-top: 44.87404%;
+		margin-top: -9.0625rem;
+
+		&.news-margin-top {
+			margin-top: -5rem;
+		}
+	}
+
+	.padding-left {
+		padding-left: 2.5rem !important;
+
+		@include media-breakpoint-down(xl) {
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+	}
+
+	.swiper-container {
+		margin-top: -13.375rem;
+
+		@include media-breakpoint-down(md) {
+			margin-top: -3rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			margin-top: -1px;
+		}
+
+		.swiper-wrapper {
+			.swiper-slide {
+				height: auto;
+
+				& > div {
+					background-color: $light-blue;
+					color: $white;
+
+					h2 {
+						font-weight: 600;
+						font-size: 3rem;
+						line-height: 1.1;
+
+						@include media-breakpoint-down(lg) {
+							font-size: 2.5rem;
+						}
+
+						@include media-breakpoint-down(xs) {
+							font-size: 2rem;
+						}
+					}
+
+					p {
+						line-height: 1.7;
+						font-size: 1.125rem;
+						margin-bottom: 0;
+
+						@include media-breakpoint-down(lg) {
+							font-size: 1.0625rem;
+						}
+
+						@include media-breakpoint-down(xs) {
+							font-size: 1rem;
+						}
+
+						strong {
+							font-weight: 600;
+						}
+					}
+				}	
+			}
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			position: static;
+			margin-top: 0;
+			border: none;
+			outline: none;
+			background: $light-blue;
+			width: 73px;
+			height: 73px;
+
+			@include media-breakpoint-down(lg) {
+				width: 63px;
+				height: 63px;
+			}
+
+			@include media-breakpoint-down(xs) {
+				width: 53px;
+				height: 53px;
+			}
+
+			i {
+				color: $white;
+				font-size: 3rem;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 2.5rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}

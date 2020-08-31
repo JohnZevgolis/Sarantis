@@ -1,0 +1,93 @@
+.img-list-widget {
+	background-color: $generalSection;
+	padding-bottom: 6.875rem;
+
+	.img-list-widget-img {
+		padding-top: 110.64516%;
+	}
+
+	h2 {
+		font-size: 2.25rem;
+		font-weight: 600;
+		color: $ourPeopleHeading;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 2rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.75rem;
+		}
+	}
+
+	p {
+		font-size: 1.125rem;
+		color: $generalText;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.0625rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1rem;
+		}
+
+		strong {
+			font-weight: 600;
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 0.75rem;
+
+		@include media-breakpoint-down(xs) {
+			padding-left: 0;
+		}
+
+		li {
+			font-size: 1.125rem;
+			color: $generalText;
+			position: relative;
+			margin-bottom: 1rem;
+			padding-left: 2.3625rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&:before {
+				content: "\f00c";
+				font-family: "Font Awesome 5";
+				font-weight: 900;
+				color: $imgListBullets;
+				display: inline-block;
+				position: absolute;
+				left: 0;
+				font-size: 1.5rem;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 1.375rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 1.25rem;
+				}
+			}
+
+			strong {
+				font-weight: 600;
+			}
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+				padding-left: 2.1625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+				padding-left: 1.9625rem;
+			}
+		}
+	}
+}

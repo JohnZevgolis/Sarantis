@@ -1,0 +1,133 @@
+.quality {
+	background-color: $generalSection;
+	padding-bottom: 11.1428rem;
+
+	@include media-breakpoint-down(xs) { 
+		padding-bottom: 8.1428rem;;
+	}
+
+	.padding-top {
+		padding-top: 9.9285rem;
+		padding-right: 2rem;
+
+		@include media-breakpoint-down(lg) {
+			padding-right: 15px;
+			padding-top: 0;
+			padding-bottom: 9.9285rem;
+		}
+
+		@include media-breakpoint-down(xs) { 
+			padding-bottom: 0;
+			margin-bottom: 3rem;
+		}
+
+		.quality-content {
+			margin-top: -9.9285rem;
+			margin-bottom: -12.7857rem;
+
+			@include media-breakpoint-down(lg) {
+				margin-top: -12.5rem;
+				margin-bottom: 0;
+			}
+
+			@include media-breakpoint-down(xs) { 
+				margin-top: 0;
+			}
+		}
+	}
+
+	.padding-bottom {
+		padding-bottom: 9.9285rem;
+		padding-left: 2rem;
+
+		@include media-breakpoint-down(lg) {
+			padding-left: 15px;
+		}
+
+		@include media-breakpoint-down(xs) { 
+			padding-bottom: 0;
+			margin-bottom: 3rem;
+		}
+
+		.quality-content {
+			margin-top: -12.5rem;
+			margin-bottom: -9.9285rem;
+
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 0;
+			}
+
+			@include media-breakpoint-down(xs) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.quality-content {
+		background-color: $white;
+		max-width: 90%;
+		padding-left: 4rem;
+		padding-right: 4rem;
+
+		@include media-breakpoint-down(xs) {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+			max-width: none;
+		}
+
+		h3 {
+		    font-size: 2.25rem;
+		    font-weight: 600;
+		    color: $main-blue;
+
+		    @include media-breakpoint-down(sm) { font-size: 2rem; }
+		    @include media-breakpoint-down(xs) { font-size: 1.625rem; }
+		}
+
+		p {
+			font-size: 1.125rem;
+
+    		@include media-breakpoint-down(sm) { font-size: 1.0625rem; }
+    		@include media-breakpoint-down(xs) { font-size: 1rem; }
+		}
+
+		p,.moreBtn {
+			color: $generalText;
+		}
+	}
+
+	.quality-box {
+		&.light-blue {
+			background-color: $light-blue;
+			padding-top: 16.0714rem;
+			padding-bottom: 6.1428rem;
+
+			@include media-breakpoint-down(lg) {
+				padding-top: 9rem;
+				padding-bottom: 18.5714rem;
+			}
+
+			@include media-breakpoint-down(xs) { 
+				padding-top: 4rem;
+				padding-bottom: 4rem;
+			}
+		}
+
+		&.dark-blue {
+			background-color: $main-blue;
+			padding-top: 9rem;
+			padding-bottom: 18.5714rem;
+
+			@include media-breakpoint-down(xs) { 
+				padding-top: 4rem;
+				padding-bottom: 4rem;
+			}
+		}
+
+		img {
+			@include media-breakpoint-down(xs) {  
+				max-width: 150px;
+			}
+		}
+	}
+}

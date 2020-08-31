@@ -1,0 +1,90 @@
+/*========================
+     @FontFace Fonts
+==========================*/
+
+
+$font-path: '../fonts/PFNeu';
+
+@font-face {
+  font-family: 'PFFuturaNeu';
+  src: url('#{$font-path}/PFFuturaNeuThin-Regular.eot');
+  src: url('#{$font-path}/PFFuturaNeuThin-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/PFFuturaNeuThin-Regular.woff2') format('woff2'),
+  url('#{$font-path}/PFFuturaNeuThin-Regular.woff') format('woff'),
+  url('#{$font-path}/PFFuturaNeuThin-Regular.ttf') format('truetype'),
+  url('#{$font-path}/PFFuturaNeuThin-Regular.svg#PFFuturaNeuThin-Regular') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PFFuturaNeu';
+  src: url('#{$font-path}/PFFuturaNeuLight-Regular.eot');
+  src: url('#{$font-path}/PFFuturaNeuLight-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/PFFuturaNeuLight-Regular.woff2') format('woff2'),
+  url('#{$font-path}/PFFuturaNeuLight-Regular.woff') format('woff'),
+  url('#{$font-path}/PFFuturaNeuLight-Regular.ttf') format('truetype'),
+  url('#{$font-path}/PFFuturaNeuLight-Regular.svg#PFFuturaNeuLight-Regular') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PFFuturaNeu-Caps';
+  src: url('#{$font-path}/PFFuturaNeu-Regular.eot');
+  src: url('#{$font-path}/PFFuturaNeu-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/PFFuturaNeu-Regular.woff2') format('woff2'),
+  url('#{$font-path}/PFFuturaNeu-Regular.woff') format('woff'),
+  url('#{$font-path}/PFFuturaNeu-Regular.ttf') format('truetype'),
+  url('#{$font-path}/PFFuturaNeu-Regular.svg#PFFuturaNeu-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PFFuturaNeu';
+  src: url('#{$font-path}/PFFuturaNeuMedium-Regular.eot');
+  src: url('#{$font-path}/PFFuturaNeuMedium-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/PFFuturaNeuMedium-Regular.woff2') format('woff2'),
+  url('#{$font-path}/PFFuturaNeuMedium-Regular.woff') format('woff'),
+  url('#{$font-path}/PFFuturaNeuMedium-Regular.ttf') format('truetype'),
+  url('#{$font-path}/PFFuturaNeuMedium-Regular.svg#PFFuturaNeuMedium-Regular') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PFFuturaNeu';
+  src: url('#{$font-path}/PFFuturaNeuSemiBold-Regular.eot');
+  src: url('#{$font-path}/PFFuturaNeuSemiBold-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/PFFuturaNeuSemiBold-Regular.woff2') format('woff2'),
+  url('#{$font-path}/PFFuturaNeuSemiBold-Regular.woff') format('woff'),
+  url('#{$font-path}/PFFuturaNeuSemiBold-Regular.ttf') format('truetype'),
+  url('#{$font-path}/PFFuturaNeuSemiBold-Regular.svg#PFFuturaNeuSemiBold-Regular') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PFFuturaNeu';
+  src: url('#{$font-path}/PFFuturaNeu-Bold.eot');
+  src: url('#{$font-path}/PFFuturaNeu-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/PFFuturaNeu-Bold.woff2') format('woff2'),
+  url('#{$font-path}/PFFuturaNeu-Bold.woff') format('woff'),
+  url('#{$font-path}/PFFuturaNeu-Bold.ttf') format('truetype'),
+  url('#{$font-path}/PFFuturaNeu-Bold.svg#PFFuturaNeu-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PFFuturaNeu';
+  src: url('#{$font-path}/PFFuturaNeuBook-Regular.eot');
+  src: url('#{$font-path}/PFFuturaNeuBook-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/PFFuturaNeuBook-Regular.woff2') format('woff2'),
+  url('#{$font-path}/PFFuturaNeuBook-Regular.woff') format('woff'),
+  url('#{$font-path}/PFFuturaNeuBook-Regular.ttf') format('truetype'),
+  url('#{$font-path}/PFFuturaNeuBook-Regular.svg#PFFuturaNeuBook-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}

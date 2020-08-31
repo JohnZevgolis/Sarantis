@@ -1,0 +1,62 @@
+.pagination {
+	ul {
+		li {
+			a {
+				font-weight: 600;
+				font-size: 1.14285rem;
+				color: $paginationAnchor;
+				width: 42px;
+				height: 42px;
+				@include display-flex(flex);
+				@include justify-content(center);
+				@include align-items(center);
+				text-decoration: none;
+				margin: 0 .2rem;
+
+				@include media-breakpoint-down(xs) {
+					width: 32px;
+					height: 32px;
+					font-size: .814285rem;
+				}
+
+				&.active {
+					background-color: $light-blue;
+					color: $white;
+				}
+			}
+
+			&:first-child,
+			&:last-child {
+				a {
+					&:before {
+						font-family: $fa-free;
+						font-weight: 900;
+						color: $light-blue;
+						font-size: .9rem;
+
+						@include media-breakpoint-down(xs) {
+							font-size: .7rem;
+						}
+					}
+				}
+			}
+
+			&:first-child {
+				a {
+					&:before {
+						content: "\f053";
+						
+					}
+				}
+			}
+
+			&:last-child {
+				a {
+					&:before {
+						content: "\f054";
+					}
+				}
+			}
+		}
+	}
+}

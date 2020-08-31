@@ -1,0 +1,188 @@
+.sustainability-pillars {
+	background-color: $generalSection;
+	padding-bottom: 7.2rem;
+
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 3.84285rem;
+	}
+
+	p {
+		color: $generalText;
+		line-height: 1.7;
+		margin-bottom: .8rem;
+		font-size: 1.125rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.0625rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1rem;
+		}
+		
+		strong {
+			font-weight: 600;
+		}
+	}
+
+	.bg-text {
+		p {
+			font-size: 1.5rem;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.375rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.25rem;
+			}
+
+			strong {
+				color: $bgTextStrong;
+			}
+		}
+	}
+
+	.sustainability-box {
+		.sustainability-img {
+			min-height: 738px;
+		}
+
+		.sustainability-box-wrapper {
+			padding-left: 3.5rem;
+			padding-right: 3.5rem;
+
+			@include media-breakpoint-down(xl) {
+				padding-left: 2.5rem;
+				padding-right: 2.5rem;
+			}
+
+			@include media-breakpoint-down(lg) {
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+			}
+
+			@include media-breakpoint-down(md) {
+				padding-left: 3.5rem;
+				padding-right: 3.5rem;
+			}
+
+			@include media-breakpoint-down(sm) {
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+			}
+
+			.sustainability-box-content {
+				z-index: 1;
+
+				h2 {
+					color: $bgTextStrong;
+					font-weight: 600;
+					font-size: 2.25rem;
+					line-height: 1;
+
+					@include media-breakpoint-down(lg) {
+						font-size: 2rem;
+					}
+
+					@include media-breakpoint-down(xs) {
+						font-size: 1.75rem;
+					}
+				}
+
+				p {
+					color: $sustainabilityBoxText;
+					line-height: 1.5;
+					margin-bottom: 0
+				}
+
+				.moreBtn {
+					color: $sustainabilityBoxMoreBtn;
+					font-weight: 600;
+				}
+			}
+		}
+
+		&.padding-right {
+			padding-right: 3.5rem;
+
+			@include media-breakpoint-down(xl) {
+				padding-right: 15px;
+			}
+		}
+
+		&.white {
+			.sustainability-box-wrapper {
+				background-color: $white;
+			}
+		}		
+
+		&.blue {
+			.sustainability-box-wrapper {
+				background-color: $bgTextStrong;
+
+				.sustainability-box-content {
+
+					h2,.moreBtn {
+						color: $white;
+					}
+
+					p {
+						color: $sustainabilityBoxBlueText;
+					}
+				}
+			}
+		}
+
+		&.blue,
+		&.white,
+		&.gray,
+		&.light-blue {
+			.sustainability-box-wrapper {
+				.sustainability-box-content {
+					padding-right: 2.5rem;
+
+					@include media-breakpoint-down(xl) {
+						padding-right: 1rem;
+					}
+
+					@include media-breakpoint-down(md) {
+						padding-right: 2.5rem;
+					}
+
+					@include media-breakpoint-down(sm) {
+						padding-right: 1rem;
+					}
+
+					@include media-breakpoint-down(xs) {
+						padding-right: 0;
+					}
+				}
+			}
+		}
+
+		&.gray {
+			.sustainability-box-wrapper {
+				background-color: $sustainabilityBoxGray;
+			}
+		}
+
+		&.light-blue {
+			.sustainability-box-wrapper {
+				background-color: $light-blue;
+			}
+		}
+
+		&.gray,
+		&.light-blue {
+			.sustainability-box-wrapper {
+				.sustainability-box-content {
+
+					h2,.moreBtn,p {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}

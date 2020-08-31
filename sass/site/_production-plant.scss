@@ -1,0 +1,185 @@
+.production-plant {
+	.production-plant-poland-img {
+		padding-top: 61.08312%;
+	}
+
+	.production-plant-greece-img {
+		padding-top: 104.43425%;
+	}
+
+	.production-plant-sub-poland-img {
+		padding-top: 97.82870%;
+
+		a {
+			top: 0;
+			left: 0;
+		}
+	}
+
+	h2 {
+		font-weight: 600;
+		font-size: 2.25rem;
+		color: $productionPlantPolandHeading;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 2rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.75rem;
+		}
+	}
+
+	h6 {
+		font-size: 1rem;
+		font-weight: 600;
+		color: $productionPlantSmallHeading;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 0.9375rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 0.875rem;
+		}
+	}
+
+	.sm-text {
+		color: $productionPlantPolandSmText;
+		font-size: 1rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 0.9375rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 0.875rem;
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 0.75rem;
+		margin: 1.625rem 0;
+
+		@include media-breakpoint-down(xs) {
+			padding-left: 0;
+		}
+
+		li {
+			font-size: 1rem;
+			color: $productionPlantPolandList;
+			position: relative;
+			margin-bottom: .5rem;
+			padding-left: 1.7625rem;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 0.9375rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 0.875rem;
+			}
+
+			&:before {
+				content: "\2022";
+				color: $productionPlantBullets;
+				font-weight: bold; 
+				display: inline-block;
+				position: absolute;
+				left: 0;
+			}
+
+			strong {
+				font-weight: 600;
+			}
+
+			ul {
+				padding-left: 0;
+
+				li {
+					&:before {
+						content: "\f00c";
+						font-family: "Font Awesome 5";
+						font-weight: 900;
+						color: $productionPlantBulletsCheck;
+						display: inline-block;
+						position: absolute;
+						left: 0;
+					}
+
+					span {
+						font-size: 0.875rem;
+						color: $productionPlantListSmText;
+					}
+				}
+			}
+		}
+	}
+
+	.certifications {
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: $productionPlantPolandList;
+	}
+
+	.external-link {
+		font-weight: 600;
+		font-size: 1rem;
+		color: $productionPlantExternalLink;
+		text-decoration: none;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 0.9375rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 0.875rem;
+		}
+	}
+
+	&.production-plant-greece {
+		background-color: $productionPlantGreeceBg;
+		padding-top: 3.75rem;
+		padding-bottom: 4.1875rem;
+	}
+
+	&.production-plant-ukraine {
+		background-color: $productionPlantUkraine;
+		min-height: 1256px;
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: contain;
+		padding-top: 4.875rem;
+		padding-bottom: 4.875rem;
+
+		@include media-breakpoint-down(xl) {
+			background-image: none !important;
+			min-height: auto;
+		}
+	}
+
+	&.production-plant-poland {
+		background-color: $productionPlantGreeceBg;
+		padding-top: 7.8125rem;
+		padding-bottom: 10.3125rem;
+
+		@include media-breakpoint-down(sm) {
+			padding-top: 4.64285rem;
+			padding-bottom: 4.64285rem;
+		}
+	}
+
+	&.production-plant-sub-poland {
+		background-color: $productionPlantUkraine;
+		padding-top: 8.5625rem;
+		padding-bottom: 11.1875rem;
+
+		@include media-breakpoint-down(sm) {
+			padding-top: 4.64285rem;
+			padding-bottom: 4.64285rem;
+		}
+
+		
+	}
+}

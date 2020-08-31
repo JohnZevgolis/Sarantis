@@ -1,0 +1,163 @@
+.management-trainee-program {
+	background-color: $generalSection;
+	padding-bottom: 11.4375rem;
+
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 4.64285rem;
+	}
+
+	.custom-margin {
+		margin-left: 2.5rem;
+    	margin-right: 2rem;
+
+    	@include media-breakpoint-down(xl) {
+    		margin-left: 0;
+    		margin-right: 0;
+    	}
+	}
+
+	h2,h3 {
+		font-weight: 600;
+		color: $ourPeopleHeading;
+	}
+
+	h2 {
+		font-size: 2.25rem;
+		margin-bottom: 5rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 2rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.75rem;
+		}
+	}
+
+	h3 {
+		font-size: 2.03125rem;
+		color: $evaluationBoxHeading;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.78125rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.53125rem;
+		}
+	}
+
+	.evaluation-box {
+		min-width: 380px;
+		max-width: 380px;
+		padding: 4.5rem 3rem 3.125rem;
+		position: relative;
+
+		@include media-breakpoint-down(lg) {
+			min-width: 278px;
+			max-width: 278px;
+		}
+
+		@include media-breakpoint-down(md) {
+			min-width: 380px;
+			max-width: 380px;
+			margin: 0 auto;
+		}
+
+		@include media-breakpoint-down(xs) {
+			min-width: 278px;
+			max-width: 278px;
+		}
+
+		.arrow-down {
+			top: 100%;
+			left: 0;
+			z-index: 1;
+			line-height: 0;
+			margin-top: -1px;
+		}
+
+		&.light-blue {
+			background-color: $light-blue;
+		}
+
+		&.blue {
+			background-color: $ourPeopleBoxBlue;
+		}
+
+		&.dark-blue {
+			background-color: $methodBoxDarkBlue;
+		}
+
+		&.darker-blue {
+			background-color: $ourPeopleBoxDarkerBlue;
+		}
+
+		&.full-dark-blue {
+			background-color: $evaluationBoxHeading;
+		}
+
+		span {
+			color: $white;
+			font-size: 1.5rem;
+			font-weight: 600;
+			line-height: 1.3;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.375rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.25rem;
+			}
+		}
+
+		p {
+			color: $white;
+			font-size: 1.125rem;
+			margin-bottom: 0;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.circle-img {
+		line-height: 1;
+	}
+
+	.journey,.made-it {
+		font-weight: 600;
+	}
+
+	.made-it {
+		color: $evaluationBoxHeading;
+		font-size: 1.875rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.75rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.625rem;
+		}
+	}
+
+	.journey {
+		color: $light-blue;
+		font-size: 1.5rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.375rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.25rem;
+		}
+	}
+}

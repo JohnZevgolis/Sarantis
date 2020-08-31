@@ -1,0 +1,89 @@
+.sustainability-news {
+	background-color: $sustainabiltyNews;
+	padding-top: 5rem;
+	padding-bottom: 6.875rem;
+
+	h2 {
+		font-size: 2.625rem;
+		font-weight: 600;
+		color: $bgTextStrong;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 2.25rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 2rem;
+		}
+	}
+
+	p {
+		color: $sustainabilityNewsText;
+		line-height: 1.7;
+		font-size: 1.125rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.0625rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1rem;
+		}
+
+		strong {
+			font-weight: 600;
+		}
+	}
+
+	.moreBtn {
+		font-weight: 600;
+		margin-top: 0;
+		color: $bgTextStrong;
+	}
+
+	.sustainability-news-box {
+		.sustainability-news-box-img {
+			padding-top: 65.04065%;
+		}
+
+		.sustainability-news-box-content {
+			border-bottom: 1px dotted #bebebe;
+
+			.date {
+				color: $light-blue;
+				font-weight: 600;
+				font-size: 0.875rem;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 0.8125rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 0.75rem;
+				}
+			}
+
+			h3, h3 a {
+				font-weight: 600;
+				font-size: 1.875rem;
+				color: $generalText;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 1.75rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 1.5rem;
+				}
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			.moreBtn {
+				color: $generalText;
+			}
+		}
+	}
+}

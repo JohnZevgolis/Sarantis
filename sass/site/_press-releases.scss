@@ -1,0 +1,187 @@
+.press-releases {
+	background-color: $generalSection;
+	padding-top: 1.8125rem;
+	padding-bottom: 6rem;
+
+	.select-wrapper {
+		position: relative;
+
+		&:before {
+			content: "\f078";
+			font-weight: 900;
+			font-family: "Font Awesome 5";
+			position: absolute;
+			color: $light-blue;
+			@extend %vCenter;
+			right: 1.75rem;
+			font-size: 1.2rem;
+		}
+
+		select {
+			width: 100%;
+			border: none;
+			height: 62px;
+			line-height: 62px;
+			padding-left: 1.9285rem;
+			padding-right: 4.5rem;
+			font-size: 1.125rem;
+			font-weight: 600;
+			color: $generalText;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;    
+			background-color: $white;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+
+
+			&::-ms-expand {
+			    display: none;
+			}
+
+			&:focus {
+				border: none;
+				outline: none;
+			}
+
+			&[disabled="disabled"] {
+				opacity: .7;
+			}
+		}
+	}
+
+	.d-sm-flex {
+		.select-wrapper {
+			min-width: 214px;
+			max-width: 214px;
+
+			@include media-breakpoint-down(xs) {
+				min-width: auto;
+				max-width: none;
+			}
+
+			&:before {
+				right: 1.5rem;
+			}
+
+			select {
+				padding-right: 3.9rem;
+			}
+		}
+	}
+
+	.submit-btn {
+		min-width: 151px;
+		max-width: 151px;
+		text-align: center;
+		border: none;
+		height: 62px;
+		line-height: 62px;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		font-size: 1.125rem;
+		font-weight: 600;
+		color: $white;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;    
+		background-color: $generalMeetingsAnchor;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.0625rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1rem;
+		}
+	}
+
+	.padding-right {
+		padding-right: 1.8rem;
+
+		@include media-breakpoint-down(md) {
+			padding-right: 15px;
+		}
+	}
+
+	.padding-left {
+		padding-left: 1.8rem;
+
+		@include media-breakpoint-down(md) {
+			padding-left: 15px;
+		}
+	}
+
+	.press-release {
+		border-bottom: 1px dotted #b8b8b9;
+		margin-top: 2rem;
+
+		.date {
+			font-weight: 600;
+			color: $light-blue;
+			font-size: 0.875rem;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 0.8125rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 0.75rem;
+			}
+		}
+
+		h2 {
+			font-weight: 600;
+			color: $generalText;
+			font-size: 1.875rem;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.75rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.625rem;
+			}
+
+			a {
+				color: $generalText;
+				text-decoration: none;
+			}
+		}
+
+		p {
+			font-size: 0.875rem;
+			line-height: 1.7;
+			color: $pressReleaseText;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 0.8125rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 0.75rem;
+			}
+			
+			strong {
+				font-weight: 600;
+			}
+		}
+
+		.moreBtn {
+			color: $generalText;
+			text-decoration: none;
+			font-weight: 600;
+		}
+	}
+
+	.press-release-img {
+		padding-top: 66.77796%;
+		margin-top: 2rem;
+	}
+}

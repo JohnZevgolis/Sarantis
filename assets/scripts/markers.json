@@ -1,0 +1,1275 @@
+[
+  {
+    "Address": {
+      "Street": "26 Amarousiou – Halandriou Street,",
+      "Town": "Marousi, 15125,",
+      "Country": "Athens, Greece"
+    },
+    "ExternalLink": {
+      "Text": "greece.sarantigroup.com",
+      "Url": "https://greece.sarantigroup.com"
+    },
+    "Id": 0,
+    "Latitude": 38.041695,
+    "Longitude": 23.808746,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Sarantis Greece",
+    "List": [ "The parent of the Group established in 1964.", "Activities include production, distribution and exports.", "A well recognized portfolio of own and distributed brands in the categories of Cosmetics \u0026 Toiletries, Luxury Cosmetics, Home Care products and Health \u0026 Care products.", "Strong Exports Activity in approximately 20 countries", "A modern Production plant, including a fully equipped R\u0026D department, and 4 warehouses supporting its supply chain in Greece and abroad.", "More than 850 employees", "Established a JV with The Estee Lauder Companies, that distributes Estee Lauder products in Greece, Romania, Bulgaria and Cyprus." ]
+  },
+  {
+    "Address": {
+      "Street": "36 the Sobornosti Str.",
+      "Town": "08150, Boyarka town",
+      "Country": "P.O. Box, Kyiv region, Ukraine"
+    },
+    "ExternalLink": {
+      "Text": "www.polipak.com.pl",
+      "Url": "https://www.polipak.com.pl"
+    },
+    "Id": 1,
+    "Latitude": 50.330984,
+    "Longitude": 30.281519,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Ergopack - Ukraine",
+    "List": [ "Established in 1996 and acquired by Sarantis Group in 2018.", "A Household products producer of Garbage Bags, Food Packaging and Cleaning items.", "Activities include production, distribution and exports.", "The brand portfolio includes flagships of Home Care products and Cosmetics \u0026 Toiletries category.", "Strong Exports Activity in CIS and European countries.", "A modern Production plant and 2 warehouses supporting its supply chain.", "More than 750 employees." ]
+  },
+  {
+    "Address": {
+      "Street": "Puławska 42 C",
+      "Town": "05-500 Piaseczno, ",
+      "Country": "Poland"
+    },
+    "ExternalLink": {
+      "Text": "poland.sarantisgroup.com",
+      "Url": "https://poland.sarantisgroup.com/"
+    },
+    "Id": 2,
+    "Latitude": 52.086068,
+    "Longitude": 21.021968,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Sarantis Poland",
+    "List": [ "Established in 2000.", "Activities include production, distribution and exports.", "A strong portfolio of great own and distributed brands in the categories of Cosmetics \u0026 Toiletries, Luxury Cosmetics and Home Care products.", "A modern Production plant and a warehouse supporting its supply chain in Poland and abroad.", "Approximately 250 employees.", "Acquisition of LUKSJA brand in 2020 reinforced the Polish brand portfolio." ]
+  },
+  {
+    "Address": {
+      "Street": "Platinum Business \u0026 Convention Center,  ",
+      "Town": "Șos. Bucharest-Ploiești no. 172-176, building B, 2nd floor, space B2, sector 1,",
+      "Country": "Bucharest, 013686"
+    },
+    "ExternalLink": {
+      "Text": "romania.sarantisgroup.com",
+      "Url": "https://romania.sarantisgroup.com"
+    },
+    "Id": 3,
+    "Latitude": 44.528304,
+    "Longitude": 26.071852,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Sarantis Romania",
+    "List": [ "Established in 1996.", "Distributing a well diversified brand portfolio of own and distributed brands in the categories of Cosmetics \u0026 Toiletries, Luxury Cosmetics, Home Care products and Health \u0026 Care brands.", "The acquisition of ELMIPLANT in 2007 reinforced the company’s position in the cosmetics market.", "1 warehouse", "More than 200 employees." ]
+  },
+  {
+    "Address": {
+      "Street": "Bul. 8 Septemvri 40 fllor 1,",
+      "Town": "local 2",
+      "Country": "Skopje-Karpos"
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 4,
+    "Latitude": 42.016683,
+    "Longitude": 21.409906,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Sarantis Skopje",
+    "List": [ "Established in 1997.", "Distributing a well recognized brand portfolio of own and distributed brands in the categories of Cosmetics \u0026 Toiletries and Home Care products.", "1 warehouse", "Approximately 40 employees" ]
+  },
+  {
+    "Address": {
+      "Street": "Nitrianská 100, ",
+      "Town": "920 27 Hlohovec, ",
+      "Country": "Slovakia"
+    },
+    "ExternalLink": {
+      "Text": "slovakia.sarantisgroup.com",
+      "Url": "https://slovakia.sarantisgroup.com/"
+    },
+    "Id": 5,
+    "Latitude": 48.420043,
+    "Longitude": 17.813648,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Sarantis Slovakia",
+    "List": [ "Established as a subsidiary in 2018 following the acquisition of INDULONA Cosmetics brand.", "Distributing a well recognized brand portfolio of own and distributed brands in the categories of Cosmetics \u0026 Toiletries and Home Care products.", "1 warehouse." ]
+  },
+  {
+    "Address": {
+      "Street": "63-000 ŚRODA WLKP, ",
+      "Town": "HARCERSKA STR. 16, ",
+      "Country": "POLAND"
+    },
+    "ExternalLink": {
+      "Text": "polipak.com.pl",
+      "Url": "https://polipak.com.pl/"
+    },
+    "Id": 6,
+    "Latitude": 52.223767,
+    "Longitude": 17.287785,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Polipak",
+    "List": [ "Established in 1986 and acquired by the Group in December of 2015.", "A producer of plastic packaging and wrappings -plastic films extrusion of LDPE, HDPE, MDPE (polyethylene) and their blends.", "Production includes PL products and products for industry use.", "Strong Exports Activity in CEE and European countries.", "A technologically advanced production plant including a warehouse support its strong position in the market.", "More than 300 employees." ]
+  },
+  {
+    "Address": {
+      "Street": " 10D build.1 Botanicheskaya str.",
+      "Town": "1st Floor room 29",
+      "Country": "127276 Moscow, Russia"
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 7,
+    "Latitude": 55.835237,
+    "Longitude": 37.592558,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Ergopack- Russia",
+    "List": [ "Established in 2018.", "Distributing own Home Care brands in the Russian market.", "1 warehouse supporting its sales network." ]
+  },
+  {
+    "Address": {
+      "Street": "Dunavska 1c,",
+      "Town": "78000 Banja Luka",
+      "Country": "Bosnia and Herzegovina"
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 8,
+    "Latitude": 44.786383,
+    "Longitude": 17.214051,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Sarantis Banja Luka",
+    "List": [ "Established in 2011.", "Distributing a well diversified brand portfolio of own and distributed brands in the categories of Cosmetics \u0026 Toiletries and Home Care products.", "1 warehouse." ]
+  },
+  {
+    "Address": {
+      "Street": "Zelengorska 1g, ",
+      "Town": "11070 Novi Beograd, ",
+      "Country": "Serbia"
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 9,
+    "Latitude": 44.833901,
+    "Longitude": 20.398322,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Sarantis Belgrade",
+    "List": [ "Established in 1997.", "Distributing a well recognized brand portfolio of own and distributed brands in the categories of Cosmetics \u0026 Toiletries and Home Care products.", "The acquisition of TOPSTAR in 2011 strengthened the company’s position in the market.", "Export activity in neighboring countries." ]
+  },
+  {
+    "Address": {
+      "Street": "Sofia 1517, ",
+      "Town": "Botevgradsko shosse 247, ",
+      "Country": "Bulgaria"
+    },
+    "ExternalLink": {
+      "Text": "bulgaria.sarantisgroup.com",
+      "Url": "https://bulgaria.sarantisgroup.com/"
+    },
+    "Id": 10,
+    "Latitude": 42.701182,
+    "Longitude": 23.372362,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Sarantis Bulgaria",
+    "List": [ "The first subsidiary of the Group, established in 1994.", "Distributing a well recognized brand portfolio of own and distributed brands in the categories of Cosmetics \u0026 Toiletries, Luxury Cosmetics and Home Care products.", "1 warehouse.", "Approximately 95 employees." ]
+  },
+  {
+    "Address": {
+      "Street": "Žerotínova 1133/32,",
+      "Town": " 130 00 Praha 3, ",
+      "Country": "Czech Republic"
+    },
+    "ExternalLink": {
+      "Text": "czechrepublic.sarantisgroup.com",
+      "Url": "https://czechrepublic.sarantisgroup.com/"
+    },
+    "Id": 11,
+    "Latitude": 50.087625,
+    "Longitude": 14.459476,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Sarantis Czech Republic",
+    "List": [ "Established in 2002.", "Distributing a well recognized brand portfolio of own and distributed brands in the categories of Cosmetics \u0026 Toiletries and Home Care products.", "The acquisition of ASTRID in 2014 and INDULONA in 2018 reinforced the Company’s position in the Cosmetics market.", "1 warehouse" ]
+  },
+  {
+    "Address": {
+      "Street": "2040 Budaörs, ",
+      "Town": "Vasút utca 11. (Shark Park)",
+      "Country": "Hungary"
+    },
+    "ExternalLink": {
+      "Text": "hungary.sarantisgroup.com",
+      "Url": "https://hungary.sarantisgroup.com/"
+    },
+    "Id": 12,
+    "Latitude": 47.446654,
+    "Longitude": 18.962383,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Sarantis Hungary",
+    "List": [ "Established in 2006.", "Distributing a well recognized brand portfolio of own and distributed brands in the categories of Cosmetics \u0026 Toiletries and Home Care products.", "The acquisition of TRADE 90 in 2008 and DOMET in 2011 supported the Company’s position in the household products market.", "1 warehouse" ]
+  },
+  {
+    "Address": {
+      "Street": "RUA CARLOS CALISTO Nº4 B/C 1400-043 ",
+      "Town": "LISBOA ",
+      "Country": "PORTUGAL"
+    },
+    "ExternalLink": {
+      "Text": "portugal.sarantisgroup.com",
+      "Url": "https://portugal.sarantisgroup.com/"
+    },
+    "Id": 13,
+    "Latitude": 38.710492,
+    "Longitude": -9.212984,
+    "Category": "subsidiary",
+    "Pin": "/assets/images/icons/subsidiary_pin.png",
+    "Pin2": "/assets/images/icons/subsidiary_pin.png",
+    "Title": "Sarantis Portugal",
+    "List": [ "Established in 2013.", "Activities include distribution and exports of Cosmetics \u0026 Toiletries and Home Care Products.", "1 warehouse" ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 14,
+    "Latitude": 41.374624,
+    "Longitude": 19.830882,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Albania",
+    "List": [ "Exporting from Greece a wide porfolio of Personal Care and Home Care brands through our long term partner Interbrands SH.P.K." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 15,
+    "Latitude": -12.277146,
+    "Longitude": 17.611873,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Angola",
+    "List": [ "Exporting from Portugal Personal Care and Home Care brands through local distribution agreements." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 16,
+    "Latitude": 40.065216,
+    "Longitude": 43.919715,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Armenia",
+    "List": [ "Exporting from Ukraine and Poland Home Care and Personal Care brands both through our local partners (SoftTrade, Mako Group) and directly to the market (Erevan City)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 17,
+    "Latitude": -24.95201,
+    "Longitude": 136.840145,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Australia",
+    "List": [ "Exporting from Greece our Sun Care brand Carroten and our Skin Care brand Bioten through our partner SklareXen Pty Ltd." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 18,
+    "Latitude": 47.846081,
+    "Longitude": 14.94393,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Austria",
+    "List": [ "Exporting from Polipak plastic packaging and bags." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 19,
+    "Latitude": 40.363262,
+    "Longitude": 48.188071,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Azerbaijan",
+    "List": [ "Exporting from Ukraine and Poland Home Care brands through our local partners Aztrade and Trion Trade and directly to the market (NIZAMI SEYMUR)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 20,
+    "Latitude": 53.218485,
+    "Longitude": 28.042685,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Belarus",
+    "List": [ "Exporting from Ukraine and Poland Personal Care and Home Care brands directly to the local market (Mila, Romax, Evrotorg, Corona, Green, Oma, Gippo, Vitalur, Santa, Almy) and through our local partners (Romax Factory, Selvin)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 21,
+    "Latitude": 5.666254,
+    "Longitude": 12.588114,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Camerron ",
+    "List": [ "Exporting from Greece Home Care brands through local distribution agreements." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 22,
+    "Latitude": 34.63733,
+    "Longitude": 102.874076,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "China",
+    "List": [ "Exporting from Greece our Personal Care brands STR8, bioten and Carroten through our partner Qingdao KINGKING Group." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 23,
+    "Latitude": -2.74898,
+    "Longitude": 23.671852,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Congo",
+    "List": [ "Exporting from Greece Personal Care brands through local distribution agreements." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 24,
+    "Latitude": 45.505236,
+    "Longitude": 15.888753,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Croatia ",
+    "List": [ "Exporting from Serbia Home Care brands and from Polipak plastic packaging and PL bags." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 25,
+    "Latitude": 35.037181,
+    "Longitude": 33.254795,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Cyprus",
+    "List": [ "Exporting from Greece a wide porfolio of Personal Care and Home Care brands through our long term partnerships with HELMA and C. A. Papaellinas Group." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 26,
+    "Latitude": 56.111919,
+    "Longitude": 9.366548,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Denmark",
+    "List": [ "Exporting from Ukraine PL Home Care brands directly to the local market (Coop DK). Additionally we export from Polipak plastic packaging and PL bags." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 27,
+    "Latitude": 27.128734,
+    "Longitude": 30.515299,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Egypt",
+    "List": [ "Exporting from Greece Personal Care brands through local distribution agreements." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 28,
+    "Latitude": 58.695542,
+    "Longitude": 25.722922,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Estonia",
+    "List": [ "Exporting from Poland Personal Care brands through local distribution agreements." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 29,
+    "Latitude": 46.646725,
+    "Longitude": 2.904863,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "France",
+    "List": [ "Exporting from Ukraine Home Care brands directly to the local market (NOZ-Consys International SRL). Additionally we export from Polipak plastic packaging and PL bags." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 30,
+    "Latitude": 42.168926,
+    "Longitude": 43.598961,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Georgia",
+    "List": [ "Exporting from Ukraine Home Care and Personal Care brands through our local partners (Libo Group)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 31,
+    "Latitude": 51.117568,
+    "Longitude": 10.408179,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Germany",
+    "List": [ "Exporting from Polipak plastic packaging and PL bags." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 32,
+    "Latitude": 8.007287,
+    "Longitude": -1.022232,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Ghana",
+    "List": [ "Exporting from Greece Home Care brands through local distribution agreements." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 33,
+    "Latitude": 31.518838,
+    "Longitude": 36.451958,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Jordan",
+    "List": [ "Exporting from Greece Personal Care brands through local distribution agreements." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 34,
+    "Latitude": 48.272763,
+    "Longitude": 67.079599,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Kazakhstan",
+    "List": [ "Exporting from Ukraine and Poland Personal Care and Home Care brands through our local partners (Koktem, Cosmeta Asia, Eurosauda)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 35,
+    "Latitude": 42.66688,
+    "Longitude": 21.159929,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Kosovo",
+    "List": [ "Exporting from North Macedonia Personal Care and Home Care brands." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 36,
+    "Latitude": 29.48519,
+    "Longitude": 7.376291,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Kuwait",
+    "List": [ "Exporting from Greece Personal Care brands through local distribution agreements." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 37,
+    "Latitude": 41.456793,
+    "Longitude": 74.738025,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Kyrgyzstan",
+    "List": [ "Exporting from Ukraine and Poland Personal Care and Home Care brands through our local partners (SRT, Sunbell) and directly to the local market (Audio Video MIR)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 38,
+    "Latitude": 56.896162,
+    "Longitude": 25.746771,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Latvia",
+    "List": [ "Exporting from Ukraine and Poland Personal Care and Home Care brands through our local partners (Biger, Balta Bura)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 39,
+    "Latitude": 33.98168,
+    "Longitude": 35.833558,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Lebanon",
+    "List": [ "Exporting from Greece Personal Care brands through local distribution agreements." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 40,
+    "Latitude": 26.977505,
+    "Longitude": 17.671474,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Libya ",
+    "List": [ "Exporting from Greece Personal Care brands." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 41,
+    "Latitude": 54.986027,
+    "Longitude": 23.943433,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Lithuania",
+    "List": [ "Exporting from Ukraine and Poland Personal Care brands and Home Care  brands through our local partners (Kesko Senukai, Kosmelita) and directly to the local market (UAB BERNER, UAB PROSELLER, UAB MAXIMA LT). We also export from Polipak plastic packaging and PL bags." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 42,
+    "Latitude": 35.886758,
+    "Longitude": 14.447007,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Malta",
+    "List": [ "Expoting from Greece Personal Care and Home Care brands." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 43,
+    "Latitude": 31.958438,
+    "Longitude": -6.22988,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Moroco",
+    "List": [ "Exporting from Polipak plastic packaging and PL bags." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 44,
+    "Latitude": 47.123979,
+    "Longitude": 28.834606,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Moldova",
+    "List": [ "Exporting from Ukraine, Romania and Poland Personal Care and Home Care and through our local partners (Orbico, Sheriff, Tarol-DD) and directly to the market (Sidal)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 45,
+    "Latitude": 42.898425,
+    "Longitude": 19.200997,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Montenegro",
+    "List": [ "Exporting from Serbia Home Care and Personal Care brands. We also export from Ukraine Home Care brands both through our local partner (Kucha Hemie)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 46,
+    "Latitude": 52.055944,
+    "Longitude": 5.504302,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Netherlands",
+    "List": [ "Exporting from Ukraine PL Home Care brands through our local partner (Karsten International). Additionally we export from Polipak plastic packaging and PL bags." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 47,
+    "Latitude": 12.565126,
+    "Longitude": 123.487611,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Philippines",
+    "List": [ "Exporting from Greece our Personal Care brands STR8 and bioten through our partnerships with IFACE INC." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 48,
+    "Latitude": 56.386408,
+    "Longitude": 39.502142,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Russia",
+    "List": [ "Exporting from Ukraine and Poland Personal Care and Home Care brands through our local partners (Vneshtorg, Taydi-Sity, Zolotaya Kometa, Arkada, Julana)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 49,
+    "Latitude": 46.060278,
+    "Longitude": 14.583685,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Slovenia",
+    "List": [ "Exporting from Poland Personal Care brands through our local partner (Bimo). We also export from Polipak plastic packaging and PL bags." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 50,
+    "Latitude": 60.770327,
+    "Longitude": 15.476442,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Sweden",
+    "List": [ "Exporting from Ukraine PL Home Care brands directly to the market (COOP Sverige)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 51,
+    "Latitude": 35.190343,
+    "Longitude": 38.539185,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Syria",
+    "List": [ "Exporting from Greece Personal Care and brands." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 52,
+    "Latitude": 38.894875,
+    "Longitude": 59.000464,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Turkemenistan",
+    "List": [ "Exporting from Ukraine PL Home Care brands through our local partner (Shohrat Merkezi)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 53,
+    "Latitude": 23.814766,
+    "Longitude": 54.127355,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "United Arab Emirates",
+    "List": [ "Exporting from Greece Personal Care brands." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 54,
+    "Latitude": 42.081516,
+    "Longitude": 63.95288,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Uzbekistan",
+    "List": [ "Exporting from Ukraine Home Care brands through our local partners (El Lab and Estra Group)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 55,
+    "Latitude": 13.49425,
+    "Longitude": 108.600409,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Vietnam",
+    "List": [ "Exporting from Czech Republic Personal Care brands." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 56,
+    "Latitude": 28.343212,
+    "Longitude": 2.411954,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Algeria",
+    "List": [ "Exporting from Ukraine Home Care brands through our local partner (Golden International)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 57,
+    "Latitude": 62.653665,
+    "Longitude": 26.54263,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Finland",
+    "List": [ "Exporting from Ukraine PL Home Care brands directly to the local market (SOK -Coop Group)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 58,
+    "Latitude": 13.579774,
+    "Longitude": -15.327841,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Gambia",
+    "List": [ "Exporting from Ukraine Home Care brands through our local partner." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 59,
+    "Latitude": 22.709916,
+    "Longitude": 79.311094,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "India",
+    "List": [ "Exporting from Ukraine PL Home Care brands directly to the local market (GCC)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 60,
+    "Latitude": 31.006705,
+    "Longitude": 34.867081,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Israel",
+    "List": [ "Exporting from Ukraine PL Home Care brands directly to the local market (Neeman)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 61,
+    "Latitude": 46.724609,
+    "Longitude": 102.203572,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Mongolia ",
+    "List": [ "Exporting from Ukraine Home Care brands through our local partner (SRT Mongolia)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 62,
+    "Latitude": 9.63415,
+    "Longitude": 7.982523,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Nigeria",
+    "List": [ "Exporting from Ukraine Home Care brands through our local partner (Paxo Pharmaceutical)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 63,
+    "Latitude": 25.330637,
+    "Longitude": 51.124233,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Qatar",
+    "List": [ "Exporting from Ukraine PL Home Care brands directly to the local market (GCC)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 64,
+    "Latitude": 41.255126,
+    "Longitude": 21.378657,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "North Macedonia",
+    "List": [ "Exporting from Poland our Personal Care brand Luksja directly to the market (Stokomak)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 65,
+    "Latitude": 38.695765,
+    "Longitude": 71.406091,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Tadjikistan",
+    "List": [ "Exporting from Ukraine Home Care brands through our local partner (Global Trading)." ]
+  },
+  {
+    "Address": {
+      "Street": "",
+      "Town": "",
+      "Country": ""
+    },
+    "ExternalLink": {
+      "Text": null,
+      "Url": null
+    },
+    "Id": 66,
+    "Latitude": 49.090189,
+    "Longitude": 31.813012,
+    "Category": "export",
+    "Pin": "/assets/images/icons/export_pin.png",
+    "Pin2": "/assets/images/icons/export_pin.png",
+    "Title": "Ukraine",
+    "List": [ "Exporting from Poland Personal Care and Home Care brands through our local partners (Nika Zakhid, Kontent V)." ]
+  }
+]

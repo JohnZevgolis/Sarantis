@@ -1,0 +1,47 @@
+.balenciaga {
+	background-color: $generalSection;
+
+	.balenciaga-wrapper {
+		margin-top: -7.875rem;
+
+		.note {
+			position: relative;
+			color: $white;
+			background: $note;
+			font-size: 1.25rem;
+			font-weight: 400;
+			line-height: 1;
+			padding: .9rem 2.21rem .9rem 1.81rem;
+			overflow: hidden;
+			margin-left: 6.8125rem;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.05rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: .905rem;
+				margin-left: 15px;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				border-width: 0 16px 16px 0;
+				border-style: solid;
+				border-color: $noteCorner $white;
+				display: block;
+				width: 0;
+				-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2), -1px 1px 3px rgba(0,0,0,0.2);
+				-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.2), -1px 1px 3px rgba(0,0,0,0.2);
+				box-shadow: 0 1px 3px rgba(0,0,0,0.2), -1px 1px 3px rgba(0,0,0,0.2);
+			}
+		}
+
+		.balenciaga-img {
+			padding-top: 53.5882%;		
+		}
+	}
+}

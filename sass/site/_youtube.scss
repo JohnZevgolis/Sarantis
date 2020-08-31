@@ -1,0 +1,67 @@
+.youtube {
+	background-color: $generalSection;
+	padding-bottom: 10.0625rem;
+
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 4.64285rem;
+	}
+
+	h2 {
+		font-weight: 600;
+		font-size: 2.25rem;
+		color: $balenciagaCarouselText;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 2rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.75rem;
+		}
+	}
+
+	.youtube-img {
+		padding-top: 55.9595%;
+
+		img {
+			@extend %Center;
+
+			@include media-breakpoint-down(md) {
+				max-width: 66px;
+			}
+
+			@include media-breakpoint-down(sm) {
+				max-width: 56px;
+			}
+
+			@include media-breakpoint-down(xs) {
+				max-width: 46px;
+			}
+		}
+
+		a {
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+#youtube {
+	.iziModal-content {
+		position: relative;
+	    display: block;
+	    overflow: hidden;
+
+	    &:before {
+	   	    padding-top: 56.25%;
+	    }
+
+	    .iziModal-iframe {
+    	    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    height: 100% !important;
+	    }
+	}
+}

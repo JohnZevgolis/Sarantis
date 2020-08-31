@@ -1,0 +1,228 @@
+.intro {
+	padding-top: 12.5rem;
+	padding-bottom: 2rem;
+	background-color: $white;
+
+	@include media-breakpoint-down(lg) {
+		padding-top: 5rem;
+	}
+
+	@include media-breakpoint-down(md) {
+		padding-top: 4rem;
+	}
+
+	span,h1 {
+		font-weight: 600;
+	}
+
+	span {
+		font-size: 1.125rem;
+		color: $light-blue;
+
+		@include media-breakpoint-down(sm) { font-size: 1.0625rem; }
+		@include media-breakpoint-down(xs) { font-size: 1rem; }
+
+		&.mb-3 {
+			margin-bottom: .5rem !important;
+		}
+	}
+
+	h1 {
+		font-size: 5.5rem;
+		color: $generalText;
+		line-height: 1;
+
+		@include media-breakpoint-down(xl) {
+			font-size: 5.0625rem;
+		}
+
+		@include media-breakpoint-down(lg) {
+			font-size: 4.625rem;
+		}
+
+		@include media-breakpoint-down(md) {
+			font-size: 4.1875rem;
+		}
+
+		@include media-breakpoint-down(sm) {
+			font-size: 3.75rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 3.3125rem;
+		}
+
+		@media (max-width: 420px) {
+			font-size: 2.675rem;
+		}
+	}
+
+	&.balenciaga-intro {
+		padding-bottom: 12.7857rem;
+	}
+
+	&.sustainability-intro {
+		padding-bottom: calc(9.0625rem + 2.5rem);
+	}
+
+	&.news-intro {
+		padding-bottom: calc(5rem + 1.375rem);
+	}
+
+	&.press-release-intro {
+		h1 {
+			font-size: 3rem;
+			line-height: 1.2;
+
+			@include media-breakpoint-down(xl) {
+				font-size: 2.75rem;
+			}
+
+			@include media-breakpoint-down(lg) {
+				font-size: 2.5rem;
+			}
+
+			@include media-breakpoint-down(md) {
+				font-size: 2.25rem;
+			}
+
+			@include media-breakpoint-down(sm) {
+				font-size: 2rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.75rem;
+			}
+
+			@media (max-width: 420px) {
+				font-size: 1.375rem;
+			}
+		}
+	}
+
+	p {
+		color: $introText;
+		line-height: 1.7;
+		font-size: 1.125rem;
+		margin-top: 1.5rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.0625rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1rem;
+		}
+
+		strong {
+			font-weight: 600;
+		}
+	}
+
+	.date {
+		color: $introDate;
+	}
+
+	.pictures-label {
+		color: $generalText;
+		font-size: 1.875rem;
+		font-weight: 600;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.75rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.625rem;
+		}
+	}
+
+	.breadcrumb {
+		background-color: transparent;
+		display: block;
+		padding: 0;
+		border-radius: 0;
+		margin-bottom: 2rem;
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li,a {
+				color: $generalText;
+				font-weight: 400;
+				font-size: 1rem;
+				line-height: 1.6;
+				display: inline-block;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 0.9375rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 0.875rem;
+				}
+			}
+
+			li {
+				position: relative;
+
+				&:last-child {
+					font-weight: 500;
+				}
+
+				&:after {
+					content: "";
+					display: block;
+				    position: absolute;
+				    top: 0;
+				    left: 50%;
+				    width: 0;
+				    height: 100%;
+				    background: rgba(0,0,0,.05);
+				    z-index: -1;
+				    @include transform(translateX(-50%) skew(-25deg));
+				    @include transition(width .4s ease);
+				}
+			}
+
+			li:not(:first-child) {
+				padding: 0 5px 0 15px;
+
+				&:before {
+					content: "/";
+					position: absolute;
+					left: 0;
+					@extends %vCenter;
+				};
+			}
+
+			a {
+				text-decoration: none;
+				position: relative;
+				z-index: 1;
+
+				&:after {
+					content: "";
+					display: block;
+				    position: absolute;
+				    top: 0;
+				    left: 50%;
+				    width: 0;
+				    height: 100%;
+				    background: rgba(0,0,0,.05);
+				    z-index: -1;
+				    @include transform(translateX(-50%) skew(-25deg));
+				    @include transition(width .4s ease);
+				}
+
+				&:hover {
+					&:after {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

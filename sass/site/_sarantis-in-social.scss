@@ -1,0 +1,33 @@
+.sarantis-in-social {
+	background-color: $sarantisInSocial;
+	padding-top: 5.3125rem;
+	padding-bottom: 5.75rem;
+
+	h2 {
+		font-weight: 600;
+		color: $white;
+		font-size: 2.25rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 2rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.75rem;
+		}
+	}
+
+	p {
+		font-size: 1.125rem;
+		margin-bottom: 0;
+		color: $sarantisInSocialText;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.0625rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1rem;
+		}
+	}
+}

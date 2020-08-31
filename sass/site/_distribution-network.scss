@@ -1,0 +1,82 @@
+.distribution-network {
+	background-color: $generalSection;
+	padding-bottom: 11.75rem;
+
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 4.64285rem;
+	}
+
+	.distribution-network-box {
+		padding-left: 2.5px;
+		padding-right: 2.5px;
+		margin-bottom: 5px;
+		
+		& > div {
+			background-color: $distributionNetworkBox;
+			padding: 4rem;
+
+			p {
+				color: $generalText;
+				font-size: 1.125rem;
+				margin-top: 2.125rem;
+				margin-bottom: 0;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 1.0625rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 1rem;
+				}
+
+				strong {
+					font-weight: 600;
+				}
+			}
+		}
+
+		&.blue > div {
+			background-color: $distributionNetworkBoxBlue;
+			padding: 5.25rem;
+
+			@include media-breakpoint-down(md) {
+				padding-left: 4rem;
+				padding-right: 4rem;
+			}
+
+			@include media-breakpoint-down(sm) {
+				padding-top: 4rem;
+				padding-bottom: 4rem;
+			}
+
+			p {
+				font-size: 1.5rem;
+				margin-top: 0;
+				margin-left: 3.4375rem;
+				line-height: 1.4;
+				max-width: 60%;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 1.375rem;
+				}
+
+				@include media-breakpoint-down(md) {
+					max-width: none;
+				}
+
+				@include media-breakpoint-down(sm) {
+					margin-top: 2.125rem;
+					margin-left: 0;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 1.25rem;
+				}
+
+				strong {
+					color: $white;
+				}
+			}
+		}
+	}
+}

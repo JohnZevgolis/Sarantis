@@ -1,0 +1,220 @@
+@mixin arrowDown ($width, $color, $top) {
+
+  position: relative;
+  padding-right: $width + 10px;
+
+  &:after {
+
+    position: absolute;
+    top: $top;
+    right: 0;
+    z-index: 1;
+    content: '';
+
+    display: block;
+    width: $width;
+    height: $width;
+    @include transform(rotate(45deg));
+
+    border-bottom: 1px solid $color;
+    border-right: 1px solid $color;
+
+  }
+
+}
+
+@mixin arrowRight ($width, $color, $top) {
+
+  position: relative;
+  padding-right: $width + 10px;
+
+  &:after {
+
+    position: absolute;
+    top: $top;
+    right: 0;
+    z-index: 1;
+    content: '';
+
+    display: block;
+    width: $width;
+    height: $width;
+    @include transform(rotate(45deg));
+
+    border-top: 1px solid $color;
+    border-right: 1px solid $color;
+
+  }
+
+}
+
+@mixin arrowTop ($width, $color, $top) {
+
+  position: relative;
+  padding-right: $width + 10px;
+
+  &:after {
+
+    position: absolute;
+    top: $top;
+    right: 0;
+    z-index: 1;
+    content: '';
+
+    display: block;
+    width: $width;
+    height: $width;
+    @include transform(rotate(45deg));
+
+    border-top: 1px solid $color;
+    border-left: 1px solid $color;
+
+  }
+
+}
+
+@mixin arrowLeft ($width, $color, $top) {
+
+  position: relative;
+  padding-right: $width + 10px;
+
+  &:after {
+
+    position: absolute;
+    top: $top;
+    right: 0;
+    z-index: 1;
+    content: '';
+
+    display: block;
+    width: $width;
+    height: $width;
+    @include transform(rotate(45deg));
+
+    border-bottom: 1px solid $color;
+    border-left: 1px solid $color;
+
+  }
+
+}
+
+@mixin vCenter () {
+
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+
+}
+
+@mixin afterCSS () {
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  content: "";
+
+  display: block;
+  height: 100%;
+  width: 100%;
+
+}
+
+@mixin beforeCSS () {
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  content: "";
+
+  display: block;
+  height: 100%;
+  width: 100%;
+
+}
+
+@mixin placeholder ($color) {
+
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+
+}
+
+@mixin placeholder-bold ($color) {
+
+
+  &::-webkit-input-placeholder {
+    font-weight: bold;
+    color: $color;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    font-weight: bold;
+    color: $color;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    font-weight: bold;
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    font-weight: bold;
+    color: $color;
+  }
+
+}
+
+@mixin placeholder-size ($color, $fsize) {
+
+
+  &::-webkit-input-placeholder {
+    font-size: $fsize;
+    color: $color;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    font-size: $fsize;
+    color: $color;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    font-size: $fsize;
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    font-size: $fsize;
+    color: $color;
+  }
+
+}
+
+
+@mixin fixed-rendering() {
+
+  @include transform(translate3d(0, 0, 0));
+  @include transform(translateZ(0));
+  @include backface-visibility(hidden);
+  @include perspective(1000px);
+
+}
+
+@mixin font-size($size) {
+  $res: ($size / 10);
+  font-size: $res + rem;
+}

@@ -1,0 +1,8 @@
+.business-model {
+	padding-bottom: 13.7142rem;
+	background-color: $generalSection;
+
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 4.64285rem;
+	}
+}

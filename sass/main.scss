@@ -1,0 +1,96 @@
+@import 'compass';
+
+
+
+/*******************************************
+      GENERAL PARTIALS
+ *******************************************/
+
+/** BOOTSTRAP 4 */
+@import "site/variables";
+@import "general/bootstrap4/bootstrap4";
+
+/** ICONS (Comment Out unneeded icon fonts) */
+@import "general/fontawesome/fontawesome";
+@import "general/ionicons/ionicons";
+
+/** CUSTOM FONT FROM ASSETS (if needed) */
+@import "general/custom-font";
+
+
+
+
+/*******************************************
+      PLUGINS PARTIALS
+ *******************************************/
+
+/** Malihu Scrollbar Plugin */
+@import "plugins/animateCSS";
+//@import "plugins/scrollbar_malihu";
+@import "plugins/swiper";
+@import "plugins/owl-carousel";
+@import "plugins/masterslider";
+@import "plugins/iziModal";
+@import "plugins/hamburger";
+@import "plugins/select2";
+@import "https://cdn.curator.io/3.1/css/curator.css";
+
+
+
+
+/*******************************************
+      SITE PARTIALS
+ *******************************************/
+
+@import "general/mixins";
+@import "general/extends";
+
+@import "site/header-menu-footer";
+@import "site/frontpage";
+@import "site/intro";
+@import "site/general-section";
+@import "site/pagination";
+@import "site/values";
+@import "site/quality";
+@import "site/business-model";
+@import "site/strategic-partnerships";
+@import "site/balenciaga";
+@import "site/balenciaga-carousel";
+@import "site/campaign";
+@import "site/youtube";
+@import "site/groups-ethics";
+@import "site/social";
+@import "site/our-brands";
+@import "site/distribution-network";
+@import "site/our-activities";
+@import "site/img-list-widget";
+@import "site/laboratory-1";
+@import "site/laboratory-2";
+@import "site/production-plant";
+@import "site/export-activity";
+@import "site/map";
+@import "site/history";
+@import "site/our-people";
+@import "site/departments";
+@import "site/attention";
+@import "site/selection-method";
+@import "site/management-trainee-program";
+@import "site/training-apprenticeship";
+@import "site/sustainability-pillars";
+@import "site/dividends";
+@import "site/annual-reports";
+@import "site/sustainability-reports";
+@import "site/sustainability-news";
+@import "site/sustainability-report_sustainability-pillars";
+@import "site/sustainability-carousel";
+@import "site/press-release-carousel";
+@import "site/press-release-content";
+@import "site/press-releases";
+@import "site/pictures-carousel";
+@import "site/videos-carousel";
+@import "site/press-releases_gallery";
+@import "site/sarantis-in-social";
+@import "site/terms-of-use";
+@import "site/contact";
+@import "site/shared";
+

@@ -1,0 +1,116 @@
+.press-releases_gallery {
+	background-color: $generalSection;
+	padding-top: 2.875rem;
+	padding-bottom: 6.875rem;
+
+	h2 {
+		font-size: 2.25rem;
+		font-weight: 600;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 2rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.75rem;
+		}
+	}
+
+	.padding-right {
+		padding-right: 2.5rem;
+
+		@include media-breakpoint-down(xl) {
+			padding-right: 15px;
+		}
+	}
+
+	.padding-left {
+		padding-left: 2.5rem;
+
+		@include media-breakpoint-down(xl) {
+			padding-left: 15px;
+		}
+	}
+
+	.moreBtn {
+		margin: 0;
+	}
+
+	.press-releases-box {
+		color: $white;
+		background-color: $light-blue;
+
+		.moreBtn {
+			font-weight: 400;
+			margin: 0;
+			color: $white;
+
+			&:hover {
+				color: $white;
+			}
+		}
+
+		.press-release-box {
+			border-bottom: 1px dotted $white;
+
+			.date {
+				font-weight: 600;
+				font-size: 0.75rem;
+				color: $bgTextStrong;
+			}
+
+			h3 {
+				font-weight: 600;
+				font-size: 1.5rem;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 1.375rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 1.25rem;
+				}
+
+				a {
+					color: $white;
+					text-decoration: none;
+				}
+			}
+
+			p {
+				font-size: 0.875rem;
+				line-height: 1.7;
+				font-size: 0.875rem;
+				margin: 0;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 0.8125rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 0.75rem;
+				}
+			}
+
+			.moreBtn {
+				font-weight: 600;
+			}
+		}
+	}
+
+	.gallery-box {
+		background-color: $white;
+
+		h2 {
+			color: $bgTextStrong;
+		}
+
+		p {
+			color: $galleryBoxText;
+		}
+
+		.gallery-box-img {
+			padding-top: 61.78861%;
+		}
+	}
+}
