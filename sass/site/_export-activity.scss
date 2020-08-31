@@ -40,4 +40,42 @@
 			font-weight: 600;
 		}
 	}
+
+	ul {
+		list-style: none;
+		padding-left: 0.75rem;
+
+		@include media-breakpoint-down(xs) {
+			padding-left: 0;
+		}
+
+		li {
+			font-size: 1.125rem;
+			color: $generalText;
+			position: relative;
+			margin-bottom: .5rem;
+			padding-left: 1.7625rem;
+
+			&:before {
+				content: "\2022";
+				color: $bullets;
+				font-weight: bold; 
+				display: inline-block;
+				position: absolute;
+				left: 0;
+			}
+
+			strong {
+				font-weight: 600;
+			}
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+		}
+	}
 }
