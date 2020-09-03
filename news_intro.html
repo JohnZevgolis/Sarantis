@@ -719,13 +719,14 @@
 <script src="assets/scripts/curator.js"></script>
 
 <script type="text/javascript">
-    // Change FEED_ID to your unique FEED_ID
-    var widget = new Curator.Widgets.Waterfall({
-        debug:true, // While you're testing
-        container:'#curator-feed',
-        feedId:'6859bd90-17ae-4b5a-a899-d4429f387c5a'
-    });
-
+    if($("#curator-feed").length) {
+        // Change FEED_ID to your unique FEED_ID
+        var widget = new Curator.Widgets.Waterfall({
+            debug:true, // While you're testing
+            container:'#curator-feed',
+            feedId:'6859bd90-17ae-4b5a-a899-d4429f387c5a'
+        });
+    }
 </script>
 
 

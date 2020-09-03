@@ -18,8 +18,10 @@
 					height: 32px;
 					font-size: .814285rem;
 				}
+			}
 
-				&.active {
+			&.active {
+				a {
 					background-color: $light-blue;
 					color: $white;
 				}

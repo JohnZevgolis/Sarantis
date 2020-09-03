@@ -16,6 +16,7 @@ $(document).ready(function() {
     timeline();
     customSelect();
     contactMap();
+    videosCarousel();
     $(".departments .department-img").matchHeight({
         byRow: true,
         property: 'height',
@@ -26,7 +27,7 @@ $(document).ready(function() {
     $(".general-section table").each(function() {
         $(this).wrap("<div class='table-responsive'></div>")
     });
-    
+ 
 
     /*********************************************************
      *      MEGA MENU
@@ -675,6 +676,7 @@ function pressRelease() {
 //==== Videos Carousel =================//
 function videosCarousel() {
     if($(".videos-carousel").length) {
+      var counter = 1;
       var mySwiper = new Swiper ('.videos-carousel .swiper-container', {
           zoom: false,
           spaceBetween: 35,
@@ -692,57 +694,10 @@ function videosCarousel() {
           on: {
               init: function () {
                 $(".videos-carousel .swiper-container .swiper-slide").each(function() {
-                      var newId = $(this).find(".youtube-video").attr("id");
-                      var newPlayer = YT.get(newId);
-                      var videoId = $(this).find(".youtube-video").data("video-id");
-                      
-                      $(this).find("img[data-player='"+newId+"']").attr("src","https://img.youtube.com/vi/"+videoId+"/0.jpg");
-                      $(this).find("img[data-player='"+newId+"']").click(function() {
-                          var oldId = $(".old-player").prop("data-old");
-                          var oldPlayer = YT.get(oldId);
-                          var newId1 = $(this).data("player");
-                          $(".old-player").prop("data-old", newId1); 
-                          
-                          if(myPlayerState == 1 && oldId != newId1) {
-                              oldPlayer.pauseVideo();
-                              $("img[data-player='"+newId1+"']").fadeOut(function() {
-                                  newPlayer.playVideo();
-                              });    
-                          } else {
-                              $("img[data-player='"+newId1+"']").fadeOut(function() {
-                                  newPlayer.playVideo();
-                              }); 
-                          }                 
-                      });     
-
-                      $(this).find(".play-video").click(function() {
-                          var oldId2 = $(".old-player").prop("data-old");
-                          var newId2 = $(this).data("player");
-                          var oldPlayer2 = YT.get(oldId2);
-                          var newPlayer2 = YT.get(newId2);
-                          $(".old-player").prop("data-old", newId2);
-
-                          if(myPlayerState == 1 && oldId2 == newId2) {
-                              newPlayer2.pauseVideo();
-                          } else if(myPlayerState == 1 && oldId2 != newId2) {
-                              oldPlayer2.pauseVideo();
-                              if($("img[data-player='"+newId2+"']").is(":visible")) {
-                                  $("img[data-player='"+newId2+"']").fadeOut(function() {
-                                      newPlayer2.playVideo();
-                                  });    
-                              } else {
-                                  newPlayer2.playVideo();
-                              } 
-                          } else {
-                              if($("img[data-player='"+newId2+"']").is(":visible")) {
-                                  $("img[data-player='"+newId2+"']").fadeOut(function() {
-                                      newPlayer2.playVideo();
-                                  });    
-                              } else {
-                                  newPlayer.playVideo();
-                              }                             
-                          }
-                      })      
+                    var id = $(this).find(".youtube-video").attr("id");
+                    var videoId = $(this).find(".youtube-video").data("video-id");
+                                       
+                    $(this).find(".video-thumb[data-player='"+id+"']").attr("src","https://img.youtube.com/vi/"+videoId+"/0.jpg");   
                 });
               }
           },

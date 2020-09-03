@@ -1,6 +1,20 @@
 .sustainability-reports {
 	background-color: $generalSection;
 
+	& > .container-fluid {
+		padding: 0;
+		padding-top: 4.6875rem;
+		padding-bottom: 3.4375rem;
+
+		& > .row {
+			margin: 0;
+
+			& > .col-lg-7 {
+				padding-left: 0;
+			}
+		}
+	}
+
 	.sustainability-reports-box {
 		.year {
 			font-weight: 600;
