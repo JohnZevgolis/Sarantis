@@ -435,121 +435,140 @@
 
      <!-- Intro -->
 
-    <main class="intro news-intro">
+    <main class="intro">
         <div class="container">
             <div class="row">
-                <div class="col-xxl-9">
-                    <h1>Contact us</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="col-xxl-6">
+                    <span class="d-block mb-3">INVESTOR RELATIONS</span>
+                    <h1>Email Alert</h1>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Contact Map -->
+    <!-- General Section -->
 
-    <section class="contact-map">
-        <div class="container-fluid px-0">
-            <div class="row mx-0">
-                <div class="col-xl-11 px-0 offset-xl-1">
-                    <div id="contact-map" class="news-margin-top"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-
-    <section class="contact">
+    <section class="general-section plain-text email-alert">
         <div class="container">
-            <div class="contact-form-intro">
-                <div class="row">
-                    <div class="col-lg-6 pr-xxl-5">
-                        <div class="pr-xl-5">
-                            <p>Thank you for your interest in our Group. To ask a question, report a comment or make a suggestion please do get in touch with us.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 pl-xxl-5">
-                        <div class="contact-info mt-3 mt-lg-0">
-                            <h2 class="mb-1">GR. SARANTIS S.A.</h2>
-                            <p>26, Amaroussiou - Halandriou Street<br>
-                            151 25 Maroussi, Athens, Greece<br>
-                            Tel: +30 210 6173000 - Fax: +30 210 6197081<br>
-                            e-mail: <a href="mailto:info@sarantis.gr">info@sarantis.gr</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="mb-4">Contact Form</h2>
-                    </div>
-                </div>
-                <form>
-                    <div class="row">
-                        <div class="col-lg-6 pr-xxl-5 d-flex flex-column">
-                            <div class="form-group mb-4">
+            <div class="row">
+                <div class="col-lg-6 pr-lg-4 pr-xl-4 order-1 order-lg-0">
+                    <div>
+                        <h4 class="mb-4">Subscribe to Email Alert</h4>
+                        <form>
+                            <div class="form-group">
                                 <label for="firstname">First Name:*</label>
                                 <input type="text" class="form-control" name="firstname" id="firstname">
                             </div>
-                            <div class="form-group mb-4">
+                            <div class="form-group">
                                 <label for="lastname">Last Name:*</label>
                                 <input type="text" class="form-control" name="lastname" id="lastname">
                             </div>
-                            <div class="form-group mb-4">
+                            <div class="form-group">
                                 <label for="email">Email:*</label>
-                                <input type="email" class="form-control" name="email" id="email">
+                                <input type="email" name="email" class="form-control" id="email">
                             </div>
-                            <div class="form-group mb-4 position-relative">
-                                <label for="countries">Country:*</label>
-                                <input type="text" class="form-control" name="countries" id="countries">
+                            <div class="form-group">
+                                <label for="company">Company:*</label>
+                                <input type="text" class="form-control" name="company" id="company">
                             </div>
-                            <div class="form-group mb-4">
+                             <div class="form-group">
                                 <label for="profession">Profession:*</label>
                                 <div class="select-wrapper">
                                     <select id="profession" class="form-control" name="profession">
                                         <option value="">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 pl-xxl-5 d-flex flex-column">
-                            <div class="form-group mb-4">
-                                <label for="department">Department:</label>
-                                <div class="select-wrapper">
-                                    <select id="department" class="form-control" name="department">
+                                        <option value="">Other</option>
+                                        <option value="">Other</option>
                                         <option value="">Other</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group mb-4">
-                                <label for="phone">Phone No:</label>
-                                <input type="text" class="form-control" minlength="10" maxlength="10" name="phone" id="phone">
+                            <div class="form-group checkbox-wrapper pb-4">
+                                <label class="mb-3">I want to receive:</label>
+                                <div class="d-flex">
+                                    <div class="mr-4">
+                                        <input type="checkbox" name="news" id="news">
+                                        <label class="mb-0 d-flex align-items-center" for="news">News</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="presentations" id="presentations">
+                                        <label class="mb-0 d-flex align-items-center" for="presentations">Presentations</label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group d-flex flex-column h-100 mb-4">
-                                <label for="message">Message:</label>
-                                <textarea class="form-control flex-grow-1" name="message" id="message"></textarea>
+                            <div class="form-group checkbox-wrapper pb-4">
+                                <label class="mb-3">Future Events:</label>
+                                <div>
+                                    <input type="checkbox" class="mr-2" name="events" id="events">
+                                    <label class="mb-0 d-flex align-items-center" for="events">Events</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 pr-xxl-5">
-                            <span class="d-block mandatory mb-2 mb-lg-0">Fields marked with asterisk (*) are mandatory.</span>
-                        </div>
-                        <div class="col-lg-6 pl-xxl-5">
-                            <div class="d-md-flex d-lg-block d-xl-flex mt-2">
-                                <div class="mr-3">
+                            <div class="form-group days pb-3 text-left">
+                                <label class="mb-1" for="days">How many days in advance would you like to be notified?</label>
+                                <small class="d-block mb-2">(values between 1 and 7):</small>
+                                <input type="text" class="form-control" id="days" name="days" minlength="1" maxlength="1">
+                            </div>
+                            <div class="d-flex flex-wrap recaptcha">
+                                <div class="mr-3 mb-2">
                                     <div id="recaptcha">
                                         <div class="g-recaptcha" data-sitekey="6LdexHYUAAAAAIO5sNauadxcXiL6q6PJCsn7osTy"></div>
                                     </div>
                                 </div>
-                                <button class="btn mt-4 mt-md-0 mt-lg-4 mt-xl-0" type="submit">SEND</button>
+                                <small class="d-block mt-2">Fields marked with asterisk (*) are mandatory.</small>
                             </div>
-                        </div>
+                            <button class="btn mt-3 d-flex justify-content-between align-items-center" type="submit">SEND</button>
+                        </form>
                     </div>
-                </form>
+                    <div class="d-block d-lg-none mt-5">
+                        <h4 class="mb-4">Unsubscribe to Email Alert</h4>
+                        <form>
+                            <div class="form-group">
+                                <label for="email2">Email:*</label>
+                                <input type="email" name="email2" class="form-control" id="email2">
+                            </div>
+                            <button class="btn mt-3 d-flex justify-content-between align-items-center" type="submit">SEND</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-0 pl-lg-4 pl-xl-5">
+                    <div class="general-section-img bg-img negative-margin" style="background-image: url('assets/images/email_alert.jpg');"></div>
+                    <div class="d-none d-lg-block">
+                        <h4 class="mb-4">Unsubscribe to Email Alert</h4>
+                        <form>
+                            <div class="form-group">
+                                <label for="email2">Email:*</label>
+                                <input type="email" name="email2" class="form-control" id="email2">
+                            </div>
+                            <button class="btn mt-3 d-flex justify-content-between align-items-center" type="submit">SEND</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <div class="environment-widget hm-common" style="background-image: url('assets/images/ir_releases_banner.jpg')">
+
+        <div class="container h-100">
+
+            <div class="row h-100 align-items-center">
+
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+
+                    <h2 class="wg-title">IR Releases</h2>
+
+                    <div class="wg-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+
+                    <a href="" class="moreBtn">More</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
     <!-- End FrontPage -->
 
@@ -655,7 +674,6 @@
 
 </div>
 
-<div id="youtube" class="iziModal"></div>
 
 
 <!-- Other JS Components -->
@@ -694,15 +712,10 @@
 
 <script src="assets/scripts/jquery.nicescroll.min.js"></script>
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBmUXYXi_Zufpz1rKucKIT1dsU9yIdx_Y"></script>
-
 <script src="assets/scripts/main.js"></script>
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-<script>
-    var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
-</script>
 
 </body>
 
