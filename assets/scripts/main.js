@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
     $("#modal-default").iziModal();
 
     headingHeight();
@@ -17,6 +16,8 @@ $(document).ready(function() {
     customSelect();
     contactMap();
     videosCarousel();
+    datepicker();
+    masonry($(".press-grid"), ".press-box-item");
     $(".departments .department-img").matchHeight({
         byRow: true,
         property: 'height',
@@ -33,6 +34,7 @@ $(document).ready(function() {
     if($(".contact .contact-form #countries").length) {
         autocomplete($(".contact .contact-form #countries")[0], countries);
     }  
+
  
 
     /*********************************************************
@@ -254,6 +256,7 @@ $(window).on("load", throttle(function (e) {
         animations($(".bg-color"),"55%", "-10%");
         counter();
         zoomOut($(".hm-common"),".zoomOut");
+        loadMasonry();
     });
 
 }, 50));
@@ -1242,4 +1245,53 @@ function autocomplete(inp, arr) {
     document.addEventListener("click", function (e) {
         closeAllLists(e.target);
     });
+}
+
+//==== Datepicker =================//
+function datepicker() {
+    if($(".investors-press,.regulated-information").length) {
+        $("#from").datepicker({
+            minDate: '0', 
+            maxDate: '+1Y+6M',
+            dateFormat: "dd-mm-yy",
+            onSelect: function(dateStr) {
+                var min = $(this).datepicker('getDate');
+                $('#to').datepicker('option', 'minDate', min || '0');
+            }    
+        });
+
+        $('#to').datepicker({
+            minDate: '0', 
+            maxDate: '+1Y+6M', 
+            dateFormat: "dd-mm-yy",
+            onSelect: function(dateStr) {
+                var max = $(this).datepicker('getDate'); 
+                $('#from').datepicker('option', 'maxDate', max || '+1Y+6M');
+            }
+        });
+    }
+}
+
+/*********  Masonry  ***********/
+var masonry;
+
+function masonry(parent, item) {
+    if(parent.length) {
+        masonry = parent;
+        parent.masonry({
+            itemSelector: item,
+            percentPosition: true,
+            isAnimated:true,
+            columnWidth:1,
+            animationOptions:{duration:350, queue:false},
+            isFitWidth: false,
+            gutter: 0
+        });
+    }
+}
+
+function loadMasonry() {
+    if(masonry.length) {
+        masonry.masonry("layout");
+    }
 }

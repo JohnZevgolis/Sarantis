@@ -1,0 +1,231 @@
+.investors-press {
+	background-color: $generalSection;
+	padding-top: 1.75rem;
+	padding-bottom: 2.1875rem;
+
+	.select-wrapper {
+		position: relative;
+		width: 50%;
+
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+
+		&:before {
+			content: "\f078";
+			font-weight: 900;
+			font-family: "Font Awesome 5";
+			position: absolute;
+			color: $light-blue;
+			@extend %vCenter;
+			right: 2.75rem;
+			font-size: 1rem;
+		}
+
+		select {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;   
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 2.0625rem;
+			padding-right: calc((1.4375rem * 2) + 14px);
+			font-weight: 500;
+			background-color: $white;
+			color: $generalText;
+			width: 100%;
+			box-shadow: none;
+			border: none;
+			outline: none;
+			height: 62px;
+			line-height: 62px;
+			font-size: 1.125rem;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+
+			&::-ms-expand {
+			    display: none;
+			}
+
+			&:focus {
+				border: none;
+				outline: none;
+			}
+		}
+	}
+
+	.calendar-wrapper {
+		position: relative;
+		width: 20%;
+
+		@include media-breakpoint-down(lg) {
+			width: 50%;
+		}
+
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+		}
+
+		&:before {
+			content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAXCAYAAAARIY8tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1ZTA3ZmM2Yi00OGUxLTE4NDItYTdkMS1lODEyYTM3ZjA5YmUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjU5NTQ1QTlGMjkxMTFFQUFBNDJCNzBFM0MxQzcyQjEiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjU5NTQ1QThGMjkxMTFFQUFBNDJCNzBFM0MxQzcyQjEiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M2Y3YjFlMzgtNmE0ZS05OTRhLThiZTUtZTdhOTE3OGJlYjk2IiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6ZjgxMTg2MjQtYjU1Ny0xMWVhLWFlNWEtYWIwZDYyZTkwMzE0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+yRmNTgAAAbZJREFUeNrsls0rRGEUh+8d0+SzsFA2WFCzI38ANhRZWNrJlA0LiSVRUrOxtFCazFaSlTSaspFsfOymUJNkyRjka8b1nOncuqa5RuPaOfXMez/e9/ebc897T9e0LMtwhrn3IEMTJGAA9o3vowd2IAhXVm/Nl5t+h3AtQwtkoQwq9LwVql3Eb3WOzK2XeegEGJMYpXIGXBCxZZhQw3v9V3asQbeLQTQvQ8mkGTLorjBOi+AsTOrNbXjKEwnDuovBhWZoxwzUwZBq3onBOBzBIGlZWoOgLhCz3SI1aNTxBTalBmhI1oei7eOnAeIi7lgkBe6ELaN4bOnchH1BteKibRf5vcDCE+NnkXWZm9M0jVha3M7g1PA2OqDdziCo283LKHe+B2Ge24LjRSs57BcNHdGb9xl/HP8GRcP/y/XS5Ma00Um8Utwohb7xymAKlvKudUG/V49I2kxaG5xw4OhNnmSQ2/qQ0uOM1zX4gEpHO5eOcF3IoKpEgw0YhhE9f4RVp6Y0u0vGN2m5VP/Zi1aBhuyuYwiIwSgHETiHWKHnWMLW74M2CJnyVYFjiJM5DztqEhbJJvIpwACmEnunUtaaqgAAAABJRU5ErkJggg==');
+			color: $light-blue;
+			position: absolute;
+			@extend %vCenter;
+			right: 2.375rem;
+			line-height: 1;
+		}
+
+		input[type="text"] {
+			background-color: $white;
+			color: $generalText;
+			width: 100%;
+			box-shadow: none;
+			border: none;
+			outline: none;
+			height: 62px;
+			line-height: 62px;
+			font-size: 1.125rem;
+			padding-left: 1.625rem;
+			padding-right: calc(1.375rem + 24px + 1rem);
+			font-weight: 600;
+
+			&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			  color: $generalText;
+			  opacity: 1; /* Firefox */
+			}
+
+			&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			  color: $generalText;
+			}
+
+			&::-ms-input-placeholder { /* Microsoft Edge */
+			  color: $generalText;
+			}
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.submit-wrapper {
+		width: 10%;
+
+		@include media-breakpoint-down(lg) {
+			width: 50%;
+		}
+
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+		}
+
+		button[type="submit"] {
+			box-shadow: none;
+			border: none;
+			outline: none;
+			height: 62px;
+			line-height: 62px;
+			background-color: $generalMeetingsAnchor;
+			color: $white;
+			font-weight: 600;
+			font-size: 1.125rem;
+			width: 100%;
+			max-width: 151px;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.press-box-item[style*="left: 0%"] {
+		padding-right: 1.5rem;
+
+		@include media-breakpoint-down(md) {
+			padding-right: 15px;
+		}
+	}
+
+	.press-box-item[style*="left: 50%"] {
+		padding-left: 1.5rem;
+
+		@include media-breakpoint-down(md) {
+			padding-left: 15px;
+		}
+	}
+
+	.press-box {
+		border-bottom: 1px dotted #b9b9ba;
+		padding-top: 2rem;
+
+		.date {
+			color: $light-blue;
+			font-weight: 600;
+			font-size: 0.875rem;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 0.8125rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 0.75rem;
+			}
+		}
+
+		h2 {
+			font-size: 1.875rem;
+			font-weight: 600;
+			color: $generalText;
+
+			a {
+				color: $generalText;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			@include media-breakpoint-down(lg) {
+				max-width: none;
+				font-size: 1.775rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.675rem;
+			}
+		}
+
+		p {
+			font-size: 0.875rem;
+			color: $pressReleaseText;
+			margin: 0;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 0.8125rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 0.75rem;
+			}
+		}
+
+		.moreBtn {
+			color: $generalText;
+			font-weight: 600 !important;
+		}
+	}
+}

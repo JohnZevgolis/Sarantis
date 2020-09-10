@@ -555,7 +555,9 @@ img {
   }
 }
 
-/****** Animations ********/
+/******************************************************
+    Animations
+ ******************************************************/
 
 .from-top {
   @include transform(translateY(-20px));
@@ -609,7 +611,9 @@ img {
   }
 }
 
-/****** Custom Select ********/
+/******************************************************
+    Custom Select
+ ******************************************************/
 
 .select2-container {
   max-width: 434.55px;
@@ -727,4 +731,139 @@ img {
       }
     }
   }
+}
+
+/******************************************************
+    Datepicker
+ ******************************************************/
+
+.ui-widget.ui-widget-content {
+  border: none;
+  padding: 1.625rem 1.4375rem 1.125rem;
+  font-family: 'PFFuturaNeu';
+  width: 364px;
+  border-radius: 0;
+  z-index: 1 !important;
+
+  @media (max-width: 420px) {
+    width: 100%;
+    left: 0 !important;
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .ui-datepicker-header {
+    background-color: transparent;
+    border: none;
+    padding-top: 0;
+
+    .ui-datepicker-title {
+      font-weight: 500;
+      color: $generalText;
+      font-size: 1.125rem;
+    }
+
+    .ui-icon {
+      background-image: none;
+    }
+
+    .ui-datepicker-prev {
+      left: 2px;
+      top: 2px;
+    }
+
+    .ui-datepicker-next {
+      right: 2px;
+      top: 2px;
+    }
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      cursor: pointer;
+
+      &.ui-state-hover {
+        border: none;
+      }
+
+      &:before {
+        font-family: "Font Awesome 5";
+        font-weight: 900;
+        font-size: 1rem;
+        color: $generalText;
+      }
+    }
+
+    .ui-datepicker-prev {
+      &:before {
+        content: "\f053";
+      } 
+    }
+
+    .ui-datepicker-next {
+      &:before {
+        content: "\f054";
+      } 
+    }
+  }
+
+  .ui-datepicker-calendar {
+    margin-bottom: 0;
+
+    th {
+      font-weight: 500;
+      color: $generalText;
+      font-size: 0.875rem;
+      margin-bottom: 1px;
+    }
+
+    td {
+      padding: 0;
+
+      .ui-state-default {
+        background: $white;
+        font-size: 0.875rem;
+        color: $generalText;
+        border: none;
+        font-weight: 500;
+        padding: 1rem .5rem 0.3875rem; 
+      }
+
+      &.ui-state-disabled {
+        opacity: 1;
+
+        .ui-state-default {
+          background: rgba(75,76,81,.1);
+          color: $generalText;
+        }
+      }
+
+      &.ui-datepicker-current-day {
+        .ui-state-default.ui-state-active {
+          background-color: $light-blue;
+          border-color: $generalText;
+          color: $white;
+        }
+      }
+
+      &.ui-datepicker-today {
+        .ui-state-default.ui-state-highlight {
+          background-color: $generalText;
+          color: $white;
+
+          &.ui-state-active {
+            background-color: $generalText;
+          }
+        }
+      }
+    }
+    
+  } 
 }

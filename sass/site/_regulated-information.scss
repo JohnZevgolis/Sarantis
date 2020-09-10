@@ -1,0 +1,193 @@
+.regulated-information {
+	background-color: $generalSection;
+	padding-bottom: 3.3125rem;
+
+	.padding-right {
+		padding-right: 2.5rem;
+
+		@include media-breakpoint-down(md) {
+			padding-right: 15px;
+		}
+	}
+
+	.padding-left {
+		padding-left: 2.5rem;
+
+		@include media-breakpoint-down(md) {
+			padding-left: 15px;
+		}
+	}
+
+	h2 {
+		font-size: 1.875rem;
+		font-weight: 600;
+		color: $generalMeetingsAnchor;
+
+		a {
+			color: $generalMeetingsAnchor;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		@include media-breakpoint-down(lg) {
+			max-width: none;
+			font-size: 1.775rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.675rem;
+		}
+	}
+
+	.calendar-wrapper {
+		position: relative;
+		width: 23%;
+
+		@include media-breakpoint-down(xl) {
+			width: 25%;
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 33.3%;
+		}
+
+		@include media-breakpoint-down(md) {
+			width: 41.66667%;
+		}
+
+		@include media-breakpoint-down(sm) {
+			width: 50%;
+		}
+
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+		}
+
+		&:before {
+			content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAZCAYAAAAiwE4nAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1ZTA3ZmM2Yi00OGUxLTE4NDItYTdkMS1lODEyYTM3ZjA5YmUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDY4QTkwNzJGMzRGMTFFQUIxODhDRDQyRUJBRURDOEQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDY4QTkwNzFGMzRGMTFFQUIxODhDRDQyRUJBRURDOEQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjEzNWRkYTctNjg0NC1jYzQ5LTkzNmItYmU3NzE5YjFmZTBlIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6ZmJhZmVmZTQtOTVmNi0xMWVhLWJjNWQtZDQzMzU3MzJlMjk4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+KG4PywAAAUpJREFUeNpi+P//PwMaNvgPAQvQxDdAxQ2wqN2ApnYBFrVgzAhSzIAK+IHYAYgfA/E5JHFzIJYA4gNA/BFN7QsgPomk1giIZdHUggHIwv8MdARMUPo6ECtCsTdUbC2SGAjvhop7Y1G7G03tWixqr4NFoGF9ASmc2YBYAYhF0MJfDCrOhkWtGJpaESxqQXb8Z8Hi619A/ACL+CsS1L6BYpxBSvc4HHALpwHxByC2wSLmjSTWTqQYQQu/QTX9wSL2G0nsO5FiCIAlldIKg1PpoInDJiC+AMQmWMQckcRKiRQjaKEcEOsDMQ8WMX4kMWkixUbjkCEPiEHVlg4WMXMksWQsYmRZCKrP/IFYBIuYJJKYLhYx/ABHHMJKew4sYlxIYkJYxPDGIQsOd2Ar7bGJvYPioVd4Dx8LYY2or0B8hsZ2gYpJbrq32gACDACBXwbJ/679CQAAAABJRU5ErkJggg==');
+			position: absolute;
+			@extend %vCenter;
+			right: 2.375rem;
+			line-height: 1;
+		}
+
+		input[type="text"] {
+			background-color: $light-blue;
+			color: $white;
+			width: 100%;
+			box-shadow: none;
+			border: none;
+			outline: none;
+			height: 62px;
+			line-height: 62px;
+			font-size: 1.125rem;
+			padding-left: 1.625rem;
+			padding-right: calc(1.375rem + 24px + 1rem);
+			font-weight: 600;
+
+			&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			  color: $white;
+			  opacity: 1; /* Firefox */
+			}
+
+			&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			  color: $white;
+			}
+
+			&::-ms-input-placeholder { /* Microsoft Edge */
+			  color: $white;
+			}
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.submit-wrapper {
+		width: 54%;
+
+		@include media-breakpoint-down(xl) {
+			width: 50%;
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 33.3%;
+		}
+
+		@include media-breakpoint-down(md) {
+			width: 16.66667%;
+		}
+
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+
+		button[type="submit"] {
+			box-shadow: none;
+			border: none;
+			outline: none;
+			height: 62px;
+			line-height: 62px;
+			background-color: $generalMeetingsAnchor;
+			color: $white;
+			font-weight: 600;
+			font-size: 1.125rem;
+			width: 100%;
+			max-width: 122px;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.information-box {
+		border-bottom: 1px dotted #b9b9ba;
+		padding-top: 2rem;
+
+		.date {
+			color: $light-blue;
+			font-weight: 600;
+			font-size: 0.875rem;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 0.8125rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 0.75rem;
+			}
+		}
+
+		p {
+			font-size: 0.875rem;
+			color: $informationBoxText;
+			font-weight: 500;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 0.8125rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 0.75rem;
+			}
+		}
+
+		.moreBtn {
+			color: $generalMeetingsAnchor;
+			font-weight: 600 !important;
+			margin-top: 0;
+		}
+	}
+}
