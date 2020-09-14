@@ -30,10 +30,7 @@ $(document).ready(function() {
     });
     $("#phone,#days").on("keypress", function() {
         validate(event);
-    });
-    if($(".contact .contact-form #countries").length) {
-        autocomplete($(".contact .contact-form #countries")[0], countries);
-    }  
+    }); 
 
  
 
@@ -1149,104 +1146,6 @@ function validate(evt) {
   }
 }
 
-//==== Autocomplete =================//
-function autocomplete(inp, arr) {
-      /*the autocomplete function takes two arguments,
-      the text field element and an array of possible autocompleted values:*/
-      var currentFocus;
-      /*execute a function when someone writes in the text field:*/
-      inp.addEventListener("input", function(e) {
-          var a, b, i, val = this.value;
-          /*close any already open lists of autocompleted values*/
-          closeAllLists();
-          if (!val) { return false;}
-          currentFocus = -1;
-          /*create a DIV element that will contain the items (values):*/
-          a = document.createElement("DIV");
-          a.setAttribute("id", this.id + "autocomplete-list");
-          a.setAttribute("class", "autocomplete-items");
-          /*append the DIV element as a child of the autocomplete container:*/
-          this.parentNode.appendChild(a);
-          /*for each item in the array...*/
-          for (i = 0; i < arr.length; i++) {
-            /*check if the item starts with the same letters as the text field value:*/
-            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-              /*create a DIV element for each matching element:*/
-              b = document.createElement("DIV");
-              /*make the matching letters bold:*/
-              b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-              b.innerHTML += arr[i].substr(val.length);
-              /*insert a input field that will hold the current array item's value:*/
-              b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-              /*execute a function when someone clicks on the item value (DIV element):*/
-                  b.addEventListener("click", function(e) {
-                  /*insert the value for the autocomplete text field:*/
-                  inp.value = this.getElementsByTagName("input")[0].value;
-                  /*close the list of autocompleted values,
-                  (or any other open lists of autocompleted values:*/
-                  closeAllLists();
-              });
-              a.appendChild(b);
-            }
-          }
-      });
-      /*execute a function presses a key on the keyboard:*/
-      inp.addEventListener("keydown", function(e) {
-          var x = document.getElementById(this.id + "autocomplete-list");
-          if (x) x = x.getElementsByTagName("div");
-          if (e.keyCode == 40) {
-            /*If the arrow DOWN key is pressed,
-            increase the currentFocus variable:*/
-            currentFocus++;
-            /*and and make the current item more visible:*/
-            addActive(x);
-          } else if (e.keyCode == 38) { //up
-            /*If the arrow UP key is pressed,
-            decrease the currentFocus variable:*/
-            currentFocus--;
-            /*and and make the current item more visible:*/
-            addActive(x);
-          } else if (e.keyCode == 13) {
-            /*If the ENTER key is pressed, prevent the form from being submitted,*/
-            e.preventDefault();
-            if (currentFocus > -1) {
-              /*and simulate a click on the "active" item:*/
-              if (x) x[currentFocus].click();
-            }
-          }
-      });
-      function addActive(x) {
-        /*a function to classify an item as "active":*/
-        if (!x) return false;
-        /*start by removing the "active" class on all items:*/
-        removeActive(x);
-        if (currentFocus >= x.length) currentFocus = 0;
-        if (currentFocus < 0) currentFocus = (x.length - 1);
-        /*add class "autocomplete-active":*/
-        x[currentFocus].classList.add("autocomplete-active");
-      }
-      function removeActive(x) {
-        /*a function to remove the "active" class from all autocomplete items:*/
-        for (var i = 0; i < x.length; i++) {
-          x[i].classList.remove("autocomplete-active");
-        }
-      }
-      function closeAllLists(elmnt) {
-        /*close all autocomplete lists in the document,
-        except the one passed as an argument:*/
-        var x = document.getElementsByClassName("autocomplete-items");
-        for (var i = 0; i < x.length; i++) {
-          if (elmnt != x[i] && elmnt != inp) {
-          x[i].parentNode.removeChild(x[i]);
-        }
-      }
-    }
-    /*execute a function when someone clicks in the document:*/
-    document.addEventListener("click", function (e) {
-        closeAllLists(e.target);
-    });
-}
-
 //==== Datepicker =================//
 function datepicker() {
     if($(".investors-press,.regulated-information").length) {
@@ -1272,12 +1171,12 @@ function datepicker() {
     }
 }
 
-/*********  Masonry  ***********/
-var masonry;
+//==== Masonry =================//
+var masonryGrid;
 
 function masonry(parent, item) {
     if(parent.length) {
-        masonry = parent;
+        masonryGrid = parent;
         parent.masonry({
             itemSelector: item,
             percentPosition: true,
@@ -1291,7 +1190,252 @@ function masonry(parent, item) {
 }
 
 function loadMasonry() {
-    if(masonry.length) {
-        masonry.masonry("layout");
+    if(masonryGrid != undefined && masonryGrid.length) {
+        masonryGrid.masonry("layout");
     }
+}
+
+//==== Synchronize Charts =================//
+if($("#stock-chart").length) {
+    AmCharts.ready(function () {
+
+        GenerateChartData2();
+        createStockChart();
+        createCal();
+        $('.amChartsPeriodSelector').addClass('clearfix');
+       
+    });
+}
+
+
+var _theChartData = [];
+
+function GenerateChartData2() {
+    for(var i=0;i < _theData.length; i++) {
+        var temp = [];
+        for (var j = 0; j < _theData[i].data.length; j++) {
+            var d = new Date(parseInt(_theData[i].data[j].year), parseInt(_theData[i].data[j].month), parseInt(_theData[i].data[j].day));                
+            var price = parseFloat(_theData[i].data[j].close_price);
+            if(isNaN(price))
+            {
+                price = parseFloat(_theData[i].data[j].a);
+            }
+            var vol = parseFloat(_theData[i].data[j].volume);
+            if(isNaN(vol))
+            {
+                vol = parseFloat(_theData[i].data[j].b);
+            }
+            temp.push({
+                date: d,
+                value: price,
+                volume: vol
+            });                
+        }
+        _theChartData.push({
+            name: _theData[i].name,
+            data: temp
+        });
+    }
+    
+}
+
+function generateChartData() {
+    var firstDate = new Date();
+    firstDate.setDate(firstDate.getDate() - 500)
+    firstDate.setHours(0, 0, 0, 0);
+
+    for (var i = 0; i < 500; i++) {
+        var newDate = new Date(firstDate);
+        newDate.setDate(newDate.getDate() + i);
+
+        var a1 = Math.round(Math.random() * (40 + i)) + 100 + i;
+        var b1 = Math.round(Math.random() * (1000 + i)) + 500 + i * 2;
+
+        var a2 = Math.round(Math.random() * (100 + i)) + 200 + i;
+        var b2 = Math.round(Math.random() * (1000 + i)) + 600 + i * 2;
+
+        var a3 = Math.round(Math.random() * (100 + i)) + 200;
+        var b3 = Math.round(Math.random() * (1000 + i)) + 600 + i * 2;
+
+        var a4 = Math.round(Math.random() * (100 + i)) + 200 + i;
+        var b4 = Math.round(Math.random() * (100 + i)) + 600 + i;
+
+        chartData1.push({
+            date: newDate,
+            value: a1,
+            volume: b1
+        });
+        chartData2.push({
+            date: newDate,
+            value: a2,
+            volume: b2
+        });
+        chartData3.push({
+            date: newDate,
+            value: a3,
+            volume: b3
+        });
+        chartData4.push({
+            date: newDate,
+            value: a4,
+            volume: b4
+        });
+    }
+}
+
+function createStockChart() {
+    var chart = new AmCharts.AmStockChart();
+    chart.colors = _colors; 
+
+    // DATASETS //////////////////////////////////////////
+    // create data sets first
+    var dataSet1 = new AmCharts.DataSet();
+    dataSet1.title = _theChartData[0].name;
+    dataSet1.fieldMappings = [{
+        fromField: "value",
+        toField: "value"
+    }, {
+        fromField: "volume",
+        toField: "volume"
+    }];
+    dataSet1.dataProvider = _theChartData[0].data;
+    dataSet1.categoryField = "date";
+
+    var dataSet2 = new AmCharts.DataSet();
+    dataSet2.title = _theChartData[1].name;
+    dataSet2.fieldMappings = [{
+        fromField: "value",
+        toField: "value"
+    }, {
+        fromField: "volume",
+        toField: "volume"
+    }];
+    dataSet2.dataProvider = _theChartData[1].data;
+    dataSet2.categoryField = "date";
+
+    var dataSet3 = new AmCharts.DataSet();
+    dataSet3.title = _theChartData[2].name;
+    dataSet3.fieldMappings = [{
+        fromField: "value",
+        toField: "value"
+    }, {
+        fromField: "volume",
+        toField: "volume"
+    }];
+    dataSet3.dataProvider = _theChartData[2].data;
+    dataSet3.categoryField = "date";
+
+    // set data sets to the chart
+    chart.dataSets = [dataSet1, dataSet2, dataSet3];
+
+    // PANELS ///////////////////////////////////////////                                                  
+    // first stock panel
+    var stockPanel1 = new AmCharts.StockPanel();
+    stockPanel1.showCategoryAxis = true;
+    stockPanel1.title = lblClosurePrice;
+    stockPanel1.percentHeight = 70;
+
+    // graph of first stock panel
+    var graph1 = new AmCharts.StockGraph();
+    graph1.backgroundColor = "#000";
+    graph1.valueField = "value";
+    graph1.showBalloon = true;
+    graph1.comparable = true;
+    graph1.compareField = "value";
+    stockPanel1.addStockGraph(graph1);
+
+    // create stock legend                
+    stockPanel1.stockLegend = new AmCharts.StockLegend();
+
+
+    // second stock panel
+    var stockPanel2 = new AmCharts.StockPanel();
+    stockPanel2.title = lblVolume;
+    stockPanel2.percentHeight = 30;
+    var graph2 = new AmCharts.StockGraph();
+    graph2.valueField = "volume";
+    graph2.type = "column";
+    graph2.showBalloon = false;
+    graph2.fillAlphas = 1;
+    stockPanel2.addStockGraph(graph2);
+    stockPanel2.stockLegend = new AmCharts.StockLegend();
+
+    // set panels to the chart
+    chart.panels = [stockPanel1, stockPanel2];
+
+
+    // OTHER SETTINGS ////////////////////////////////////
+    var sbsettings = new AmCharts.ChartScrollbarSettings();
+    sbsettings.graph = graph1;
+    sbsettings.enabled = false;
+    chart.chartScrollbarSettings = sbsettings;
+
+    var cursorSettings = new AmCharts.ChartCursorSettings();
+    cursorSettings.valueBalloonsEnabled = true;
+    cursorSettings.cursorColor = '#525252';
+    cursorSettings.color = '#fff';
+    chart.chartCursorSettings = cursorSettings;
+
+
+    // PERIOD SELECTOR ///////////////////////////////////
+    var periodSelector = new AmCharts.PeriodSelector();
+    periodSelector.fromText = lblFrom;
+    periodSelector.toText = lblUntil;
+    periodSelector.periodsText = lblZoom;
+    periodSelector.position = "bottom";
+    periodSelector.periods = [{
+        period: "DD",
+        count: 10,
+        label: lbl10days
+    }, {
+        period: "MM",
+        selected: true,
+        count: 1,
+        label: lbl1month
+    }, {
+        period: "YYYY",
+        count: 1,
+        label: lbl1year
+    }, {
+        period: "YTD",
+        label: "YTD"
+    }, {
+        period: "MAX",
+        label: "MAX"
+    }];
+    chart.periodSelector = periodSelector;
+
+
+    // DATA SET SELECTOR
+    var dataSetSelector = new AmCharts.DataSetSelector();
+    dataSetSelector.comboBoxSelectText = lblSelect;
+    dataSetSelector.selectText = lblSelect;
+    dataSetSelector.compareText = lblCompare;
+    dataSetSelector.position = "bottom";
+    chart.dataSetSelector = dataSetSelector;
+
+    chart.write('stock-chart');
+
+    // var hhh=current_locale;
+    //enable chosen to the drop down list
+    //$('.amChartsDataSetSelector select').chosen();
+    //$('.amChartsPeriodSelector .amChartsInputField').datepicker($.datepicker.regional[current_locale + "_PAST"]);
+    //$('.ui-datepicker .ui-datepicker-calendar td a').click(function () {
+    //    //console.log('date selected!');
+    //});    
+}
+
+function createCal() {
+    $('.amChartsInputField:first-child').addClass("start");
+    $('.amChartsInputField:last-child').addClass("end");
+
+    $('input.start').datepicker({
+        dateFormat: 'dd-mm-yy',
+        maxDate: '0d'
+    });
+
+    $('input.end').datepicker({
+        dateFormat: 'dd-mm-yy',
+        maxDate: '0d'
+    });
 }

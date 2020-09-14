@@ -1,0 +1,39 @@
+.metoxi {
+	.metoxi-info-box {
+		span {
+			font-family: 'PFFuturaNeu-Book';
+		}
+
+		h5 {
+			color: $metoxih5;
+			font-size: 18px;
+		}
+	}
+
+	.metoxi-info-1 {
+		.metoxi-info-box {
+			border-bottom: 1px solid $companyProfileTableRow;
+
+			span {
+				font-size: 16px;
+				color: $metoxih5;
+			}
+		}
+	}
+
+	.metoxi-info-2 {
+		h2 {
+			color: $lightBlue;
+			margin-bottom: 2rem;
+		}
+
+		.metoxi-info-box {
+			border-bottom: 1px dotted $metoxiInfoBoxBorder;
+
+			span {
+				font-size: 14px;
+				color: $metoxiSpan;
+			}
+		}
+	}
+}

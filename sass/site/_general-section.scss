@@ -882,4 +882,129 @@
 			font-weight: 600 !important;
 		}
 	}
+
+	&.share-intro {
+		h5 {
+			font-weight: 600;
+			color: $light-blue;
+			font-size: 1.125rem;
+			margin-bottom: 2.5rem;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+		}
+
+		.share-element {
+			border-bottom: 1px dotted #b9baba;
+
+			h5 {
+				color: $generalText;
+				margin-bottom: 0;
+			}
+
+			span {
+				font-size: 1.125rem;
+				color: $contactFormLabel;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 1.0625rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 1rem;
+				}
+			}
+		}
+
+		.general-section-img {
+			.bg-img {
+				top: 0;
+				left: 0;
+				line-height: 1.5;
+				padding: 5.25rem 17% 6.3125rem;
+
+				@include media-breakpoint-down(xs) {
+					padding: 2rem 1.5rem;
+				}
+
+				.stock-price,.capitalization {
+					font-size: 1.125rem;
+					color: $stockPrice;
+
+					@include media-breakpoint-down(lg) {
+						font-size: 1.0625rem;
+					}
+
+					@include media-breakpoint-down(xs) {
+						font-size: 1rem;
+					}
+				}
+
+				.sar,.negative-value,.capitalization-value {
+					font-size: 2.25rem;
+					line-height: 1;
+
+					@include media-breakpoint-down(lg) {
+						font-size: 2rem;
+					}
+
+					@include media-breakpoint-down(xs) {
+						font-size: 1.75rem;
+					}
+				}
+
+				.sar,.capitalization {
+					color: $light-blue;
+				}
+
+				.negative-value {
+					color: $negativeValue;
+				}
+
+				.price {
+					color: $white;
+					font-weight: 600;
+					font-size: 5.8125rem;
+					line-height: 1;
+
+					@include media-breakpoint-down(lg) {
+						font-size: 4.875rem;
+					}
+
+					@include media-breakpoint-down(xs) {
+						font-size: 3.9375rem;
+					}
+				}
+
+				.date {
+					color: $shareDate;
+					font-size: 1.3125rem;
+
+					@include media-breakpoint-down(lg) {
+						font-size: 1.25rem;
+					}
+
+					@include media-breakpoint-down(xs) {
+						font-size: 1.1875rem;
+					}
+				}
+
+				.capitalization {
+					margin-top: 2rem;
+				}
+
+				.capitalization-value {
+					font-weight: 600;
+					color: $white;
+				}
+			}
+		}
+
+		
+	}
 }
