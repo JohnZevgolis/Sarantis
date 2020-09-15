@@ -1,0 +1,166 @@
+.investors-press_sustainability-report {
+	background-color: $generalSection;
+	padding-top: 4.5rem;
+	padding-bottom: 6.4375rem;
+
+	h2 {
+		font-size: 2.25rem;
+		font-weight: 600;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 2rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.75rem;
+		}
+	}
+
+	.padding-right {
+		padding-right: 2.5rem;
+
+		@include media-breakpoint-down(xl) {
+			padding-right: 15px;
+		}
+	}
+
+	.padding-left {
+		padding-left: 2.5rem;
+
+		@include media-breakpoint-down(xl) {
+			padding-left: 15px;
+		}
+	}
+
+	.date,.pdf {
+		font-weight: 600;
+		font-size: 0.875rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 0.8125rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 0.75rem;
+		}
+	}
+
+	.moreBtn {
+		margin: 0;
+		font-weight: 600 !important;
+	}
+
+	.subheading {
+		font-size: 1.125rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.0625rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1rem;
+		}
+	}
+
+	.pdf {
+		font-size: 1.5rem;
+		font-weight: 400;
+		line-height: 1;
+		color: $white;
+		text-decoration: none;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.375rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.25rem;
+		}
+	}
+
+	.investors-press-boxes {
+		background-color: $white;
+
+		h2 {
+			color: $main-blue;
+		}
+
+		.date {
+			color: $light-blue;
+		}
+
+		.investors-press-box {
+			border-bottom: 1px dotted #bdbfc4;
+			margin-bottom: 3rem;
+			padding-bottom: 3.5rem;
+
+			&:last-child {
+				border-bottom: none;
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+
+			h3 {
+				font-weight: 600;
+				font-size: 1.875rem;
+				line-height: 1.1;
+				color: $generalText;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 1.775rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 1.675rem;
+				}
+
+				a {
+					color: $generalText;
+					text-decoration: none;
+				}
+			}
+
+			p {
+				font-size: 0.875rem;
+				line-height: 1.7;
+				margin: 0;
+				color: $sustainabilityPillarsBoxText;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 0.8125rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 0.75rem;
+				}
+			}
+
+			.moreBtn {
+				color: $generalText;
+			}
+		}
+	}
+
+	.sustainability-report {
+		background-color: $light-blue;
+		color: $white;
+
+		h2 {
+			line-height: 1.3;
+		}
+	}
+
+	.corporate-presentation {
+		color: $generalText;
+		background-color: $corporatePresentation;
+
+		.subheading {
+			color: $light-blue;
+		}
+
+		.pdf {
+			color: $generalText;
+			margin-top: 2rem;
+		}
+	}
+}

@@ -17,6 +17,7 @@ $(document).ready(function() {
     contactMap();
     videosCarousel();
     datepicker();
+    syncCharts();
     masonry($(".press-grid"), ".press-box-item");
     $(".departments .department-img").matchHeight({
         byRow: true,
@@ -1150,8 +1151,8 @@ function validate(evt) {
 function datepicker() {
     if($(".investors-press,.regulated-information").length) {
         $("#from").datepicker({
-            minDate: '0', 
-            maxDate: '+1Y+6M',
+            // minDate: '0', 
+            maxDate: '0',
             dateFormat: "dd-mm-yy",
             onSelect: function(dateStr) {
                 var min = $(this).datepicker('getDate');
@@ -1160,8 +1161,8 @@ function datepicker() {
         });
 
         $('#to').datepicker({
-            minDate: '0', 
-            maxDate: '+1Y+6M', 
+            // minDate: '0', 
+            maxDate: '0', 
             dateFormat: "dd-mm-yy",
             onSelect: function(dateStr) {
                 var max = $(this).datepicker('getDate'); 
@@ -1438,4 +1439,224 @@ function createCal() {
         dateFormat: 'dd-mm-yy',
         maxDate: '0d'
     });
+}
+
+function syncCharts() {
+        /**
+     * In order to synchronize tooltips and crosshairs, override the
+     * built-in events with handlers defined on the parent element.
+     */
+    $('#stock-chart-small').bind('mousemove touchmove touchstart', function (e) {
+        var chart,
+            point,
+            i,
+            event;
+
+        for (i = 0; i < Highcharts.charts.length; i = i + 1) {
+            chart = Highcharts.charts[i];
+            event = chart.pointer.normalize(e.originalEvent); // Find coordinates within the chart
+            point = chart.series[0].searchPoint(event, true); // Get the hovered point
+
+            if (point) {
+                point.highlight(e);
+            }
+        }
+    });
+    /**
+     * Override the reset function, we don't need to hide the tooltips and crosshairs.
+     */
+    Highcharts.Pointer.prototype.reset = function () {
+        return undefined;
+    };
+
+    /**
+     * Highlight a point by showing tooltip, setting hover state and draw crosshair
+     */
+    Highcharts.Point.prototype.highlight = function (event) {
+        this.onMouseOver(); // Show the hover marker
+        this.series.chart.tooltip.refresh(this); // Show the tooltip
+        this.series.chart.xAxis[0].drawCrosshair(event, this); // Show the crosshair
+    };
+
+    /**
+     * Synchronize zooming through the setExtremes event handler.
+     */
+    function syncExtremes(e) {
+        var thisChart = this.chart;
+
+        if (e.trigger !== 'syncExtremes') { // Prevent feedback loop
+            Highcharts.each(Highcharts.charts, function (chart) {
+                if (chart !== thisChart) {
+                    if (chart.xAxis[0].setExtremes) { // It is null while updating
+                        chart.xAxis[0].setExtremes(e.min, e.max, undefined, false, { trigger: 'syncExtremes' });
+                    }
+                }
+            });
+        }
+    }
+
+    var syncChart = "#stock-chart-small";
+    var data;
+
+    if (syncChart.length && typeof rawData !== 'undefined') {
+
+        var prices = [],
+        volume = [],
+        dataLength = rawData.length;
+
+        for (var i = 0; i < dataLength; i += 1) {
+            prices.push([
+                parseInt(rawData[i].date), //date
+                parseFloat(rawData[i].a), //close
+            ]);
+
+            volume.push([
+                parseInt(rawData[i].date), //date
+                parseInt(rawData[i].b), //close
+            ]);
+        }
+
+        $('<div class="chart1">')
+        .appendTo('#stock-chart-small')
+        .highcharts({
+            chart: {
+                backgroundColor: 'transparent',
+                marginLeft: 40, // Keep all charts left aligned
+                spacingTop: 20,
+                spacingBottom: 20,
+                zoomType: 'x',
+                height: '188px',
+                style: {
+                    fontFamily: 'PFFuturaNeu'
+                }
+            },
+            title: {
+                text: '',                   
+            },
+            credits: {
+                enabled: false
+            },
+            legend: {
+                enabled: false
+            },
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: { // don't display the dummy year
+                    month: '%e. %b %y',
+                    year: '%b %Y'
+                },
+                crosshair: true,
+                events: {
+                    setExtremes: syncExtremes
+                },
+                tickWidth: 0,
+                lineColor: "#3c4045",
+                gridLineWidth: 1,
+                gridLineColor: "#3c4045",
+                labels: {
+                    enabled: false
+                }
+            },
+            yAxis: {
+                tickLength: 0,
+                tickWidth: 1,
+                gridLineWidth: 1,
+                tickColor: "#3c4045",
+                gridLineColor: "#3c4045",
+                lineColor: "#3c4045",
+                title: {
+                    text: null
+                },
+                labels: {
+                    y: -5,
+                    x: -30,
+                    align: "left",
+                    style: {
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            series: [{
+                data: prices,
+                type: "line",
+                color: "#00b7ee",
+                fillOpacity: 0.3,
+                tooltip: {
+                    valueSuffix: ' '
+                },             
+            }]
+        });
+
+        $('<div class="chart2">')
+        .appendTo('#stock-chart-small')
+        .highcharts({
+            chart: {
+                backgroundColor: 'transparent',
+                marginLeft: 40, // Keep all charts left aligned
+                spacingTop: 20,
+                spacingBottom: 20,
+                zoomType: 'x',
+                height: '116px',
+                style: {
+                    fontFamily: 'PFFuturaNeu'
+                }
+            },
+            title: {
+                text: '',                  
+            },
+            credits: {
+                enabled: false
+            },
+            legend: {
+                enabled: false
+            },
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: { // don't display the dummy year
+                    month: '%e. %b %y',
+                    year: '%b %Y'
+                },
+                crosshair: true,
+                events: {
+                    setExtremes: syncExtremes
+                },
+                tickWidth: 0,
+                lineColor: "#3c4045",
+                gridLineWidth: 1,
+                gridLineColor: "#3c4045",
+                labels: {
+                    enabled: false
+                }
+            },
+            yAxis: {
+                tickLength: 0,
+                tickWidth: 1,
+                tickColor: "#3c4045",
+                gridLineColor: "#3c4045",
+                lineColor: "#3c4045",
+                title: {
+                    text: null
+                },
+                labels: {
+                    y: -5,
+                    x: -30,
+                    align: "left",
+                    style: {
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            series: [{
+                data: volume,
+                type: "column",
+                color: "#00baf2",
+                borderColor: "#00baf2",
+                pointWidth: 8,
+                fillOpacity: 0.3,
+                tooltip: {
+                    valueSuffix: ' '
+                }
+            }]
+        });
+    }
 }

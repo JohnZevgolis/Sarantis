@@ -1,0 +1,166 @@
+.our-share {
+	min-height: 646px;
+	padding-top: 4.64285rem;
+	padding-bottom: 4.64285rem;
+
+	&:after{
+		content:'';
+		min-height:inherit;
+		font-size:0;
+	}
+
+	&.bg-img {
+		line-height: 1.5;
+	}
+
+	.chart-wrapper {
+		padding-left: 4rem;
+		padding-right: 4rem;
+
+		@include media-breakpoint-down(xl) {
+			padding-left: 3rem;
+			padding-right: 3rem;
+		}
+
+		@include media-breakpoint-down(sm) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			@extend %vCenter;
+			border-right: 1px dotted #40556b;
+			width: 1px;
+			height: 110%;
+			left: 0;
+
+			@include media-breakpoint-down(xs) {
+				display: none;
+			}
+		}
+
+		#stock-chart-small {
+			.highcharts-grid {
+				path:first-child {
+					display: none;
+				}
+			}
+
+			.highcharts-axis-labels.highcharts-yaxis-labels {
+				text:last-child {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.capitalization {
+		font-size: 0.9375rem;
+		color: $stockPrice;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 0.875rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 0.8125rem;
+		}
+	}
+
+	.sar,.negative-value,.capitalization-value {
+		font-size: 1.875rem;
+		line-height: 1;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.775rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.675rem;
+		}
+	}
+
+	.sar,.capitalization {
+		color: $light-blue;
+	}
+
+	.negative-value {
+		color: $negativeValue;
+	}
+
+	.price {
+		color: $white;
+		font-weight: 600;
+		font-size: 4.625rem;
+		line-height: 1;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 3.6875rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 2.75rem;
+		}
+	}
+
+	.date {
+		color: $shareDate;
+		font-size: 1.0625rem;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 0.9375rem;
+		}
+	}
+
+	.capitalization-value {
+		font-weight: 600;
+		color: $white;
+	}
+
+	.our-share-content {
+		h2 {
+			color: $white;
+			font-weight: 600;
+			font-size: 2.25rem;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 2rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.75rem;
+			}
+		}
+
+		p {
+			font-size: 1.125rem;
+			color: $ourShareText;
+			line-height: 1.7;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.0625rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1rem;
+			}
+		}
+
+		.moreBtnWrapper {
+			background-color: $light-blue;
+			min-width: 112px;
+
+			.moreBtn {
+				font-weight: 600 !important;
+				color: $sarantisInSocial;
+				margin-top: 0;
+			}
+		}
+	}
+}

@@ -50,6 +50,11 @@
 						@include media-breakpoint-down(xs) {
 							font-size: 2rem;
 						}
+
+						a {
+							color: $white;
+							text-decoration: none;
+						}
 					}
 
 					p {
