@@ -2668,17 +2668,19 @@ function pies() {
 }
 
 //==== Highcharts Option =================//
-Highcharts.setOptions({
-    lang: {
-        months: [
-            'Janvier', 'Février', 'Mars', 'Avril',
-            'Mai', 'Juin', 'Juillet', 'Août',
-            'Septembre', 'Octobre', 'Novembre', 'Décembre'
-        ],
-        shortMonths: ['Jan', 'Feb', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-        weekdays: [
-            'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
-            'Jeudi', 'Vendredi', 'Samedi'
-        ]
-    }
-});
+if (!$('body').hasClass('ENG')) {
+	Highcharts.setOptions({
+	    lang: {
+	        months: [
+	            'Ιανουάριος', 'Φεβρουάριος', 'Μάρτιος', 'Απρίλιος',
+	            'Μάιος', 'Ιούνιος', 'Ιούλιος', 'Αύγουστος',
+	            'Σεπτέμβριος', 'Οκτώβριος', 'Νοέμβριος', 'Δεκέμβριος'
+	        ],
+	        shortMonths: ['Ιαν', 'Φεβρ', 'Μάρτ', 'Απρ', 'Μαϊ', 'Ιούν', 'Ιούλ', 'Αύγ', 'Σεπτ', 'Οκτ', 'Νοε', 'Δεκ'],
+	        weekdays: [
+	            'Κυριακή', 'Δευτέρα ', 'Τρίτη ', 'Τετάρτη',
+	            'Πέμπτη', 'Παρασκευή', 'Σάββατο'
+	        ]
+	    }
+	});
+}
