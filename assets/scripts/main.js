@@ -17,7 +17,13 @@ $(document).ready(function() {
     contactMap();
     videosCarousel();
     datepicker();
-    syncCharts();
+    pies();
+    incomeChart();
+    EBITDAChart();
+    turnoverChart();
+    if($("#stock-chart-small").length) {
+        syncCharts();
+    }
     masonry($(".press-grid"), ".press-box-item");
     $(".departments .department-img").matchHeight({
         byRow: true,
@@ -1660,3 +1666,1019 @@ function syncCharts() {
         });
     }
 }
+
+//==== Group Turnover Chart =================//
+function turnoverChart() {
+    if($("#turnover-chart").length) {
+        var prices = [],
+        dataLength = groupTurnover.length;
+
+        for (var i = 0; i < dataLength; i += 1) {
+            prices.push([
+                groupTurnover[i].Year,
+                groupTurnover[i].Value
+            ]);
+        }
+
+        Highcharts.chart('turnover-chart', {
+            chart: {
+                backgroundColor: 'transparent',
+                style: {
+                    fontFamily: 'PFFuturaNeu'
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: '',
+            },
+            xAxis: {
+                type: "category",
+                crosshair: true,
+                labels: {
+                    y: 25,
+                    style: {
+                        color: '#fff',
+                        fontWeight: '600',
+                        fontSize: '11px'
+                    }
+                },
+                lineColor: '#42c1f9',
+                lineWidth: 1,
+            },
+            yAxis: {
+                lineWidth: 0,
+                gridLineWidth: 0,
+                alignTicks: false,
+                title: {
+                    text: "",
+                },
+                labels: {
+                    enabled: false  
+                },
+            },
+            tooltip: {
+                shared: true,
+                useHTML: true,
+                headerFormat: '<div>',
+                footerFormat: '</div>'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0,
+                    pointWidth: 26,
+                    color: '#fff',
+                    tooltip: {
+                        pointFormat: '<span class="d-block text-center" style="padding:0;color:#4b4c51;font-family: PFFuturaNeu; font-weight: 600;">{point.y}</span>',
+                    },
+                }
+            },
+            series: [{
+                type: 'column',
+                data: prices,
+                showInLegend: false,
+                yAxis: 0,
+                dataLabels: {
+                    enabled: true,
+                    color: '#fff',
+                    align: 'center',
+                    y: -5,
+                    style: {
+                        fontSize: '11px',
+                        textOutline: false,
+                        fontWeight: '600'
+
+                    },
+                    format: '{point.y:.' + 2 + 'f}'
+                }
+            }],
+            responsive: {
+                rules: [
+                    {
+                        condition: {
+                            maxWidth: 490,
+                        },
+                        chartOptions: {
+                            xAxis: {
+                                labels: {
+                                    rotation: 90,
+                                    align: 'top',
+                                    y: 15,
+                                    style: {
+                                        fontSize: "10px"
+                                    }
+                                }
+                            },
+                            series: {
+                                dataLabels: {
+                                    style: {
+                                        fontSize: '10px',
+                                    }
+                                }
+                            },
+                            plotOptions: {
+                                column: {
+                                    pointWidth: 22,
+                                }
+                            },
+                        },
+                    },
+                    {
+                        condition: {
+                            maxWidth: 350,
+                        },
+                        chartOptions: {
+                            plotOptions: {
+                                column: {
+                                    pointWidth: 18,
+                                }
+                            },
+                            xAxis: {
+                                labels: {
+                                    style: {
+                                        fontSize: "9px"
+                                    }
+                                }
+                            },
+                            series: {
+                                dataLabels: {
+                                    style: {
+                                        fontSize: '9px',
+                                    }
+                                }
+                            },
+                        }
+                    }
+                ]
+            }
+        });
+    }
+}
+
+//==== Group EBITDA Chart =================//
+function EBITDAChart() {
+    if($("#ebitda-chart").length) {
+        var prices = [],
+        max = [],
+        dataLength = groupEbitda.length;
+
+        for (var i = 0; i < dataLength; i += 1) {
+            prices.push([
+                groupEbitda[i].Year,
+                groupIncomeData[i].Value
+            ]);
+
+            max.push([
+                groupEbitda[i].LimitValue
+            ]);
+        }
+
+        Highcharts.chart('ebitda-chart', {
+            chart: {
+                backgroundColor: 'transparent',
+                style: {
+                    fontFamily: 'PFFuturaNeu'
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: '',
+            },
+            xAxis: {
+                type: "category",
+                crosshair: true,
+                labels: {
+                    y: 25,
+                    style: {
+                        color: '#fff',
+                        fontWeight: '600',
+                        fontSize: '11px'
+                    }
+                },
+                lineColor: '#42c1f9',
+                lineWidth: 1,
+            },
+            yAxis: [
+                {
+                    min: 0,
+                    lineColor: '#42c1f9',
+                    lineWidth: 1,
+                    gridLineWidth: 0,
+                    alignTicks: false,
+                    tickInterval: 5,
+                    title: {
+                        text: "",
+                    },
+                    labels: {
+                        x: -20,
+                        style: {
+                            color: '#fff',
+                            fontSize: '12px',
+                            fontWeight: '600'
+                        },
+                        formatter: function () {
+                            return this.value + ".00";
+                        }   
+                    },
+                },
+                {
+                    min: 0,
+                    max: 40,
+                    tickInterval: 5,
+                    opposite: true,
+                    lineColor: '#42c1f9',
+                    lineWidth: 1,
+                    gridLineWidth: 0,
+                    alignTicks: false,
+                    title: {
+                        text: ""
+                    },
+                    labels: {
+                        x: 20,
+                        style: {
+                            color: '#fff',
+                            fontSize: '12px',
+                            fontWeight: '600'
+                        },
+                        formatter: function () {
+                            return this.value + ".00%";
+                        }
+                    }
+                }
+            ],
+            tooltip: {
+                shared: true,
+                useHTML: true,
+                headerFormat: '<div>',
+                footerFormat: '</div>'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0,
+                    pointWidth: 26,
+                    color: '#fff',
+                    tooltip: {
+                        pointFormat: '<span class="d-block text-center" style="padding:0;color:#4b4c51;font-family: PFFuturaNeu; font-weight: 600;">{point.y}</span>',
+                    },
+                },
+                line: {
+                    marker: {
+                        enabled: false
+                    },
+                    color: '#003975',
+                    dashStyle: 'Dash',
+                    tooltip: {
+                        pointFormat: '<span class="d-block text-center" style="padding:0;color:#4b4c51;font-family: PFFuturaNeu; font-weight: 600;">{point.y:.' + 1 + 'f}%</span>',
+                    },
+                }
+            },
+            series: [{
+                type: 'column',
+                data: prices,
+                showInLegend: false,
+                yAxis: 0,
+                dataLabels: {
+                    enabled: true,
+                    color: '#fff',
+                    align: 'center',
+                    y: -5,
+                    style: {
+                        fontSize: '11px',
+                        textOutline: false,
+                        fontWeight: '600'
+
+                    }
+                }
+            }, {
+                type: 'line',
+                yAxis: 1,
+                data: max,
+                showInLegend: false,
+                dataLabels: {
+                    enabled: true,
+                    color: '#003975',
+                    align: 'center',
+                    y: 35,
+                    style: {
+                        fontSize: '11px',
+                        textOutline: false,
+                        fontWeight: '600'
+
+                    },
+                    format: '{point.y:.' + 1 + 'f}%'
+                }
+            }],
+            responsive: {
+                rules: [
+                    {
+                        condition: {
+                            maxWidth: 460,
+                        },
+                        chartOptions: {
+                            series: [{
+                                dataLabels: {
+                                    style: {
+                                        fontSize: '10px',
+                                    }
+                                }
+                            }, {
+                                dataLabels: {
+                                    style: {
+                                        fontSize: '10px',
+                                    }
+                                }
+                            }],
+                            yAxis: [
+                                {
+                                    labels: {
+                                        x: -15,
+                                        style: {
+                                            fontSize: '10px'
+                                        }
+                                    }
+                                },
+                                {
+                                    labels: {
+                                        x: 10,
+                                        style: {
+                                            fontSize: '10px'
+                                        }
+                                    }
+                                }
+                            ],
+                            xAxis: {
+                                labels: {
+                                    rotation: 90,
+                                    align: 'top',
+                                    y: 15
+                                }
+                            },
+                            plotOptions: {
+                                column: {
+                                    pointWidth: 22,
+                                }
+                            },
+                        },
+                    },
+                    {
+                        condition: {
+                            maxWidth: 360,
+                        },
+                        chartOptions: {
+                            yAxis: [
+                                {
+                                    labels: {
+                                        enabled: false,
+                                    }
+                                },
+                                {
+                                    labels: {
+                                        enabled: false
+                                    }
+                                }
+                            ],
+                            plotOptions: {
+                                column: {
+                                    pointWidth: 18,
+                                }
+                            },
+                            xAxis: {
+                                labels: {
+                                    style: {
+                                        fontSize: "9px"
+                                    }
+                                }
+                            },
+                            series: [{
+                                dataLabels: {
+                                    style: {
+                                        fontSize: '9px',
+                                    }
+                                }
+                            }, {
+                                dataLabels: {
+                                    style: {
+                                        fontSize: '9px',
+                                    }
+                                }
+                            }],
+                        }
+                    }
+                ]
+            }
+        });
+    }
+}
+
+//==== Group Net Income Chart =================//
+function incomeChart() {
+    if($("#income-chart").length) {
+        var prices = [],
+        max = [],
+        dataLength = groupIncomeData.length;
+
+        for (var i = 0; i < dataLength; i += 1) {
+            prices.push([
+                groupIncomeData[i].Year,
+                groupIncomeData[i].Value
+            ]);
+
+            max.push([
+                groupIncomeData[i].LimitValue
+            ]);
+        }
+
+        Highcharts.chart('income-chart', {
+            chart: {
+                backgroundColor: 'transparent',
+                style: {
+                    fontFamily: 'PFFuturaNeu'
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: '',
+            },
+            xAxis: {
+                type: "category",
+                crosshair: true,
+                labels: {
+                    y: 25,
+                    style: {
+                        color: '#fff',
+                        fontWeight: '600',
+                        fontSize: '11px'
+                    }
+                },
+                lineColor: '#42c1f9',
+                lineWidth: 1,
+            },
+            yAxis: [
+                {
+                    min: 0,
+                    lineColor: '#42c1f9',
+                    lineWidth: 1,
+                    gridLineWidth: 0,
+                    alignTicks: false,
+                    tickInterval: 5,
+                    title: {
+                        text: "",
+                    },
+                    labels: {
+                        x: -20,
+                        style: {
+                            color: '#fff',
+                            fontSize: '14px',
+                            fontWeight: '600'
+                        },
+                        formatter: function () {
+                            return this.value + ".00";
+                        }   
+                    },
+                },
+                {
+                    min: 0,
+                    max: 20,
+                    tickInterval: 5,
+                    opposite: true,
+                    lineColor: '#42c1f9',
+                    lineWidth: 1,
+                    gridLineWidth: 0,
+                    alignTicks: false,
+                    title: {
+                        text: ""
+                    },
+                    labels: {
+                        x: 20,
+                        style: {
+                            color: '#fff',
+                            fontSize: '14px',
+                            fontWeight: '600'
+                        },
+                        formatter: function () {
+                            return this.value + ".00%";
+                        }
+                    }
+                }
+            ],
+            tooltip: {
+                shared: true,
+                useHTML: true,
+                headerFormat: '<div>',
+                footerFormat: '</div>'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0,
+                    pointWidth: 60,
+                    color: '#fff',
+                    tooltip: {
+                        pointFormat: '<span class="d-block text-center" style="padding:0;color:#4b4c51;font-family: PFFuturaNeu; font-weight: 600;">{point.y}</span>',
+                    },
+                },
+                line: {
+                    marker: {
+                        enabled: false
+                    },
+                    color: '#003975',
+                    dashStyle: 'Dash',
+                    tooltip: {
+                        pointFormat: '<span class="d-block text-center" style="padding:0;color:#4b4c51;font-family: PFFuturaNeu; font-weight: 600;">{point.y:.' + 1 + 'f}%</span>',
+                    },
+                }
+            },
+            series: [{
+                type: 'column',
+                data: prices,
+                showInLegend: false,
+                yAxis: 0,
+                dataLabels: {
+                    enabled: true,
+                    color: '#fff',
+                    align: 'center',
+                    y: -5,
+                    style: {
+                        fontSize: '11px',
+                        textOutline: false,
+                        fontWeight: '600'
+
+                    }
+                }
+            }, {
+                type: 'line',
+                yAxis: 1,
+                data: max,
+                showInLegend: false,
+                dataLabels: {
+                    enabled: true,
+                    color: '#003975',
+                    align: 'center',
+                    y: 35,
+                    style: {
+                        fontSize: '11px',
+                        textOutline: false,
+                        fontWeight: '600'
+
+                    },
+                    format: '{point.y:.' + 1 + 'f}%'
+                }
+            }],
+            responsive: {
+                rules: [
+                    {
+                        condition: {
+                            maxWidth: 992,
+                        },
+                        chartOptions: {
+                            yAxis: [
+                                {
+                                    labels: {
+                                        x: -15,
+                                        style: {
+                                            fontSize: '11px'
+                                        }
+                                    }
+                                },
+                                {
+                                    labels: {
+                                        x: 10,
+                                        style: {
+                                            fontSize: '11px'
+                                        }
+                                    }
+                                }
+                            ],
+                            xAxis: {
+                                labels: {
+                                    rotation: 90,
+                                    align: 'top',
+                                    y: 15
+                                }
+                            },
+                            plotOptions: {
+                                column: {
+                                    pointWidth: 50,
+                                }
+                            },
+                        },
+                    },
+                    {
+                        condition: {
+                            maxWidth: 768,
+                        },
+                        chartOptions: {
+                            plotOptions: {
+                                column: {
+                                    pointWidth: 40,
+                                }
+                            },
+                        }
+                    },
+                    {
+                        condition: {
+                            maxWidth: 510,
+                        },
+                        chartOptions: {
+                            yAxis: [
+                                {
+                                    labels: {
+                                        enabled: false,
+                                    }
+                                },
+                                {
+                                    labels: {
+                                        enabled: false
+                                    }
+                                }
+                            ],
+                            plotOptions: {
+                                column: {
+                                    pointWidth: 25,
+                                }
+                            },
+                            series: [{
+                                dataLabels: {
+                                    style: {
+                                        fontSize: '10px',
+                                    }
+                                }
+                            }, {
+                                dataLabels: {
+                                    style: {
+                                        fontSize: '10px',
+                                    }
+                                }
+                            }],
+                            xAxis: {
+                                labels: {
+                                    style: {
+                                        fontSize: "10px"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        condition: {
+                            maxWidth: 360,
+                        },
+                        chartOptions: {
+                            plotOptions: {
+                                column: {
+                                    pointWidth: 18,
+                                }
+                            },
+                            series: [{
+                                dataLabels: {
+                                    style: {
+                                        fontSize: '9px',
+                                    }
+                                }
+                            }, {
+                                dataLabels: {
+                                    style: {
+                                        fontSize: '9px',
+                                    }
+                                }
+                            }],
+                            xAxis: {
+                                labels: {
+                                    style: {
+                                        fontSize: "9px"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        });
+    } 
+}
+
+//==== Pie Charts =================//
+function pies() {
+    if($("#pie-1").length) {
+        var chart1 = [],
+        chart1DataLength = pie1Data.length;
+
+        for (var i = 0; i < chart1DataLength; i += 1) {
+            chart1.push([
+                pie1Data[i].name,
+                pie1Data[i].y,
+                pie1Data[i].color
+            ]);
+        }
+
+        Highcharts.chart('pie-1', {
+            chart: {
+                backgroundColor: "transparent",
+                type: 'pie',
+                style: {
+                    fontFamily: 'PFFuturaNeu'
+                },
+                margin: [10, 10, 10, 10],
+                spacingTop: 0,
+                spacingBottom: 0,
+                spacingLeft: 0,
+                spacingRight: 0,
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: ''
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                shared: true,
+                useHTML: true,
+                headerFormat: '<div>',
+                footerFormat: '</div>',
+                pointFormat: '<span class="d-block text-center" style="padding:0;color:#4b4c51;font-family: PFFuturaNeu; font-weight: 600;">{point.name}<br/> {point.percentage:.1f}%</span>',
+
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    borderColor: '#03b9f1',    
+                    borderWidth: 3,               
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    innerSize: '55%',
+                    dataLabels: {
+                        useHTML: true,
+                        enabled: true,
+                        format: '<span class="d-block text-center">{point.name}<br/> {point.percentage:.1f} %</span>'
+                    },
+                }
+            },
+            series: [{
+                name: '',
+                colorByPoint: true,
+                dataLabels: {
+                    enabled: true,
+                    color: '#fff',
+                    style: {
+                        textOutline: false,
+                        fontWeight: '600',
+                        fontSize: '10px'
+                    }
+                },
+                keys: ['name', 'y', 'color'],
+                data: chart1
+            }],
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 460
+                    },
+                    chartOptions: {
+                        chart: {
+                            marginBottom: 40,
+                        },
+                        legend: {
+                            enabled: true
+                        },
+                        series: {
+                            dataLabels: {
+                                enabled: false
+                            },
+                            showInLegend: true
+                        }
+                    }
+                }]
+            }
+        });
+    }
+    
+    if($("#pie-2").length) {
+        var chart2 = [],
+        chart2DataLength = pie2Data.length;
+
+        for (var i = 0; i < chart2DataLength; i += 1) {
+            chart2.push([
+                pie2Data[i].name,
+                pie2Data[i].y,
+                pie2Data[i].color
+            ]);
+        }
+
+        Highcharts.chart('pie-2', {
+            chart: {
+                backgroundColor: "transparent",
+                type: 'pie',
+                style: {
+                    fontFamily: 'PFFuturaNeu'
+                },
+                margin: [10, 10, 10, 10],
+                spacingTop: 0,
+                spacingBottom: 0,
+                spacingLeft: 0,
+                spacingRight: 0,
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: ''
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                shared: true,
+                useHTML: true,
+                headerFormat: '<div>',
+                footerFormat: '</div>',
+                pointFormat: '<span class="d-block text-center" style="padding:0;color:#4b4c51;font-family: PFFuturaNeu; font-weight: 600;">{point.name}<br/> {point.percentage:.1f}%</span>',
+
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    borderColor: '#03b9f1',    
+                    borderWidth: 3,               
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    innerSize: '55%',
+                    dataLabels: {
+                        useHTML: true,
+                        enabled: true,
+                        format: '<span class="d-block text-center">{point.name}<br/> {point.percentage:.1f} %</span>'
+                    }
+                }
+            },
+            series: [{
+                name: '',
+                colorByPoint: true,
+                dataLabels: {
+                    enabled: true,
+                    color: '#fff',
+                    style: {
+                        textOutline: false,
+                        fontWeight: '600',
+                        fontSize: '12px'
+                    }
+                },
+                keys: ['name', 'y', 'color'],
+                data: chart2
+            }],
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 460
+                    },
+                    chartOptions: {
+                        chart: {
+                            marginBottom: 40,
+                        },
+                        legend: {
+                            enabled: true
+                        },
+                        series: {
+                            dataLabels: {
+                                enabled: false
+                            },
+                            showInLegend: true
+                        }
+                    }
+                }]
+            }
+        });
+    }
+
+    if($("#pie-3").length) {
+        var chart3 = [],
+        chart3DataLength = pie3Data.length;
+
+        for (var i = 0; i < chart3DataLength; i += 1) {
+            chart3.push([
+                pie3Data[i].name,
+                pie3Data[i].y,
+                pie3Data[i].color
+            ]);
+        }
+
+        Highcharts.chart('pie-3', {
+            chart: {
+                backgroundColor: "transparent",
+                type: 'pie',
+                style: {
+                    fontFamily: 'PFFuturaNeu'
+                },
+                margin: [10, 10, 10, 10],
+                spacingTop: 0,
+                spacingBottom: 0,
+                spacingLeft: 0,
+                spacingRight: 0,
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: ''
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                shared: true,
+                useHTML: true,
+                headerFormat: '<div>',
+                footerFormat: '</div>',
+                pointFormat: '<span class="d-block text-center" style="padding:0;color:#4b4c51;font-family: PFFuturaNeu; font-weight: 600;">{point.name}<br/> {point.percentage:.1f}%</span>',
+
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    borderColor: '#03b9f1',    
+                    borderWidth: 3,               
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    innerSize: '55%',
+                    dataLabels: {
+                        useHTML: true,
+                        enabled: true,
+                        format: '<span class="d-block text-center">{point.name}<br/> {point.percentage:.1f} %</span>'
+                    }
+                }
+            },
+            series: [{
+                name: '',
+                colorByPoint: true,
+                dataLabels: {
+                    enabled: true,
+                    color: '#fff',
+                    style: {
+                        textOutline: false,
+                        fontWeight: '600',
+                        fontSize: '12px'
+                    }
+                },
+                keys: ['name', 'y', 'color'],
+                data: chart3
+            }],
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 460
+                    },
+                    chartOptions: {
+                        chart: {
+                            marginBottom: 40,
+                        },
+                        legend: {
+                            enabled: true
+                        },
+                        series: {
+                            dataLabels: {
+                                enabled: false
+                            },
+                            showInLegend: true,
+                        }
+                    }
+                }]
+            }
+        });
+    }    
+}
+
+//==== Highcharts Option =================//
+Highcharts.setOptions({
+    lang: {
+        months: [
+            'Janvier', 'Février', 'Mars', 'Avril',
+            'Mai', 'Juin', 'Juillet', 'Août',
+            'Septembre', 'Octobre', 'Novembre', 'Décembre'
+        ],
+        shortMonths: ['Jan', 'Feb', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        weekdays: [
+            'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
+            'Jeudi', 'Vendredi', 'Samedi'
+        ]
+    }
+});
