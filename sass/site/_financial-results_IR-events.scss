@@ -85,6 +85,7 @@
 
 	.ir-events {
 		background-color: $white;
+		height: auto !important;
 
 		h2 {
 			color: $bgTextStrong;
@@ -125,6 +126,7 @@
 	.annual-financial-report {
 		color: $white;
 		background-color: $bgTextStrong;
+		height: auto !important;
 
 		.year {
 			font-size: 4.625rem;

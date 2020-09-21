@@ -1,0 +1,64 @@
+.worldwide-intro {
+	min-height: 100vh;
+	background: #0b1a2c url("../images/worldwide_intro.jpg") center center no-repeat;
+	background-size: 100%;
+  	color: $white;
+
+	.ww-title {
+		font-size: 1.875rem;
+		color: $light-blue;
+		font-weight: 600;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 1.775rem;
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 1.675rem;
+		}
+	}
+
+	.ww-list-wrapper {
+		max-height: 492px;
+
+		.ww-list {
+			max-width: 720px;
+		}
+	}
+
+	.ww-country {
+
+		display: block;
+		background-color: #112740;
+		padding: 12px 20px;
+		font-size: 16px;
+		margin: 3px;
+		text-decoration: none;
+		outline: 0;
+		color: inherit;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		@include border-radius(4px);
+		@include transition(all .2s);
+
+		@include media-breakpoint-down(md) { font-size: 15px }
+		@include media-breakpoint-down(sm) { font-size: 14px }
+
+		&:hover {
+		background-color: $worldwideWrapperHover;
+		color: $worldwideWrapperHoverText;
+		}
+
+	}
+
+	.footer {
+		background-color: #0b1a2c;
+
+		.ft-copyrights {
+			border-color: #94a0ae;
+			color: #94a0ae;
+		}
+	}
+
+}

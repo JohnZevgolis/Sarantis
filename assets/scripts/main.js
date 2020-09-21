@@ -32,6 +32,7 @@ $(document).ready(function() {
         remove: false
     });
     nicescroll($("#worldwide-wrapper"),".ww-list");
+    nicescroll($(".ww-list-wrapper"),".ww-list");
     $(".general-section table").each(function() {
         $(this).wrap("<div class='table-responsive'></div>")
     });

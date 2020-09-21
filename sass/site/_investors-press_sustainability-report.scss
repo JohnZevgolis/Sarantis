@@ -144,6 +144,7 @@
 	.sustainability-report {
 		background-color: $light-blue;
 		color: $white;
+		height: auto !important;
 
 		h2 {
 			line-height: 1.3;
@@ -153,6 +154,7 @@
 	.corporate-presentation {
 		color: $generalText;
 		background-color: $corporatePresentation;
+		height: auto !important;
 
 		.subheading {
 			color: $light-blue;
