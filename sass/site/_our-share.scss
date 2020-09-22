@@ -69,7 +69,7 @@
 		}
 	}
 
-	.sar,.negative-value,.capitalization-value {
+	.sar,.value span,.capitalization-value {
 		font-size: 1.875rem;
 		line-height: 1;
 
@@ -86,8 +86,32 @@
 		color: $light-blue;
 	}
 
-	.negative-value {
-		color: $negativeValue;
+	.value.negative-value {
+		span {
+			color: $negativeValue;
+		}
+
+		.negative-img {
+			display: block;
+		}
+
+		.positive-img {
+			display: none;
+		}
+	}
+
+	.value.positive-value {
+		span {
+			color: #23903c;
+		}
+
+		.negative-img {
+			display: none;
+		}
+
+		.positive-img {
+			display: block;
+		}
 	}
 
 	.price {

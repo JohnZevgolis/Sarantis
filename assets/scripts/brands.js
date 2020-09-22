@@ -268,190 +268,367 @@ $(function() {
 });
 
 //==== Brands =================//
-function brands() {
-    if($(".our-brands").length) {
-        var counter = 1,
-        flag = false,
-        $grid, brandsList;
+// function brands() {
+//     if($(".our-brands").length) {
+//         var counter = 1,
+//         flag = false,
+//         $grid, brandsList;
 
-        $.ajax({
-            url : './assets/scripts/GetCategoryBrandsNew.json',
-            type : 'GET',
-            dataType:'JSON',
-            success : function(data) {     
-            	brandsList = data;         
-                appendBrands(brandsList,brandsLoaded);  
-                loadOnScroll();
-            }
-        });    
-    }  
+//         $.ajax({
+//             url : './assets/scripts/GetCategoryBrandsNew.json',
+//             type : 'GET',
+//             dataType:'JSON',
+//             success : function(data) {     
+//             	brandsList = data;         
+//                 appendBrands(brandsList,brandsLoaded);  
+//                 loadOnScroll();
+//             }
+//         });    
+//     }  
 
-    function loadOnScroll() {
-    	$(".our-brands .filter").each(function() {
-            var select = $(this).find("select");
-            if (select.children('option:first-child').is(':selected')) {
-                flag = true;
-            }
+//     function loadOnScroll() {
+//     	$(".our-brands .filter").each(function() {
+//             var select = $(this).find("select");
+//             if (select.children('option:first-child').is(':selected')) {
+//                 flag = true;
+//             }
 
-            select.change(function() {
-                if($(this).children('option:first-child').is(':selected')) {
-                    flag = true;
-                } else {
-                    flag = false;   
-                }
-            })
-        });
+//             select.change(function() {
+//                 if($(this).children('option:first-child').is(':selected')) {
+//                     flag = true;
+//                 } else {
+//                     flag = false;   
+//                 }
+//             })
+//         });
 
-        $(window).scroll(function() {
-            if(flag == true) {
-                var windowBottom = $(window).scrollTop() + $(window).height();
-                var objectBottom = $(".our-brands .filters .brand").last().outerHeight() + $(".our-brands .filters .brand").last().offset().top;
+//         $(window).scroll(function() {
+//             if(flag == true) {
+//                 var windowBottom = $(window).scrollTop() + $(window).height();
+//                 var objectBottom = $(".our-brands .filters .brand").last().outerHeight() + $(".our-brands .filters .brand").last().offset().top;
                 
-                if(counter < brandsList.length) {
-                    if(windowBottom > objectBottom) {
-                    	counter++;
- 						appendBrands(brandsList,brandsLoaded);
-                    }
-                } 
-            }
-        });
-    }
+//                 if(counter < brandsList.length) {
+//                     if(windowBottom > objectBottom) {
+//                     	counter++;
+//  						appendBrands(brandsList,brandsLoaded);
+//                     }
+//                 } 
+//             }
+//         });
+//     }
 
-    function appendBrands(jsonArray,callback) {
-        var category = jsonArray.filter(function(category) {
-            return category.id === counter;           
-        });	
+//     function appendBrands(jsonArray,callback) {
+//         var category = jsonArray.filter(function(category) {
+//             return category.id === counter;           
+//         });	
 
-        $.each(category, function(index, value) {  
-            createBrands(category);
-        });
+//         $.each(category, function(index, value) {  
+//             createBrands(category);
+//         });
 
-        if(typeof callback == "function") {
-            callback();      
-        }
-    }  
+//         if(typeof callback == "function") {
+//             callback();      
+//         }
+//     }  
 
-    function createBrands(jsonArray) {
-        $.each(jsonArray, function(index, value) {
-            $.each(value.products, function(index, value) {
-                var subcategories = value.subcategories.join().replace(/,/g, " ");
-                var countries = value.countries.join().replace(/,/g, " ");
-                var brand = $('<div class="col-sm-6 col-lg-4 col-xxl-3 brand text-center mb-5 '+value.category+' '+subcategories+' '+value.type+' '+countries+' '+value.partner+'">'+
-                    '<div class="brand-img d-flex justify-content-center align-items-center p-5">'+
-                        '<div class="w-100">'+
-                            '<img src="'+value.logo+'">'+
-                        '</div>'+
-                    '</div>'+
-                    '<div class="px-2 brand-text">'+
-                        '<h3 class="mt-4 mb-1">'+value.title+'</h3>'+
-                        '<p>'+value.text+'</p>'+
-                    '</div>'+
-                    '<a href="'+value.url+'" class="position-absolute w-100 h-100"></a>'+
-                '</div>'); 
+//     function createBrands(jsonArray) {
+//         $.each(jsonArray, function(index, value) {
+//             $.each(value.products, function(index, value) {
+//                 var subcategories = value.subcategories.join().replace(/,/g, " ");
+//                 var countries = value.countries.join().replace(/,/g, " ");
+//                 var brand = $('<div class="col-sm-6 col-lg-4 col-xxl-3 brand text-center mb-5 '+value.category+' '+subcategories+' '+value.type+' '+countries+' '+value.partner+'">'+
+//                     '<div class="brand-img d-flex justify-content-center align-items-center p-5">'+
+//                         '<div class="w-100">'+
+//                             '<img src="'+value.logo+'">'+
+//                         '</div>'+
+//                     '</div>'+
+//                     '<div class="px-2 brand-text">'+
+//                         '<h3 class="mt-4 mb-1">'+value.title+'</h3>'+
+//                         '<p>'+value.text+'</p>'+
+//                     '</div>'+
+//                     '<a href="'+value.url+'" class="position-absolute w-100 h-100"></a>'+
+//                 '</div>'); 
 
-                $grid = $(".our-brands .filters").isotope({
-                    itemSelector: '.brand',
-                    layoutMode: 'fitRows'
-                });
+//                 $grid = $(".our-brands .filters").isotope({
+//                     itemSelector: '.brand',
+//                     layoutMode: 'fitRows'
+//                 });
                 
-                $(".our-brands .filters").append(brand).isotope('appended', brand);
+//                 $(".our-brands .filters").append(brand).isotope('appended', brand);
                 
-            });
-        });
-    }
+//             });
+//         });
+//     }
 
-    function brandsLoaded() {
-        $(".our-brands .filters").imagesLoaded(function() {
-            $grid.one( 'arrangeComplete', function() {
-                SetUpGridCols($(".our-brands .brand-img"));
-                SetUpGridCols($(".our-brands .brand-text"));
-            });
+//     function brandsLoaded() {
+//         $(".our-brands .filters").imagesLoaded(function() {
+//             $grid.one( 'arrangeComplete', function() {
+//                 SetUpGridCols($(".our-brands .brand-img"));
+//                 SetUpGridCols($(".our-brands .brand-text"));
+//             });
 
-            filterBrands(brandsList);
+//             filterBrands(brandsList);
 
-        });     
-    }
+//         });     
+//     }
 
-    function filterBrands(jsonArray) {
-        //filter for each group
-   		// $('.our-brands select').each(function () {
+//     function filterBrands(jsonArray) {
+//         //filter for each group
+//    		// $('.our-brands select').each(function () {
    			
 
-   		// 	$(this).on('change', function (event) {
-   		// 		var filters = {};
-   		// 		var filterGroup = $(this).attr('data-filter-group');
-     //            // set filter for group
-     //            filters[filterGroup] = $(this).val();
-     //            // combine filters
-     //            var filterValue = concatValues(filters);
-     //            // set filter for Isotope
-     //            $grid.isotope({ filter: filterValue });
-     //        });
-     //   });
+//    		// 	$(this).on('change', function (event) {
+//    		// 		var filters = {};
+//    		// 		var filterGroup = $(this).attr('data-filter-group');
+//      //            // set filter for group
+//      //            filters[filterGroup] = $(this).val();
+//      //            // combine filters
+//      //            var filterValue = concatValues(filters);
+//      //            // set filter for Isotope
+//      //            $grid.isotope({ filter: filterValue });
+//      //        });
+//      //   });
 
-   		$("select[data-filter-group=category]").each(function() {
-   			if(flag == true) {
-   				$(this).change(function (event) {
-	            	if(counter < brandsList.length) {
-	            		$grid.isotope( 'remove', $(".brand") );
-	            		var val = $(this).val().split(".").join("");
+//    		$("select[data-filter-group=category]").each(function() {
+//    			if(flag == true) {
+//    				$(this).change(function (event) {
+// 	            	if(counter < brandsList.length) {
+// 	            		$grid.isotope( 'remove', $(".brand") );
+// 	            		var val = $(this).val().split(".").join("");
 
-	            		var category = jsonArray.filter(function(obj) {
-				            return obj.category === val;           
-				        });	
-				        console.log(category)
+// 	            		var category = jsonArray.filter(function(obj) {
+// 				            return obj.category === val;           
+// 				        });	
+// 				        console.log(category)
 
-				        $.each(category, function(index, value) {  
-				            createBrands(category);
-				        });
-	                } 	           	   
-	            });
-   			} else {
-   				$(this).change(function() {
-		        	var filters = {};
-		            var category = $(this).find("option:selected").val().split('.').join("");
-		            $(".our-brands .filter select[data-filter-group=sub-category]").find("option").not(":first").remove();
-		            var categoryArr = brandsList.filter(function(obj) {
-		                return obj.category === category;
-		            });
+// 				        $.each(category, function(index, value) {  
+// 				            createBrands(category);
+// 				        });
+// 	                } 	           	   
+// 	            });
+//    			} else {
+//    				$(this).change(function() {
+// 		        	var filters = {};
+// 		            var category = $(this).find("option:selected").val().split('.').join("");
+// 		            $(".our-brands .filter select[data-filter-group=sub-category]").find("option").not(":first").remove();
+// 		            var categoryArr = brandsList.filter(function(obj) {
+// 		                return obj.category === category;
+// 		            });
 
-		            $.each(categoryArr, function(index, value) {  
-		                var options = value.subcategories;
-		                $.each(options, function(index, value) {  
-		                    var option = $("<option value='."+value+"'>"+value+"</option>");
-		                    $(".our-brands .filter select[data-filter-group=sub-category]").append(option);
-		                });
-		            });
+// 		            $.each(categoryArr, function(index, value) {  
+// 		                var options = value.subcategories;
+// 		                $.each(options, function(index, value) {  
+// 		                    var option = $("<option value='."+value+"'>"+value+"</option>");
+// 		                    $(".our-brands .filter select[data-filter-group=sub-category]").append(option);
+// 		                });
+// 		            });
 
-		            var filterGroupSub = $("select[data-filter-group=sub-category]").attr('data-filter-group');
-		            $("select[data-filter-group=sub-category]").val("");
-		            var emptySub = $("select[data-filter-group=sub-category]").val();
-		            filters[filterGroupSub] = emptySub;
-		            var filterValueSub = concatValues(filters);
-		            $grid.isotope({ filter: filterValueSub });
+// 		            var filterGroupSub = $("select[data-filter-group=sub-category]").attr('data-filter-group');
+// 		            $("select[data-filter-group=sub-category]").val("");
+// 		            var emptySub = $("select[data-filter-group=sub-category]").val();
+// 		            filters[filterGroupSub] = emptySub;
+// 		            var filterValueSub = concatValues(filters);
+// 		            $grid.isotope({ filter: filterValueSub });
 
-		            var filterGroup = $(this).attr('data-filter-group');
-		                // set filter for group
-		            filters[filterGroup] = $(this).val();
-		            // combine filters
-		            var filterValue = concatValues(filters);
-		            console.log(filterValue)
-		            // set filter for Isotope
-		            $grid.isotope({ filter: filterValue });
-		        });
-   			}		
-   		});
+// 		            var filterGroup = $(this).attr('data-filter-group');
+// 		                // set filter for group
+// 		            filters[filterGroup] = $(this).val();
+// 		            // combine filters
+// 		            var filterValue = concatValues(filters);
+// 		            console.log(filterValue)
+// 		            // set filter for Isotope
+// 		            $grid.isotope({ filter: filterValue });
+// 		        });
+//    			}		
+//    		});
 
         
 
-        // flatten object by concatting values
-        function concatValues(obj) {
-            var value = '';
-            for (var prop in obj) {
-                value += obj[prop];
+//         // flatten object by concatting values
+//         function concatValues(obj) {
+//             var value = '';
+//             for (var prop in obj) {
+//                 value += obj[prop];
+//             }
+//             return value;
+//         }        
+//     }
+// }
+
+function brands() {
+    // Business Unit
+    $(".our-brands .filter select[data-filter-group=category]").change(function() {
+        var category = $(this).find("option:selected").val();
+        var allCountries = [];
+        $(this).find("option").not(":first,:selected").remove();
+        $(".our-brands .filter select[data-filter-group=sub-category]").find("option").not(":first").remove();
+        $(".our-brands .filter select[data-filter-group=type]").find("option").not(":first").remove();
+        $(".our-brands .filter select[data-filter-group=country]").find("option").not(":first").remove();
+        var categoryArr = brandsList.filter(function(obj) {
+            return obj.category === category;
+        });
+
+        $.each(categoryArr, function(index, value) {  
+            var options = value.subcategories;
+            $.each(options, function(index, value) {  
+                var optionText;
+                if(value.indexOf("-")) {
+                    optionText = value.replace("-"," ").capitalize();                    
+                } else {
+                    optionText = value.capitalize();
+                }
+                var option = $("<option value="+value+">"+optionText+"</option>");
+                $(".our-brands .filter select[data-filter-group=sub-category]").append(option);
+            });
+            var products = value.products;
+            var types = [];
+            $.each(products, function(index, value) {
+                types.push(value.type);
+                $.each(value.countries, function(index, value) {
+                   allCountries.push(value);
+                });
+            });
+            if(types.includes("own")) {
+                var option = $("<option value='own'>Own</option>");
+                $(".our-brands .filter select[data-filter-group=type]").append(option);
             }
-            return value;
-        }        
+            if(types.includes("distributed")) {
+                var option = $("<option value='distributed'>Distributed</option>");
+                $(".our-brands .filter select[data-filter-group=type]").append(option);
+            }
+        });
+
+        var removeDuplicateCountries = allCountries.filter( function( item, index, inputArray ) {
+            return inputArray.indexOf(item) == index;
+        });
+        $.each(removeDuplicateCountries, function(index, value) {
+            var option = $("<option value="+value+">"+value+"</option>");
+            $(".our-brands .filter select[data-filter-group=country]").append(option);
+        });
+
+        if($(this).find("option").first().is(":selected")) {
+            var allCountries = [];
+            $(".our-brands .filter select[data-filter-group=category]").find("option").not(":first").remove();
+            $(".our-brands .filter select[data-filter-group=sub-category]").find("option").not(":first").remove();
+            $(".our-brands .filter select[data-filter-group=country]").find("option").not(":first").remove();
+            $.each(brandsList, function(index, value) {  
+                var category = value.category;
+                var text = value.text;
+                var categoryOption = $("<option value="+category+">"+text+"</option>");
+                $(".our-brands .filter select[data-filter-group=category]").append(categoryOption);
+                $.each(value.subcategories, function(index, value) {  
+                    var optionText;
+                    if(value.indexOf("-")) {
+                        optionText = value.replace("-"," ").capitalize();                    
+                    } else {
+                        optionText = value.capitalize();
+                    }
+                    var option = $("<option value="+value+">"+optionText+"</option>");
+                    $(".our-brands .filter select[data-filter-group=sub-category]").append(option);
+                });
+                $.each(value.products, function(index, value) {  
+                    $.each(value.countries, function(index, value) {
+                        allCountries.push(value);
+                    });
+                });
+            });
+            var removeDuplicateCountries = allCountries.filter( function( item, index, inputArray ) {
+                   return inputArray.indexOf(item) == index;
+            });
+            $.each(removeDuplicateCountries, function(index, value) {
+                var option = $("<option value="+value+">"+value+"</option>");
+                $(".our-brands .filter select[data-filter-group=country]").append(option);
+            });
+        }
+    });
+
+    // Sub-category
+    $(".our-brands .filter select[data-filter-group=sub-category]").change(function() {
+        var subcategory = $(this).find("option:selected").val();
+        $(".our-brands .filter select[data-filter-group=category]").find("option").not(":first").remove();
+        $(".our-brands .filter select[data-filter-group=type]").find("option").not(":first").remove();
+        $(".our-brands .filter select[data-filter-group=sub-country]").find("option").not(":first").remove();
+        var categoryArr = brandsList.filter(function(obj) {
+            if(obj.subcategories.find(function(item) {
+                return item === subcategory;
+            })) {
+                return obj;
+            }  
+        });
+        var otherCategories = brandsList.filter(function(obj) {
+            if(!obj.subcategories.find(function(item) {
+                return item === subcategory;
+
+            })) {
+                return obj;
+            }  
+        });
+        $.each(categoryArr, function(index, value) {  
+            var category = value.category;
+            var subcategories = value.subcategories;
+            var text = value.text;
+            var categoryOption = $("<option selected value="+category+">"+text+"</option>");
+            $(".our-brands .filter select[data-filter-group=category]").append(categoryOption);
+            var products = value.products;
+            var types = [];
+            $.each(products, function(index, value) {
+                types.push(value.type)
+            });
+            if(types.includes("own")) {
+                var option = $("<option value='own'>Own</option>");
+                $(".our-brands .filter select[data-filter-group=type]").append(option);
+            }
+            if(types.includes("distributed")) {
+                var option = $("<option value='distributed'>Distributed</option>");
+                $(".our-brands .filter select[data-filter-group=type]").append(option);
+            }
+        });
+        $.each(otherCategories, function(index, value) {  
+            $.each(value.subcategories, function(index, value) {
+                $(".our-brands .filter select[data-filter-group=sub-category]").find("option[value='"+value+"']").remove();
+            });
+        });
+
+        if($(this).find("option").first().is(":selected")) {
+            $(".our-brands .filter select[data-filter-group=category]").find("option").not(":first").remove();
+            $.each(brandsList, function(index, value) {  
+                var category = value.category;
+                var text = value.text;
+                var categoryOption = $("<option value="+category+">"+text+"</option>");
+                $(".our-brands .filter select[data-filter-group=category]").append(categoryOption);
+                $.each(value.subcategories, function(index, value) {  
+                    var optionText;
+                    if(value.indexOf("-")) {
+                        optionText = value.replace("-"," ").capitalize();                    
+                    } else {
+                        optionText = value.capitalize();
+                    }
+                    var option = $("<option value="+value+">"+optionText+"</option>");
+                    $(".our-brands .filter select[data-filter-group=sub-category]").append(option);
+                });
+            });
+        }
+    });
+
+    // Country
+    $(".our-brands .filter select[data-filter-group=category]").change(function() {
+        var category = $(this).find("option:selected").val();
+    });
+
+    // Every select
+    $(".our-brands .filter").each(function() {
+        $(this).find("select").change(function() {
+            if($(this).find("option").first().is(":selected")) {
+                $(".our-brands .filter select[data-filter-group=type]").find("option").not(":first").remove();
+                var own = $("<option value='own'>Own</option>");
+                var distributed = $("<option value='distributed'>Distributed</option>");
+                $(".our-brands .filter select[data-filter-group=type]").append(own,distributed);
+            }
+        });
+    });
+
+    String.prototype.capitalize = function() {
+        return this.charAt(0).toUpperCase() + this.slice(1);
     }
 }
 

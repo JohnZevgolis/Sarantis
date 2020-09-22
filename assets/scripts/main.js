@@ -1511,16 +1511,18 @@ function syncCharts() {
         volume = [],
         dataLength = rawData.length;
 
-        for (var i = 0; i < dataLength; i += 1) {
-            prices.push([
-                parseInt(rawData[i].date), //date
-                parseFloat(rawData[i].a), //close
-            ]);
+         for (var i = 0; i < dataLength; i += 1) {
+            if (parseInt(rawData[i].date) > 0) {
+                prices.push([
+                    parseInt(rawData[i].date), //date
+                    parseFloat(rawData[i].a), //close
+                ]);
 
-            volume.push([
-                parseInt(rawData[i].date), //date
-                parseInt(rawData[i].b), //close
-            ]);
+                volume.push([
+                    parseInt(rawData[i].date), //date
+                    parseInt(rawData[i].b), //close
+                ]);
+            }
         }
 
         $('<div class="chart1">')
