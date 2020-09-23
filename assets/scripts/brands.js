@@ -460,10 +460,13 @@ function brands() {
     $(".our-brands .filter select[data-filter-group=category]").change(function() {
         var category = $(this).find("option:selected").val();
         var allCountries = [];
-        $(this).find("option").not(":first,:selected").remove();
+        var allPartners = [];
+        var types = [];
+
         $(".our-brands .filter select[data-filter-group=sub-category]").find("option").not(":first").remove();
         $(".our-brands .filter select[data-filter-group=type]").find("option").not(":first").remove();
         $(".our-brands .filter select[data-filter-group=country]").find("option").not(":first").remove();
+        $(".our-brands .filter select[data-filter-group=partner]").find("option").not(":first").remove();
         var categoryArr = brandsList.filter(function(obj) {
             return obj.category === category;
         });
@@ -473,7 +476,7 @@ function brands() {
             $.each(options, function(index, value) {  
                 var optionText;
                 if(value.indexOf("-")) {
-                    optionText = value.replace("-"," ").capitalize();                    
+                    optionText = value.replace(/\-/g," ").capitalize();                      
                 } else {
                     optionText = value.capitalize();
                 }
@@ -481,22 +484,23 @@ function brands() {
                 $(".our-brands .filter select[data-filter-group=sub-category]").append(option);
             });
             var products = value.products;
-            var types = [];
             $.each(products, function(index, value) {
                 types.push(value.type);
                 $.each(value.countries, function(index, value) {
                    allCountries.push(value);
                 });
+                allPartners.push(value.partner);
             });
-            if(types.includes("own")) {
-                var option = $("<option value='own'>Own</option>");
-                $(".our-brands .filter select[data-filter-group=type]").append(option);
-            }
-            if(types.includes("distributed")) {
-                var option = $("<option value='distributed'>Distributed</option>");
-                $(".our-brands .filter select[data-filter-group=type]").append(option);
-            }
         });
+
+        if(types.includes("own")) {
+            var option = $("<option value='own'>Own</option>");
+            $(".our-brands .filter select[data-filter-group=type]").append(option);
+        }
+        if(types.includes("distributed")) {
+            var option = $("<option value='distributed'>Distributed</option>");
+            $(".our-brands .filter select[data-filter-group=type]").append(option);
+        }
 
         var removeDuplicateCountries = allCountries.filter( function( item, index, inputArray ) {
             return inputArray.indexOf(item) == index;
@@ -506,11 +510,31 @@ function brands() {
             $(".our-brands .filter select[data-filter-group=country]").append(option);
         });
 
+        var removeDuplicatePartners = allPartners.filter( function( item, index, inputArray ) {
+            return inputArray.indexOf(item) == index;
+        });
+        
+        var removeEmptySpacesPartners = removeDuplicatePartners.filter(function (el) {
+            return el != "";
+        });
+        $.each(removeEmptySpacesPartners, function(index, value) {
+            var optionText;
+            if(value.indexOf("-")) {
+                optionText = value.replace(/\-/g," ").capitalize();                    
+            } else {
+                optionText = value.capitalize();
+            }
+            var option = $("<option value="+value+">"+optionText+"</option>");
+            $(".our-brands .filter select[data-filter-group=partner]").append(option);
+        });
+
         if($(this).find("option").first().is(":selected")) {
-            var allCountries = [];
+            allCountries = [];
+            allPartners = [];
             $(".our-brands .filter select[data-filter-group=category]").find("option").not(":first").remove();
             $(".our-brands .filter select[data-filter-group=sub-category]").find("option").not(":first").remove();
             $(".our-brands .filter select[data-filter-group=country]").find("option").not(":first").remove();
+            $(".our-brands .filter select[data-filter-group=partner]").find("option").not(":first").remove();
             $.each(brandsList, function(index, value) {  
                 var category = value.category;
                 var text = value.text;
@@ -519,7 +543,7 @@ function brands() {
                 $.each(value.subcategories, function(index, value) {  
                     var optionText;
                     if(value.indexOf("-")) {
-                        optionText = value.replace("-"," ").capitalize();                    
+                        optionText = value.replace(/\-/g," ").capitalize();                      
                     } else {
                         optionText = value.capitalize();
                     }
@@ -530,6 +554,7 @@ function brands() {
                     $.each(value.countries, function(index, value) {
                         allCountries.push(value);
                     });
+                    allPartners.push(value.partner);
                 });
             });
             var removeDuplicateCountries = allCountries.filter( function( item, index, inputArray ) {
@@ -539,15 +564,41 @@ function brands() {
                 var option = $("<option value="+value+">"+value+"</option>");
                 $(".our-brands .filter select[data-filter-group=country]").append(option);
             });
+
+            var removeDuplicatePartners = allPartners.filter( function( item, index, inputArray ) {
+                return inputArray.indexOf(item) == index;
+            });
+            
+            var removeEmptySpacesPartners = removeDuplicatePartners.filter(function (el) {
+                return el != "";
+            });
+            $.each(removeEmptySpacesPartners, function(index, value) {
+                var optionText;
+                if(value.indexOf("-")) {
+                    optionText = value.replace(/\-/g," ").capitalize();                    
+                } else {
+                    optionText = value.capitalize();
+                }
+                var option = $("<option value="+value+">"+optionText+"</option>");
+                $(".our-brands .filter select[data-filter-group=partner]").append(option);
+            });
         }
     });
 
     // Sub-category
     $(".our-brands .filter select[data-filter-group=sub-category]").change(function() {
+        var allCountries = [];
+        var allPartners = [];
+        var types = [];
         var subcategory = $(this).find("option:selected").val();
+        var products = [];
         $(".our-brands .filter select[data-filter-group=category]").find("option").not(":first").remove();
         $(".our-brands .filter select[data-filter-group=type]").find("option").not(":first").remove();
-        $(".our-brands .filter select[data-filter-group=sub-country]").find("option").not(":first").remove();
+        if($(".our-brands .filter select[data-filter-group=country]").find("option").first().is(":selected")) {
+            $(".our-brands .filter select[data-filter-group=country]").find("option").not(":first").remove();
+        }
+        $(".our-brands .filter select[data-filter-group=partner]").find("option").not(":first").remove();
+        
         var categoryArr = brandsList.filter(function(obj) {
             if(obj.subcategories.find(function(item) {
                 return item === subcategory;
@@ -555,42 +606,79 @@ function brands() {
                 return obj;
             }  
         });
-        var otherCategories = brandsList.filter(function(obj) {
-            if(!obj.subcategories.find(function(item) {
-                return item === subcategory;
 
-            })) {
-                return obj;
-            }  
-        });
         $.each(categoryArr, function(index, value) {  
             var category = value.category;
             var subcategories = value.subcategories;
             var text = value.text;
             var categoryOption = $("<option selected value="+category+">"+text+"</option>");
             $(".our-brands .filter select[data-filter-group=category]").append(categoryOption);
-            var products = value.products;
-            var types = [];
-            $.each(products, function(index, value) {
-                types.push(value.type)
-            });
-            if(types.includes("own")) {
-                var option = $("<option value='own'>Own</option>");
-                $(".our-brands .filter select[data-filter-group=type]").append(option);
-            }
-            if(types.includes("distributed")) {
-                var option = $("<option value='distributed'>Distributed</option>");
-                $(".our-brands .filter select[data-filter-group=type]").append(option);
-            }
-        });
-        $.each(otherCategories, function(index, value) {  
-            $.each(value.subcategories, function(index, value) {
-                $(".our-brands .filter select[data-filter-group=sub-category]").find("option[value='"+value+"']").remove();
+            $.each(value.products, function(index, value) {
+                products.push(value);
             });
         });
 
+        var subProducts = products.filter(function(prod) {
+            if(prod.subcategories.find(function(sub) {
+                return sub === subcategory;
+            })) {
+                return prod;
+            }
+        });
+
+        $.each(subProducts, function(index, value) {  
+            types.push(value.type);
+            $.each(value.countries, function(index, value) {
+               allCountries.push(value);
+            });
+            allPartners.push(value.partner);
+        });
+
+        if(types.includes("own")) {
+            var option = $("<option value='own'>Own</option>");
+            $(".our-brands .filter select[data-filter-group=type]").append(option);
+        }
+        if(types.includes("distributed")) {
+            var option = $("<option value='distributed'>Distributed</option>");
+            $(".our-brands .filter select[data-filter-group=type]").append(option);
+        }
+
+        var removeDuplicateCountries = allCountries.filter( function( item, index, inputArray ) {
+            return inputArray.indexOf(item) == index;
+        });
+        if($(".our-brands .filter select[data-filter-group=country]").find("option").first().is(":selected")) {
+            $.each(removeDuplicateCountries, function(index, value) {
+                var option = $("<option value="+value+">"+value+"</option>");
+                $(".our-brands .filter select[data-filter-group=country]").append(option);
+            });
+        }
+
+        var removeDuplicatePartners = allPartners.filter( function( item, index, inputArray ) {
+            return inputArray.indexOf(item) == index;
+        });
+        
+        var removeEmptySpacesPartners = removeDuplicatePartners.filter(function (el) {
+            return el != "";
+        });
+
+        $.each(removeEmptySpacesPartners, function(index, value) {
+            var optionText;
+            if(value.indexOf("-")) {
+                optionText = value.replace(/\-/g," ").capitalize();                    
+            } else {
+                optionText = value.capitalize();
+            }
+            var option = $("<option value="+value+">"+optionText+"</option>");
+            $(".our-brands .filter select[data-filter-group=partner]").append(option);
+        });
+
         if($(this).find("option").first().is(":selected")) {
+            allCountries = [];
+            allPartners = [];
             $(".our-brands .filter select[data-filter-group=category]").find("option").not(":first").remove();
+            $(".our-brands .filter select[data-filter-group=sub-category]").find("option").not(":first").remove();
+            $(".our-brands .filter select[data-filter-group=country]").find("option").not(":first").remove();
+            $(".our-brands .filter select[data-filter-group=partner]").find("option").not(":first").remove();
             $.each(brandsList, function(index, value) {  
                 var category = value.category;
                 var text = value.text;
@@ -599,7 +687,7 @@ function brands() {
                 $.each(value.subcategories, function(index, value) {  
                     var optionText;
                     if(value.indexOf("-")) {
-                        optionText = value.replace("-"," ").capitalize();                    
+                        optionText = value.replace(/\-/g," ").capitalize();                   
                     } else {
                         optionText = value.capitalize();
                     }
@@ -610,9 +698,70 @@ function brands() {
         }
     });
 
+    // Type
+    $(".our-brands .filter select[data-filter-group=type]").change(function() {
+        var type = $(this).find("option:selected").val();
+        var products = [];
+        var allCountries = [];
+        var allPartners = [];
+        $(".our-brands .filter select[data-filter-group=sub-category]").find("option").not(":first").remove();
+    });
+
     // Country
-    $(".our-brands .filter select[data-filter-group=category]").change(function() {
-        var category = $(this).find("option:selected").val();
+
+    $(".our-brands .filter select[data-filter-group=country]").change(function() {
+        var country = $(this).find("option:selected").val();
+        var products = [];
+        var categories = [];
+        var subcategories = [];
+        $(".our-brands .filter select[data-filter-group=category]").find("option").not(":first").remove();
+        $(".our-brands .filter select[data-filter-group=sub-category]").find("option").not(":first").remove();
+
+        $.each(brandsList, function(index, value) {  
+            $.each(value.products, function(index, value) {
+                products.push(value);
+            });
+        });
+
+        var subProducts = products.filter(function(prod) {
+            if(prod.countries.find(function(sub) {
+                return sub === country;
+            })) {
+                return prod;
+            }
+        });
+
+        $.each(subProducts, function(index, value) {
+            categories.push(value.category);
+            $.each(value.subcategories, function(index, value) {
+               subcategories.push(value);
+            });
+        });
+
+        var removeDuplicateCategories = categories.filter( function( item, index, inputArray ) {
+            return inputArray.indexOf(item) == index;
+        });
+
+        $.each(removeDuplicateCategories, function(index, value) {
+            var optionText = value.capitalize();
+            var option = $("<option value="+value+">"+optionText+"</option>");
+            $(".our-brands .filter select[data-filter-group=category]").append(option);
+        });
+
+        var removeDuplicateSubCategories = subcategories.filter( function( item, index, inputArray ) {
+            return inputArray.indexOf(item) == index;
+        });
+
+        $.each(removeDuplicateSubCategories, function(index, value) {
+            var optionText;
+            if(value.indexOf("-")) {
+                optionText = value.replace(/\-/g," ").capitalize();                   
+            } else {
+                optionText = value.capitalize();
+            }
+            var option = $("<option value="+value+">"+optionText+"</option>");
+            $(".our-brands .filter select[data-filter-group=sub-category]").append(option);
+        });
     });
 
     // Every select

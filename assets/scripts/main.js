@@ -1156,11 +1156,17 @@ function validate(evt) {
 
 //==== Datepicker =================//
 function datepicker() {
+    var dateFormat;
+    if ($('body').hasClass('ENG')) {
+        dateFormat = "mm-dd-yy";
+    } else {
+        dateFormat = "dd-mm-yy"
+    }
     if($(".investors-press,.regulated-information").length) {
         $("#from").datepicker({
             // minDate: '0', 
             maxDate: '0',
-            dateFormat: "dd-mm-yy",
+            dateFormat: dateFormat,
             onSelect: function(dateStr) {
                 var min = $(this).datepicker('getDate');
                 $('#to').datepicker('option', 'minDate', min || '0');
@@ -1170,11 +1176,19 @@ function datepicker() {
         $('#to').datepicker({
             // minDate: '0', 
             maxDate: '0', 
-            dateFormat: "dd-mm-yy",
+            dateFormat: dateFormat,
             onSelect: function(dateStr) {
                 var max = $(this).datepicker('getDate'); 
                 $('#from').datepicker('option', 'maxDate', max || '+1Y+6M');
             }
+        });
+    }
+
+    if($(".calculators").length) {
+        $('#on,#on2').datepicker({
+            // minDate: '0', 
+            maxDate: '0', 
+            dateFormat: dateFormat
         });
     }
 }
@@ -1211,7 +1225,14 @@ if($("#stock-chart").length) {
         createStockChart();
         createCal();
         $('.amChartsPeriodSelector').addClass('clearfix');
-       
+        if($("body").hasClass("ENG")) {
+            var startEngDateArr = $(".start").val().split("-");
+            var startEngDate = startEngDateArr[1] + "-" + startEngDateArr[0] + "-" + startEngDateArr[2];
+            $(".start").val(startEngDate);
+            var endEngDateArr = $(".end").val().split("-");
+            var endEngDate = endEngDateArr[1] + "-" + endEngDateArr[0] + "-" + endEngDateArr[2];
+            $(".end").val(endEngDate);
+        }
     });
 }
 
@@ -1437,13 +1458,20 @@ function createCal() {
     $('.amChartsInputField:first-child').addClass("start");
     $('.amChartsInputField:last-child').addClass("end");
 
+    var dateFormat;
+    if ($('body').hasClass('ENG')) {
+        dateFormat = "mm-dd-yy";
+    } else {
+        dateFormat = "dd-mm-yy"
+    }
+
     $('input.start').datepicker({
-        dateFormat: 'dd-mm-yy',
+        dateFormat: dateFormat,
         maxDate: '0d'
     });
 
     $('input.end').datepicker({
-        dateFormat: 'dd-mm-yy',
+        dateFormat: dateFormat,
         maxDate: '0d'
     });
 }
