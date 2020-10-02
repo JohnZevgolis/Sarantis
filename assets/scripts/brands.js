@@ -306,7 +306,7 @@ function brands(brandsList) {
             var subcategories = value.subcategories.join().replace(/,/g, " ");
             var countries = value.countries.join().replace(/,/g, " ");
             var brand = $('<div class="col-sm-6 col-lg-4 col-xxl-3 brand text-center mb-5 '+value.category+' '+subcategories+' '+value.type+' '+countries+' '+value.partner+'">'+
-                '<div class="brand-img d-flex justify-content-center align-items-center p-5">'+
+                '<div class="brand-img d-flex justify-content-center align-items-center px-5">'+
                     '<div class="w-100">'+
                         '<img src="'+value.logo+'">'+
                     '</div>'+
@@ -326,6 +326,13 @@ function brands(brandsList) {
             $(".our-brands .filters").append(brand).isotope('appended', brand);                        
         });
     });
+
+    SetUpGridCols($(".brand-img"));
+    SetUpGridCols($(".brand-text"));
+
+    $grid.imagesLoaded().progress( function() {
+      $grid.isotope('layout');
+    }); 
 
     //Append Categories Options
     $.each(categoriesArray, function(index, value) {
