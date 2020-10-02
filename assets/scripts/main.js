@@ -368,8 +368,7 @@ function headingHeight() {
 
 //==== MatchHeight =================//
 function SetUpGridCols(element) {
-    element.matchHeight
-    ({
+    element.matchHeight({
         byRow: false,
         property: 'height',
         target: null,

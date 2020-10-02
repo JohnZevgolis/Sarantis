@@ -327,12 +327,22 @@ function brands(brandsList) {
         });
     });
 
-    SetUpGridCols($(".brand-img"));
-    SetUpGridCols($(".brand-text"));
+    initIsotope(function() {
+        $grid.imagesLoaded().progress(function() {
+            $grid.isotope('layout');
+        }); 
+    });
 
-    $grid.imagesLoaded().progress( function() {
-      $grid.isotope('layout');
-    }); 
+    function initIsotope(callback) {
+        $('.filters').imagesLoaded(function() {
+              SetUpGridCols($(".brand-img"));
+            SetUpGridCols($(".brand-text"));
+
+            if(typeof callback == "function") {
+                callback();
+            }
+        });
+    }
 
     //Append Categories Options
     $.each(categoriesArray, function(index, value) {
