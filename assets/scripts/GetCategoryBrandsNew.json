@@ -2,6 +2,7 @@
   {
     "id": 1,
     "category": "cosmetics",
+    "text": "Cosmetics & Toiletries",
     "subcategories": [ "baby-care", "body-wash", "deodorants", "Fragrances", "grooming", "hair-care", "hair-colorant", "hair-styling", "hand-wash", "oral-care", "personal-hygiene", "shaving-products", "skin-care", "sun-care" ],
     "products": [
       {
@@ -636,6 +637,7 @@
   {
     "id": 2,
     "category": "luxury",
+    "text": "Luxury",
     "subcategories": [ "bathroom-cleaners", "cleaning-tools", "dishwashing", "drainer-care", "food-packaging", "garbage-bags", "insect-control", "septic-tank-activator", "shoe-care" ],
     "products": [
       {
@@ -841,6 +843,7 @@
   {
     "id": 3,
     "category": "home",
+    "text": "Home",
     "subcategories": [ "food-supplements", "health-self-care", "skin-care", "sun-care" ],
     "products": [
       {
@@ -925,6 +928,7 @@
   {
     "id": 4,
     "category": "professional",
+    "text": "Professional",
     "subcategories": [ "Fragrances", "home-fragrances", "Make-Up", "Treatment" ],
     "products": [
       {
@@ -1295,6 +1299,7 @@
   {
     "id": 5,
     "category": "health",
+    "text": "Health",
     "subcategories": [ "cleaning-tools", "detergents", "food-packaging", "garbage-bags", "packaging" ],
     "products": [
       {
