@@ -497,7 +497,7 @@
       z-index: 1;
       content: '';
 
-      @include media-breakpoint-down(lg) { height: 96px; width: 100%; }
+      @include media-breakpoint-down(lg) { height: 96px; width: 100%;}
       @include media-breakpoint-down(md) { height: 70px; }
 
     }
@@ -669,6 +669,7 @@
 
       padding: 4vw 4.5vw;
       color: #272727;
+      background-color: $white;
 
       @include media-breakpoint-down(xl) { padding: 3.5vw 4vw; }
       @include media-breakpoint-down(lg) { padding: 3.5vw 20px; }

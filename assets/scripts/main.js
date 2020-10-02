@@ -70,7 +70,7 @@ $(document).ready(function() {
                 $('body').css('overflow', 'hidden')
                 $megaMenu.addClass('menu-open');
                 $header.addClass('menu-open');
-                $megaMenu.find('.menu-side').css({'max-height': $megaMenu.height() + 'px'});
+                //$megaMenu.find('.menu-side').css({'max-height': $megaMenu.height() + 'px'});
 
             }
 
