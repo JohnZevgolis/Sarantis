@@ -40,6 +40,16 @@
 		color: $white;
 		background-color: $light-blue;
 
+		h2 {
+			a {
+				color: $white; 
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
 		.moreBtn {
 			font-weight: 400;
 			margin: 0;
@@ -103,6 +113,14 @@
 
 		h2 {
 			color: $bgTextStrong;
+
+			a {
+				color: $bgTextStrong;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 
 		p {
