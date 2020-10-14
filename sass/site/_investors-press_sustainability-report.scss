@@ -83,6 +83,14 @@
 
 		h2 {
 			color: $main-blue;
+
+			a {
+				color: $main-blue;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 
 		.date {
