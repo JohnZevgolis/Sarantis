@@ -869,3 +869,62 @@ img {
     
   } 
 }
+
+/******************************************************
+    Table
+ ******************************************************/
+
+.table-responsive {
+  table {
+    width: 100%;
+
+    th,td {
+      color: $generalText;
+      text-align: center;
+      padding-left: 0.4rem;
+      padding-right: 0.4rem;
+      line-height: 1.3;
+    }
+
+    thead {
+      tr {
+        border-bottom: 2px solid $light-blue;
+
+        th {
+          font-weight: 600;
+          font-size: 1rem;
+          padding-top: 1.125rem;
+          padding-bottom: 1.125rem;
+
+          @include media-breakpoint-down(lg) {
+            font-size: 0.9375rem;
+          }
+
+          @include media-breakpoint-down(xs) {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px dotted $tableBodyRowBorder;
+
+        td {
+          font-size: 0.875rem;
+          padding-top: 0.875rem;
+          padding-bottom: 0.875rem;
+
+          @include media-breakpoint-down(lg) {
+            font-size: 0.8125rem;
+          }
+
+          @include media-breakpoint-down(xs) {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}

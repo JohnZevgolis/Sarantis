@@ -3,25 +3,52 @@
 	padding-top: 3.8125rem;
 	padding-bottom: 6.625rem;
 
-	.term {
-		width: 38px;
-		height: 38px;
-		border: 2px solid $termBorder;
-		font-size: 1.125rem;
-		font-weight: 600;
-		color: $termBorder;
+	ol {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 1rem;
 
-		@include media-breakpoint-down(lg) {
-			font-size: 1.0625rem;
-		}
+		li {
+			counter-increment: step-counter;
+			position: relative;
+			padding-left: calc(38px + 1rem);
+			margin-bottom: 1rem;
 
-		@include media-breakpoint-down(xs) {
-			font-size: 1rem;
-			float: left;
+			@include media-breakpoint-down(xs) {
+				padding-left: 0;
+			}
+
+			&:before {
+				content: counter(step-counter);
+				width: 38px;
+				height: 38px;
+				border: 2px solid $termBorder;
+				font-size: 1.125rem;
+				font-weight: 600;
+				color: $termBorder;
+				border-radius: 100%;
+				position: absolute;
+				left: 0;
+				@include display-flex();
+				@include align-items(center);
+				@include justify-content(center);
+
+				@include media-breakpoint-down(lg) {
+					font-size: 1.0625rem;
+				}
+
+				@include media-breakpoint-down(xs) {
+					font-size: 1rem;
+					float: left;
+					position: static;
+					margin-right: 1rem;
+				}
+			}
 		}
 	}
 
-	p {
+	p,li {
 		color: $introText;
 		line-height: 1.7;
 		font-size: 1.125rem;
