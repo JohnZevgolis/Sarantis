@@ -82,6 +82,11 @@
 		text-decoration: none;
 		background-color: transparent;
 		outline: none;
+		text-align: left;
+
+		.icon-wrapper {
+			width: 27px;
+		}
 
 		i {
 			font-size: 1.5rem;
