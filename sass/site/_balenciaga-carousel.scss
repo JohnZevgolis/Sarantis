@@ -1,6 +1,6 @@
 .balenciaga-carousel {
 	background-color: $generalSection;
-	padding-bottom: 12.6428rem;
+	padding-bottom: 7.0625rem;
 
 	@include media-breakpoint-down(xl) {
 		padding-top: 4.64285rem;
@@ -60,6 +60,8 @@
 
 		.swiper-slide {
 			img {
+				max-height: 450px;
+
 				@include media-breakpoint-down(xs) {
 					max-width: 230px;
 				}
