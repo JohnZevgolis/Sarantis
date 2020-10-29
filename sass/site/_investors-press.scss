@@ -171,6 +171,13 @@
 	.press-box {
 		border-bottom: 1px dotted #b9b9ba;
 		padding-top: 2rem;
+		height: 100%;
+		@include display-flex();
+		@include flex-direction(column);
+
+		.text-right {
+			margin-top: auto;
+		}
 
 		.date {
 			color: $light-blue;

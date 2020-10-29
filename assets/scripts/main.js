@@ -24,7 +24,6 @@ $(document).ready(function() {
     if($("#stock-chart-small").length) {
         syncCharts();
     }
-    masonry($(".press-grid"), ".press-box-item");
     $(".departments .department-img").matchHeight({
         byRow: true,
         property: 'height',
