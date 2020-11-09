@@ -444,17 +444,43 @@ function brands(brandsList) {
                     }
                 });
 
-                $('.our-brands select').each(function () {
-                    // if ($(this).find("option[visible=true]").length === 1) {
-                    //     $(this).children("option[visible=true]").attr("selected", true);
-                    // } else 
-                    if ($(this).find("option[visible=true]").length === 0) {
-                        $(this).attr("disabled", true);
-                    } else {
-                        $(this).children("option").attr("selected", false);
-                        $(this).attr("disabled", false);
-                    }
-                });
+                if(country === false) {
+	                $('.our-brands select').each(function () {
+	                    // if ($(this).find("option[visible=true]").length === 1) {
+	                    //     $(this).children("option[visible=true]").attr("selected", true);
+	                    // } else 
+	                    if ($(this).find("option[visible=true]").length === 0) {
+	                        $(this).attr("disabled", true);
+	                    } else {
+	                        $(this).children("option").attr("selected", false);
+	                        $(this).attr("disabled", false);
+	                    }
+	                });
+	            } else {
+	            	$('.our-brands select').not("[data-filter-group=country]").each(function () {
+	                    // if ($(this).find("option[visible=true]").length === 1) {
+	                    //     $(this).children("option[visible=true]").attr("selected", true);
+	                    // } else 
+	                    if ($(this).find("option[visible=true]").length === 0) {
+	                        $(this).attr("disabled", true);
+	                    } else {
+	                        $(this).children("option").attr("selected", false);
+	                        $(this).attr("disabled", false);
+	                    }
+	                });
+
+	                $('.our-brands select[data-filter-group=country]').each(function () {
+	                    // if ($(this).find("option[visible=true]").length === 1) {
+	                    //     $(this).children("option[visible=true]").attr("selected", true);
+	                    // } else 
+	                    if ($(this).find("option").length === 0) {
+	                        $(this).attr("disabled", true);
+	                    } else {
+	                        $(this).children("option").attr("selected", false);
+	                        $(this).attr("disabled", false);
+	                    }
+	                });
+	            }
             });
         });
     });
