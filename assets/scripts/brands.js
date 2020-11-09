@@ -399,10 +399,11 @@ function brands(brandsList) {
     });
 
     var filters = {};
+    var country = false;
 
     $('.our-brands select').each(function () {
-        $(this).on('change', function (event) {                 
-           var filterGroup = $(this).attr('data-filter-group');
+        $(this).on('change', function (event) {
+            var filterGroup = $(this).attr('data-filter-group');
             // set filter for group
             filters[filterGroup] = $(this).val();
             // combine filters
@@ -410,37 +411,53 @@ function brands(brandsList) {
             // set filter for Isotope
             $grid.isotope({ filter: filterValue });
 
-            var strall = []; 
-            $grid.on('layoutComplete', function( event, laidOutItems ) {
-                $.each(laidOutItems, function(index, value) {
+            if($(this).attr("data-filter-group") === "country") {
+                country = true;
+            } else {
+                country = false;
+            }
+            var strall = [];
+            $grid.on('layoutComplete', function (event, laidOutItems) {
+                strall = [];
+                $('.filters').imagesLoaded( function() {
+                    SetUpGridCols($(".brand-img"));
+                    SetUpGridCols($(".brand-text"));
+                });
+                $.each(laidOutItems, function (index, value) {
                     strall.push($(value.element).attr("class").split(" "));
                 });
-                var concatArray = strall.reduce(function(r, a) {
+                var concatArray = strall.reduce(function (r, a) {
                     return r.concat(a)
                 }, []);
-                var dropdown = $('select option:not([value=""])');
-                dropdown.each(function(el){
-                    var nowfilter = $(this).attr('value').replace(/\./g,"");
-                    if(concatArray.includes(nowfilter)) {
+                var dropdown;
+                if(country === false) {
+                    dropdown = $('select option:not([value=""])');
+                } else {
+                    dropdown = $('select').not("[data-filter-group=country]").find("option:not([value=''])");
+                }
+                dropdown.each(function (el) {
+                    var nowfilter = $(this).attr('value').replace(/\./g, "");
+                    if (concatArray.includes(nowfilter)) {
                         $(this).show().attr("visible", true);
                     } else {
                         $(this).hide().attr("visible", false);
                     }
                 });
-                    
-                $('.our-brands select').each(function () {  
-                    if($(this).find("option[visible=true]").length === 1) {
-                        $(this).children("option[visible=true]").attr("selected", true);
-                    } else if($(this).find("option[visible=true]").length === 0) {
+
+                $('.our-brands select').each(function () {
+                    // if ($(this).find("option[visible=true]").length === 1) {
+                    //     $(this).children("option[visible=true]").attr("selected", true);
+                    // } else 
+                    if ($(this).find("option[visible=true]").length === 0) {
                         $(this).attr("disabled", true);
                     } else {
                         $(this).children("option").attr("selected", false);
                         $(this).attr("disabled", false);
                     }
                 });
-            });          
+            });
         });
-   });
+    });
 
     function concatValues(obj) {
         var value = '';
