@@ -93,6 +93,8 @@ function picturesCarousel() {
 
                       if(slides == 1) {
                           $(".pictures-carousel").find(".navigation-btns").hide();
+                      } else {
+                          $(".pictures-carousel").find(".navigation-btns").show();
                       }
                   });
                 }
