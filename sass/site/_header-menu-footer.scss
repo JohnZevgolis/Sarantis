@@ -122,7 +122,7 @@
   .ww-title {
     font-size: 30px;
     color: $white;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 15px;
     margin-left: 5px;
 
@@ -565,7 +565,7 @@
       list-style: none;
       padding: 0;
       font-size: 16px;
-      font-weight: 300;
+      font-weight: 400;
       margin: 15px -5px 35px;
 
       @include media-breakpoint-down(xl) { font-size: 17px; }

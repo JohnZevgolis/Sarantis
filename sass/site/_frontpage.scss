@@ -36,7 +36,7 @@
     .ms-title {
       color: $main-blue;
       font-size: 54px;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 100%;
       display: block;
 
@@ -163,7 +163,7 @@
         letter-spacing: 0.5px;
 
         line-height: 120%;
-        font-weight: 500;
+        font-weight: 600;
         @include transform(translateY(-50%));
 
         @include media-breakpoint-down(xl) { width: 110px; }
@@ -247,7 +247,7 @@
     line-height: 105%;
     margin-bottom: 10px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 
     @include media-breakpoint-down(sm) { font-size: 38px }
     @include media-breakpoint-down(xs) { font-size: 32px }
@@ -438,7 +438,7 @@
     .circle-text {
       display: block;
       font-size: 20px;
-      font-weight: 300;
+      font-weight: 400;
       margin: 6px 0 2px;
       line-height: 1.2;
 
@@ -457,7 +457,7 @@
     .circle-number {
       display: block;
       font-size: 50px;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1;
 
       @include media-breakpoint-only(lg) { font-size: 48px; }
@@ -468,14 +468,14 @@
     .circle-title {
       display: block;
       font-size: 23px;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 115%;
       margin-bottom: 6px;
 
       @include media-breakpoint-down(sm) { font-size: 20px; }
 
       small {
-        font-weight: 500;
+        font-weight: 600;
         font-size: 18px;
         line-height: 90%;
         white-space: nowrap;
@@ -489,7 +489,7 @@
       display: block;
       font-size: 13px;
       line-height: 120%;
-      font-weight: 300;
+      font-weight: 400;
 
       //word-break: break-all;
 
@@ -507,7 +507,7 @@
         display: inline-block;
         padding: 3px 5px;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
         background-color: #363edf;
 
         &.light {
@@ -517,7 +517,7 @@
 
       .cw-title {
         font-size: 23px;
-        font-weight: 500;
+        font-weight: 600;
         padding: 5px;
         margin-bottom: 15px;
 
@@ -1023,7 +1023,7 @@
 
     .capital {
       font-size: 24px;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 100%;
     }
 
@@ -1114,7 +1114,7 @@
       width: 100%;
 
       padding: 20px 30px 0 30px;
-      font-weight: 300;
+      font-weight: 400;
       font-size: 24px;
 
       line-height: 140%;
@@ -1203,7 +1203,7 @@
 
     display: block;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 5px;
     color: $light-blue;
 
@@ -1218,7 +1218,7 @@
     text-decoration: none;
     color: inherit;
     line-height: 120%;
-    font-weight: 500;
+    font-weight: 600;
 
     @include media-breakpoint-down(lg) { font-size: 26px }
     @include media-breakpoint-down(sm) { font-size: 24px; }
@@ -1247,7 +1247,7 @@
   .ft-title {
 
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
     color: $light-blue;
     line-height: 105%;
     margin-bottom: 20px;
@@ -1323,7 +1323,7 @@
       border: 0;
       outline: 0;
       color: #FFFFFF;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 1px;
       @include transition(all .1s);
 

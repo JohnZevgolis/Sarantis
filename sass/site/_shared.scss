@@ -8,13 +8,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
   padding: 0;
 }
 
 b, strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 img {
@@ -33,7 +33,7 @@ img {
   display: inline-block;
   color: $main-blue;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px!important;
   line-height: 100% !important;
   margin-top: 15px;
@@ -94,7 +94,7 @@ img {
   @include border-radius(3px);
 
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   background: $light-blue;
   margin-top: 25px;
   @include transition(all .15s);
@@ -207,7 +207,7 @@ img {
     text-decoration: none;
     color: #FFFFFF;
     background-color: $main-blue;
-    font-weight: 500;
+    font-weight: 600;
 
     &:hover,
     &:focus,
@@ -227,7 +227,7 @@ img {
 
   color: #4f4f4f;
 
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 5px;
 
 
@@ -235,7 +235,6 @@ img {
 
     position: absolute;
     right: 10px;
-    top: 50%;
 
     font-family: $fa-free;
     font-size: 12px;
@@ -243,7 +242,7 @@ img {
     font-weight: 400;
     content: "\f054";
 
-    @include transform(translateY(-50%));
+    bottom: 5px;
     @include transition(all .1s);
 
 
@@ -820,7 +819,7 @@ img {
     margin-bottom: 0;
 
     th {
-      font-weight: 500;
+      font-weight: 600;
       color: $generalText;
       font-size: 0.875rem;
       margin-bottom: 1px;
@@ -834,7 +833,7 @@ img {
         font-size: 0.875rem;
         color: $generalText;
         border: none;
-        font-weight: 500;
+        font-weight: 600;
         padding: 1rem .5rem 0.3875rem; 
       }
 
