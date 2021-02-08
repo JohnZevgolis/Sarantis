@@ -163,16 +163,17 @@
 
 	&.production-plant-ukraine {
 		background-color: $productionPlantUkraine;
-		min-height: 1256px;
+		// min-height: 1256px;
 		background-repeat: no-repeat;
-		background-position: right center;
+		background-position: right bottom;
 		background-size: contain;
 		padding-top: 4.875rem;
-		padding-bottom: 4.875rem;
+		padding-bottom: 38%;
 
 		@include media-breakpoint-down(xl) {
 			background-image: none !important;
 			min-height: auto;
+			padding-bottom: 4.875rem;
 		}
 	}
 
