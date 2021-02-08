@@ -235,19 +235,32 @@
 
     display: block;
     text-decoration: none;
-    width: 190px;
     pointer-events: auto;
 
-    @include media-breakpoint-down(lg) { width: 160px; }
+    &.sarantis,
+    &.ergopak {
+      // width: 190px;
+      max-width: 142px;
 
-    @include media-breakpoint-down(md) { width: 120px; }
-    @include media-breakpoint-down(xs) { width: 100px; }
+      // @include media-breakpoint-down(lg) { width: 160px; }
+      @include media-breakpoint-down(md) { width: 120px; }
+      @include media-breakpoint-down(xs) { width: 100px; }
+    }
+
+    &.polipak,
+    &.ergopak {
+       margin-left: 1rem;
+    }
+
+    &.polipak {
+      min-width: 70px;
+      max-width: 70px;
+    }
 
     img {
       display: block;
-      width: 100%;
       height: auto;
-      max-width: 142px;
+      max-width: 100%;
     }
 
   }
