@@ -1354,5 +1354,21 @@
 
   }
 
+  .ft-text.lh + .ftContactBtn {
+    font-size: 1.28571rem;
+
+    &:before {
+      font-size: 1.14285rem;
+      bottom: 6px;
+      right: 0;
+    }
+
+    &:hover {
+      &:before {
+        right: 5px;
+      }
+    }
+  }
+
 }
 
