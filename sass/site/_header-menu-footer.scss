@@ -254,7 +254,11 @@
 
     &.polipak,
     &.ergopak {
-       margin-left: 1rem;
+       margin-left: 2rem;
+
+       @include media-breakpoint-down(sm) {
+        margin-left: 0;
+       }
     }
 
     &.polipak,
