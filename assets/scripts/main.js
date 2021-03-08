@@ -730,7 +730,6 @@ function contactMap() {
             zoom: 14,
             scrollwheel: false,
             disableDefaultUI: true,
-
             center: new google.maps.LatLng(38.041645, 23.808642),
 
             styles: [
@@ -769,7 +768,7 @@ function contactMap() {
                             "lightness": 40
                         },
                         {
-                            "visibility": "off"
+                            "visibility": "on"
                         }
                     ]
                 },
